@@ -1,5 +1,6 @@
 ﻿using SpotiftClone.DataAccess;
 using SpotiftClone.DataAccess.User;
+using SpotiftClone.MenuForms;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -18,15 +19,25 @@ namespace SpotiftClone
         {
             InitializeComponent();
         }
-        private void FormGetir(Form frm)
+       // private void FormGetir(Form frm)
+        //{
+         //   panel5.Controls.Clear();
+          //  frm.MdiParent = this;
+           // frm.FormBorderStyle = FormBorderStyle.None;
+            //panel5.Controls.Add(frm);
+            //frm.Show();
+
+//        }
+
+        private void FormGetir2(Form frm)
         {
-            panel5.Controls.Clear();
+            panel2.Controls.Clear();
             frm.MdiParent = this;
             frm.FormBorderStyle = FormBorderStyle.None;
-            panel5.Controls.Add(frm);
+            panel2.Controls.Add(frm);
             frm.Show();
-
         }
+
 
         private void pictureBox1_Click(object sender, EventArgs e)
         {
@@ -50,13 +61,34 @@ namespace SpotiftClone
 
         private void ıconButton1_Click(object sender, EventArgs e)
         {
-
+            AnasayfaForm anasayfaForm = new AnasayfaForm();
+            FormGetir2(anasayfaForm);
         }
 
         private void Anasayfa_Load(object sender, EventArgs e)
         {
+            AnasayfaForm anasayfaForm = new AnasayfaForm();
+            FormGetir2(anasayfaForm);
+            
+        }
 
-            anasayfaUsername.Text = User.user.name.ToUpper()+ "\n" + User.user.surname.ToUpper();
+        private void anasayfaUsername_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void ıconButton2_Click(object sender, EventArgs e)
+        {
+            playListForm playListForm = new playListForm();
+            FormGetir2(playListForm);
+
+
+        }
+
+        private void ıconButton3_Click(object sender, EventArgs e)
+        {
+            TakipEdilenForm takipEdilenForm = new TakipEdilenForm();
+            FormGetir2(takipEdilenForm);
         }
     }
 }

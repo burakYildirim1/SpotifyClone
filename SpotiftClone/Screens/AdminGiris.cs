@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using MySql.Data;
 using MySql.Data.MySqlClient;
+using SpotiftClone.Admin;
 using SpotiftClone.DataAccess;
 using SpotiftClone.Database;
 
@@ -28,14 +29,20 @@ namespace SpotiftClone
             var user = eFUserDal.login(txtMail.Text, txtPassword.Text);
             if(eFUserDal.checkIfAdmin(user))
             {
-                Anasayfa anasyf = new Anasayfa();
-                anasyf.Show();
+                AdminForm adminForm = new AdminForm();
+                adminForm.Show();
                 this.Hide();
             }
             else
             {
                 MessageBox.Show("Yetkisiz giriş!", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+
+
+
+
+
+
         }
 
        

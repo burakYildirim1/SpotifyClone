@@ -69,7 +69,7 @@
             this.txtUserPass.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUserPass.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtUserPass.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txtUserPass.Location = new System.Drawing.Point(64, 104);
+            this.txtUserPass.Location = new System.Drawing.Point(75, 104);
             this.txtUserPass.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserPass.Multiline = true;
             this.txtUserPass.Name = "txtUserPass";
@@ -154,7 +154,7 @@
             this.txtUserMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtUserMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtUserMail.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txtUserMail.Location = new System.Drawing.Point(64, 39);
+            this.txtUserMail.Location = new System.Drawing.Point(75, 43);
             this.txtUserMail.Margin = new System.Windows.Forms.Padding(4);
             this.txtUserMail.Multiline = true;
             this.txtUserMail.Name = "txtUserMail";

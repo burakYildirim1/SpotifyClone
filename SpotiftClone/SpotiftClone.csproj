@@ -105,6 +105,30 @@
     <Compile Include="admins.cs">
       <DependentUpon>spotifyDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="Admin\AdminForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\AdminForm.Designer.cs">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\islemler\EklemeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\islemler\EklemeForm.Designer.cs">
+      <DependentUpon>EklemeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\islemler\GuncellemeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\islemler\GuncellemeForm.Designer.cs">
+      <DependentUpon>GuncellemeForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\islemler\SilmeForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\islemler\SilmeForm.Designer.cs">
+      <DependentUpon>SilmeForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="albums.cs">
       <DependentUpon>spotifyDB.tt</DependentUpon>
     </Compile>
@@ -123,6 +147,24 @@
     <Compile Include="DataAccess\Connection.cs" />
     <Compile Include="DataAccess\EntityFramework\EFUserDal.cs" />
     <Compile Include="DataAccess\User\User.cs" />
+    <Compile Include="MenuForms\AnasayfaForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForms\AnasayfaForm.Designer.cs">
+      <DependentUpon>AnasayfaForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForms\playListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForms\playListForm.Designer.cs">
+      <DependentUpon>playListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForms\TakipEdilenForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForms\TakipEdilenForm.Designer.cs">
+      <DependentUpon>TakipEdilenForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="playlists.cs">
       <DependentUpon>spotifyDB.tt</DependentUpon>
     </Compile>
@@ -188,6 +230,27 @@
     <Compile Include="user_playlist_songs.cs">
       <DependentUpon>spotifyDB.tt</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Admin\AdminForm.resx">
+      <DependentUpon>AdminForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\islemler\EklemeForm.resx">
+      <DependentUpon>EklemeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\islemler\GuncellemeForm.resx">
+      <DependentUpon>GuncellemeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\islemler\SilmeForm.resx">
+      <DependentUpon>SilmeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForms\AnasayfaForm.resx">
+      <DependentUpon>AnasayfaForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForms\playListForm.resx">
+      <DependentUpon>playListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForms\TakipEdilenForm.resx">
+      <DependentUpon>TakipEdilenForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

@@ -69,7 +69,7 @@
             this.txtPassword.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPassword.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txtPassword.Location = new System.Drawing.Point(59, 105);
+            this.txtPassword.Location = new System.Drawing.Point(75, 104);
             this.txtPassword.Margin = new System.Windows.Forms.Padding(4);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
@@ -154,7 +154,7 @@
             this.txtMail.BorderStyle = System.Windows.Forms.BorderStyle.None;
             this.txtMail.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtMail.ForeColor = System.Drawing.Color.SeaGreen;
-            this.txtMail.Location = new System.Drawing.Point(64, 39);
+            this.txtMail.Location = new System.Drawing.Point(75, 43);
             this.txtMail.Margin = new System.Windows.Forms.Padding(4);
             this.txtMail.Multiline = true;
             this.txtMail.Name = "txtMail";
@@ -185,6 +185,7 @@
             this.Location = new System.Drawing.Point(0, 40);
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AdminGiris";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "AdminGiris";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();

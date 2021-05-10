@@ -9,5 +9,7 @@ namespace SpotiftClone.Database
     public static class Connection
     {
         public static spotifydbEntities spotifydb = new spotifydbEntities();
+
+
     }
 }

@@ -40,3 +40,10 @@ C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.csproj.C
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.exe
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.pdb
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\bin\Debug\FontAwesome.Sharp.dll
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.MenuForms.AnasayfaForm.resources
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.MenuForms.playListForm.resources
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.MenuForms.TakipEdilenForm.resources
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.AdminForm.resources
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.EklemeForm.resources
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.GuncellemeForm.resources
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.SilmeForm.resources
