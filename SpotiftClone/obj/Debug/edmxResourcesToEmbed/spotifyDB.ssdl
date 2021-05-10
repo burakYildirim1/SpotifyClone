@@ -1,0 +1,429 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="spotifydbModel.Store" Provider="MySql.Data.MySqlClient" ProviderManifestToken="5.7" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="admins">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="albums">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="artistID" Type="int" Nullable="false" />
+    <Property Name="typeID" Type="int" Nullable="false" />
+    <Property Name="songCount" Type="int" Nullable="false" />
+    <Property Name="date" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="albumsongs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="albumID" Type="int" Nullable="false" />
+    <Property Name="songID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="artists">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="surname" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="stageName" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="countryID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="artists_of_song">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="artistID" Type="int" Nullable="false" />
+    <Property Name="songID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="countries">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="playlists">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="songTypeID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="song_type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="songs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="artistID" Type="int" Nullable="false" />
+    <Property Name="albumID" Type="int" Nullable="false" />
+    <Property Name="typeID" Type="int" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="date" Type="datetime" Precision="0" Nullable="false" />
+    <Property Name="time" Type="int" Nullable="false" />
+    <Property Name="playedCount" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="subscriber_type">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="type" Type="varchar" MaxLength="45" Nullable="false" />
+  </EntityType>
+  <EntityType Name="user_playlist_songs">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="playlistID" Type="int" Nullable="false" />
+    <Property Name="songID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="users">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="surname" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="mail" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="45" Nullable="false" />
+    <Property Name="subscriberID" Type="int" Nullable="false" />
+    <Property Name="countryID" Type="int" Nullable="false" />
+  </EntityType>
+  <Association Name="admins_ibfk_1">
+    <End Role="users" Type="Self.users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="admins" Type="Self.admins" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="admins">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="albums_ibfk_1">
+    <End Role="artists" Type="Self.artists" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="albums" Type="Self.albums" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="artists">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="albums">
+        <PropertyRef Name="artistID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="albums_ibfk_2">
+    <End Role="song_type" Type="Self.song_type" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="albums" Type="Self.albums" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="song_type">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="albums">
+        <PropertyRef Name="typeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="albumsongs_ibfk_1">
+    <End Role="albums" Type="Self.albums" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="albumsongs" Type="Self.albumsongs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="albums">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="albumsongs">
+        <PropertyRef Name="albumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="albumsongs_ibfk_2">
+    <End Role="songs" Type="Self.songs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="albumsongs" Type="Self.albumsongs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="songs">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="albumsongs">
+        <PropertyRef Name="songID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="artists_ibfk_1">
+    <End Role="countries" Type="Self.countries" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="artists" Type="Self.artists" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="countries">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="artists">
+        <PropertyRef Name="countryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="artists_of_song_ibfk_1">
+    <End Role="artists" Type="Self.artists" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="artists_of_song" Type="Self.artists_of_song" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="artists">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="artists_of_song">
+        <PropertyRef Name="artistID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="artists_of_song_ibfk_2">
+    <End Role="songs" Type="Self.songs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="artists_of_song" Type="Self.artists_of_song" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="songs">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="artists_of_song">
+        <PropertyRef Name="songID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="playlists_ibfk_1">
+    <End Role="song_type" Type="Self.song_type" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="playlists" Type="Self.playlists" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="song_type">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="playlists">
+        <PropertyRef Name="songTypeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="playlists_ibfk_2">
+    <End Role="users" Type="Self.users" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="playlists" Type="Self.playlists" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="playlists">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="songs_ibfk_1">
+    <End Role="song_type" Type="Self.song_type" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="songs" Type="Self.songs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="song_type">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="songs">
+        <PropertyRef Name="typeID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="songs_ibfk_2">
+    <End Role="artists" Type="Self.artists" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="songs" Type="Self.songs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="artists">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="songs">
+        <PropertyRef Name="artistID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="songs_ibfk_3">
+    <End Role="albums" Type="Self.albums" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="songs" Type="Self.songs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="albums">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="songs">
+        <PropertyRef Name="albumID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="user_playlist_songs_ibfk_1">
+    <End Role="playlists" Type="Self.playlists" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="user_playlist_songs" Type="Self.user_playlist_songs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="playlists">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="user_playlist_songs">
+        <PropertyRef Name="playlistID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="user_playlist_songs_ibfk_2">
+    <End Role="songs" Type="Self.songs" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="user_playlist_songs" Type="Self.user_playlist_songs" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="songs">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="user_playlist_songs">
+        <PropertyRef Name="songID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="users_ibfk_1">
+    <End Role="countries" Type="Self.countries" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="countries">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="countryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="users_ibfk_2">
+    <End Role="subscriber_type" Type="Self.subscriber_type" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="users" Type="Self.users" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="subscriber_type">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="users">
+        <PropertyRef Name="subscriberID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="spotifydbModelStoreContainer">
+    <EntitySet Name="admins" EntityType="Self.admins" Schema="spotifydb" store:Type="Tables" />
+    <EntitySet Name="albums" EntityType="Self.albums" Schema="spotifydb" store:Type="Tables" />
+    <EntitySet Name="albumsongs" EntityType="Self.albumsongs" Schema="spotifydb" store:Type="Tables" />
+    <EntitySet Name="artists" EntityType="Self.artists" Schema="spotifydb" store:Type="Tables" />
+    <EntitySet Name="artists_of_song" EntityType="Self.artists_of_song" Schema="spotifydb" store:Type="Tables" />
+    <EntitySet Name="countries" EntityType="Self.countries" Schema="spotifydb" store:Type="Tables" />
+    <EntitySet Name="playlists" EntityType="Self.playlists" Schema="spotifydb" store:Type="Tables" />
+    <EntitySet Name="song_type" EntityType="Self.song_type" Schema="spotifydb" store:Type="Tables" />
+    <EntitySet Name="songs" EntityType="Self.songs" Schema="spotifydb" store:Type="Tables" />
+    <EntitySet Name="subscriber_type" EntityType="Self.subscriber_type" Schema="spotifydb" store:Type="Tables" />
+    <EntitySet Name="user_playlist_songs" EntityType="Self.user_playlist_songs" Schema="spotifydb" store:Type="Tables" />
+    <EntitySet Name="users" EntityType="Self.users" Schema="spotifydb" store:Type="Tables" />
+    <AssociationSet Name="admins_ibfk_1" Association="Self.admins_ibfk_1">
+      <End Role="users" EntitySet="users" />
+      <End Role="admins" EntitySet="admins" />
+    </AssociationSet>
+    <AssociationSet Name="albums_ibfk_1" Association="Self.albums_ibfk_1">
+      <End Role="artists" EntitySet="artists" />
+      <End Role="albums" EntitySet="albums" />
+    </AssociationSet>
+    <AssociationSet Name="albums_ibfk_2" Association="Self.albums_ibfk_2">
+      <End Role="song_type" EntitySet="song_type" />
+      <End Role="albums" EntitySet="albums" />
+    </AssociationSet>
+    <AssociationSet Name="albumsongs_ibfk_1" Association="Self.albumsongs_ibfk_1">
+      <End Role="albums" EntitySet="albums" />
+      <End Role="albumsongs" EntitySet="albumsongs" />
+    </AssociationSet>
+    <AssociationSet Name="albumsongs_ibfk_2" Association="Self.albumsongs_ibfk_2">
+      <End Role="songs" EntitySet="songs" />
+      <End Role="albumsongs" EntitySet="albumsongs" />
+    </AssociationSet>
+    <AssociationSet Name="artists_ibfk_1" Association="Self.artists_ibfk_1">
+      <End Role="countries" EntitySet="countries" />
+      <End Role="artists" EntitySet="artists" />
+    </AssociationSet>
+    <AssociationSet Name="artists_of_song_ibfk_1" Association="Self.artists_of_song_ibfk_1">
+      <End Role="artists" EntitySet="artists" />
+      <End Role="artists_of_song" EntitySet="artists_of_song" />
+    </AssociationSet>
+    <AssociationSet Name="artists_of_song_ibfk_2" Association="Self.artists_of_song_ibfk_2">
+      <End Role="songs" EntitySet="songs" />
+      <End Role="artists_of_song" EntitySet="artists_of_song" />
+    </AssociationSet>
+    <AssociationSet Name="playlists_ibfk_1" Association="Self.playlists_ibfk_1">
+      <End Role="song_type" EntitySet="song_type" />
+      <End Role="playlists" EntitySet="playlists" />
+    </AssociationSet>
+    <AssociationSet Name="playlists_ibfk_2" Association="Self.playlists_ibfk_2">
+      <End Role="users" EntitySet="users" />
+      <End Role="playlists" EntitySet="playlists" />
+    </AssociationSet>
+    <AssociationSet Name="songs_ibfk_1" Association="Self.songs_ibfk_1">
+      <End Role="song_type" EntitySet="song_type" />
+      <End Role="songs" EntitySet="songs" />
+    </AssociationSet>
+    <AssociationSet Name="songs_ibfk_2" Association="Self.songs_ibfk_2">
+      <End Role="artists" EntitySet="artists" />
+      <End Role="songs" EntitySet="songs" />
+    </AssociationSet>
+    <AssociationSet Name="songs_ibfk_3" Association="Self.songs_ibfk_3">
+      <End Role="albums" EntitySet="albums" />
+      <End Role="songs" EntitySet="songs" />
+    </AssociationSet>
+    <AssociationSet Name="user_playlist_songs_ibfk_1" Association="Self.user_playlist_songs_ibfk_1">
+      <End Role="playlists" EntitySet="playlists" />
+      <End Role="user_playlist_songs" EntitySet="user_playlist_songs" />
+    </AssociationSet>
+    <AssociationSet Name="user_playlist_songs_ibfk_2" Association="Self.user_playlist_songs_ibfk_2">
+      <End Role="songs" EntitySet="songs" />
+      <End Role="user_playlist_songs" EntitySet="user_playlist_songs" />
+    </AssociationSet>
+    <AssociationSet Name="users_ibfk_1" Association="Self.users_ibfk_1">
+      <End Role="countries" EntitySet="countries" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="users_ibfk_2" Association="Self.users_ibfk_2">
+      <End Role="subscriber_type" EntitySet="subscriber_type" />
+      <End Role="users" EntitySet="users" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>

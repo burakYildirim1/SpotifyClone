@@ -1,0 +1,123 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="spotifydbModelStoreContainer" CdmEntityContainer="spotifydbEntities">
+    <EntitySetMapping Name="admins">
+      <EntityTypeMapping TypeName="spotifydbModel.admins">
+        <MappingFragment StoreEntitySet="admins">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="albums">
+      <EntityTypeMapping TypeName="spotifydbModel.albums">
+        <MappingFragment StoreEntitySet="albums">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="artistID" ColumnName="artistID" />
+          <ScalarProperty Name="typeID" ColumnName="typeID" />
+          <ScalarProperty Name="songCount" ColumnName="songCount" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="albumsongs">
+      <EntityTypeMapping TypeName="spotifydbModel.albumsongs">
+        <MappingFragment StoreEntitySet="albumsongs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="albumID" ColumnName="albumID" />
+          <ScalarProperty Name="songID" ColumnName="songID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artists">
+      <EntityTypeMapping TypeName="spotifydbModel.artists">
+        <MappingFragment StoreEntitySet="artists">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="stageName" ColumnName="stageName" />
+          <ScalarProperty Name="countryID" ColumnName="countryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="artists_of_song">
+      <EntityTypeMapping TypeName="spotifydbModel.artists_of_song">
+        <MappingFragment StoreEntitySet="artists_of_song">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="artistID" ColumnName="artistID" />
+          <ScalarProperty Name="songID" ColumnName="songID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="countries">
+      <EntityTypeMapping TypeName="spotifydbModel.countries">
+        <MappingFragment StoreEntitySet="countries">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="playlists">
+      <EntityTypeMapping TypeName="spotifydbModel.playlists">
+        <MappingFragment StoreEntitySet="playlists">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="songTypeID" ColumnName="songTypeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="song_type">
+      <EntityTypeMapping TypeName="spotifydbModel.song_type">
+        <MappingFragment StoreEntitySet="song_type">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="songs">
+      <EntityTypeMapping TypeName="spotifydbModel.songs">
+        <MappingFragment StoreEntitySet="songs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="artistID" ColumnName="artistID" />
+          <ScalarProperty Name="albumID" ColumnName="albumID" />
+          <ScalarProperty Name="typeID" ColumnName="typeID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="date" ColumnName="date" />
+          <ScalarProperty Name="time" ColumnName="time" />
+          <ScalarProperty Name="playedCount" ColumnName="playedCount" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="subscriber_type">
+      <EntityTypeMapping TypeName="spotifydbModel.subscriber_type">
+        <MappingFragment StoreEntitySet="subscriber_type">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="type" ColumnName="type" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="user_playlist_songs">
+      <EntityTypeMapping TypeName="spotifydbModel.user_playlist_songs">
+        <MappingFragment StoreEntitySet="user_playlist_songs">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="playlistID" ColumnName="playlistID" />
+          <ScalarProperty Name="songID" ColumnName="songID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="users">
+      <EntityTypeMapping TypeName="spotifydbModel.users">
+        <MappingFragment StoreEntitySet="users">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="surname" ColumnName="surname" />
+          <ScalarProperty Name="mail" ColumnName="mail" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="subscriberID" ColumnName="subscriberID" />
+          <ScalarProperty Name="countryID" ColumnName="countryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
