@@ -47,3 +47,6 @@ C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.Ad
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.EklemeForm.resources
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.GuncellemeForm.resources
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.SilmeForm.resources
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.guncellemeFormlar.albumForm.resources
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.guncellemeFormlar.sarkiForm.resources
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.guncellemeFormlar.sanatciForm.resources

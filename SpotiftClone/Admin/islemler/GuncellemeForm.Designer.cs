@@ -30,10 +30,10 @@ namespace SpotiftClone.Admin.islemler
         private void InitializeComponent()
         {
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.ıconButton1 = new FontAwesome.Sharp.IconButton();
-            this.ıconButton2 = new FontAwesome.Sharp.IconButton();
-            this.ıconButton3 = new FontAwesome.Sharp.IconButton();
-            this.ıconButton4 = new FontAwesome.Sharp.IconButton();
+            this.btnAlbum = new FontAwesome.Sharp.IconButton();
+            this.btnSanatci = new FontAwesome.Sharp.IconButton();
+            this.btnSarki = new FontAwesome.Sharp.IconButton();
+            this.panelGuncel = new System.Windows.Forms.Panel();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -41,63 +41,62 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(150, -2);
+            this.dataGridView1.Location = new System.Drawing.Point(-3, -2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(683, 194);
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(996, 194);
             this.dataGridView1.TabIndex = 0;
+            this.dataGridView1.CellEnter += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellEnter);
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             // 
-            // ıconButton1
+            // btnAlbum
             // 
-            this.ıconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ıconButton1.IconColor = System.Drawing.Color.Black;
-            this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton1.Location = new System.Drawing.Point(12, 255);
-            this.ıconButton1.Name = "ıconButton1";
-            this.ıconButton1.Size = new System.Drawing.Size(231, 48);
-            this.ıconButton1.TabIndex = 1;
-            this.ıconButton1.Text = "Albüm";
-            this.ıconButton1.UseVisualStyleBackColor = true;
-            this.ıconButton1.Click += new System.EventHandler(this.ıconButton1_Click);
+            this.btnAlbum.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnAlbum.IconColor = System.Drawing.Color.Black;
+            this.btnAlbum.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnAlbum.Location = new System.Drawing.Point(12, 255);
+            this.btnAlbum.Name = "btnAlbum";
+            this.btnAlbum.Size = new System.Drawing.Size(231, 48);
+            this.btnAlbum.TabIndex = 1;
+            this.btnAlbum.Text = "Albüm";
+            this.btnAlbum.UseVisualStyleBackColor = true;
+            this.btnAlbum.Click += new System.EventHandler(this.ıconButton1_Click);
             // 
-            // ıconButton2
+            // btnSanatci
             // 
-            this.ıconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ıconButton2.IconColor = System.Drawing.Color.Black;
-            this.ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton2.Location = new System.Drawing.Point(12, 346);
-            this.ıconButton2.Name = "ıconButton2";
-            this.ıconButton2.Size = new System.Drawing.Size(231, 48);
-            this.ıconButton2.TabIndex = 2;
-            this.ıconButton2.Text = "Sanatçı";
-            this.ıconButton2.UseVisualStyleBackColor = true;
-            this.ıconButton2.Click += new System.EventHandler(this.ıconButton2_Click);
+            this.btnSanatci.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnSanatci.IconColor = System.Drawing.Color.Black;
+            this.btnSanatci.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSanatci.Location = new System.Drawing.Point(12, 346);
+            this.btnSanatci.Name = "btnSanatci";
+            this.btnSanatci.Size = new System.Drawing.Size(231, 48);
+            this.btnSanatci.TabIndex = 2;
+            this.btnSanatci.Text = "Sanatçı";
+            this.btnSanatci.UseVisualStyleBackColor = true;
+            this.btnSanatci.Click += new System.EventHandler(this.ıconButton2_Click);
             // 
-            // ıconButton3
+            // btnSarki
             // 
-            this.ıconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ıconButton3.IconColor = System.Drawing.Color.Black;
-            this.ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton3.Location = new System.Drawing.Point(12, 440);
-            this.ıconButton3.Name = "ıconButton3";
-            this.ıconButton3.Size = new System.Drawing.Size(231, 48);
-            this.ıconButton3.TabIndex = 3;
-            this.ıconButton3.Text = "Şarkılar";
-            this.ıconButton3.UseVisualStyleBackColor = true;
-            this.ıconButton3.Click += new System.EventHandler(this.ıconButton3_Click);
+            this.btnSarki.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.btnSarki.IconColor = System.Drawing.Color.Black;
+            this.btnSarki.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnSarki.Location = new System.Drawing.Point(12, 440);
+            this.btnSarki.Name = "btnSarki";
+            this.btnSarki.Size = new System.Drawing.Size(231, 48);
+            this.btnSarki.TabIndex = 3;
+            this.btnSarki.Text = "Şarkılar";
+            this.btnSarki.UseVisualStyleBackColor = true;
+            this.btnSarki.Click += new System.EventHandler(this.ıconButton3_Click);
             // 
-            // ıconButton4
+            // panelGuncel
             // 
-            this.ıconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ıconButton4.IconColor = System.Drawing.Color.Black;
-            this.ıconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton4.Location = new System.Drawing.Point(12, 534);
-            this.ıconButton4.Name = "ıconButton4";
-            this.ıconButton4.Size = new System.Drawing.Size(231, 48);
-            this.ıconButton4.TabIndex = 4;
-            this.ıconButton4.Text = "Güncelle";
-            this.ıconButton4.UseVisualStyleBackColor = true;
+            this.panelGuncel.Location = new System.Drawing.Point(262, 191);
+            this.panelGuncel.Name = "panelGuncel";
+            this.panelGuncel.Size = new System.Drawing.Size(731, 442);
+            this.panelGuncel.TabIndex = 5;
             // 
             // GuncellemeForm
             // 
@@ -105,10 +104,10 @@ namespace SpotiftClone.Admin.islemler
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(993, 631);
-            this.Controls.Add(this.ıconButton4);
-            this.Controls.Add(this.ıconButton3);
-            this.Controls.Add(this.ıconButton2);
-            this.Controls.Add(this.ıconButton1);
+            this.Controls.Add(this.panelGuncel);
+            this.Controls.Add(this.btnSarki);
+            this.Controls.Add(this.btnSanatci);
+            this.Controls.Add(this.btnAlbum);
             this.Controls.Add(this.dataGridView1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "GuncellemeForm";
@@ -121,9 +120,9 @@ namespace SpotiftClone.Admin.islemler
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private FontAwesome.Sharp.IconButton ıconButton1;
-        private FontAwesome.Sharp.IconButton ıconButton2;
-        private FontAwesome.Sharp.IconButton ıconButton3;
-        private FontAwesome.Sharp.IconButton ıconButton4;
+        private FontAwesome.Sharp.IconButton btnAlbum;
+        private FontAwesome.Sharp.IconButton btnSanatci;
+        private FontAwesome.Sharp.IconButton btnSarki;
+        private System.Windows.Forms.Panel panelGuncel;
     }
 }

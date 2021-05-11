@@ -123,6 +123,24 @@
     <Compile Include="Admin\islemler\GuncellemeForm.Designer.cs">
       <DependentUpon>GuncellemeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\islemler\guncellemeFormlar\albumForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\islemler\guncellemeFormlar\albumForm.Designer.cs">
+      <DependentUpon>albumForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\islemler\guncellemeFormlar\sanatciForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\islemler\guncellemeFormlar\sanatciForm.Designer.cs">
+      <DependentUpon>sanatciForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\islemler\guncellemeFormlar\sarkiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\islemler\guncellemeFormlar\sarkiForm.Designer.cs">
+      <DependentUpon>sarkiForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Admin\islemler\SilmeForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -238,6 +256,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\islemler\GuncellemeForm.resx">
       <DependentUpon>GuncellemeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\islemler\guncellemeFormlar\albumForm.resx">
+      <DependentUpon>albumForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\islemler\guncellemeFormlar\sanatciForm.resx">
+      <DependentUpon>sanatciForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\islemler\guncellemeFormlar\sarkiForm.resx">
+      <DependentUpon>sarkiForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\islemler\SilmeForm.resx">
       <DependentUpon>SilmeForm.cs</DependentUpon>
