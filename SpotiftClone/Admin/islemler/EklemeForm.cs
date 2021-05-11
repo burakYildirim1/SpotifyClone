@@ -30,8 +30,8 @@ namespace SpotiftClone.Admin.islemler
             var sanatciAdiList = Connection.spotifydb.artists.ToList();
             foreach (var item in sanatciAdiList)
             {
-                SanatciAdList.Items.Add(item.name+" "+item.surname);
-                sanatciAdlari.Items.Add(item.name + " " + item.surname);
+                SanatciAdList.Items.Add(item.ID+"-"+item.name+" "+item.surname);
+                sanatciAdlari.Items.Add(item.ID + "-" + item.name + " " + item.surname);
             }
 
          //-------------------------------------------------------------
@@ -92,8 +92,12 @@ namespace SpotiftClone.Admin.islemler
         private void btnAlbumEkle_Click(object sender, EventArgs e)
         {
 
-           Connection.spotifydb.albums.Add(new albums() { songCount = Convert.ToInt32(textSarkiSayi.Text), name = textAlbumAd.Text,
-           date = albumTarih.Value, typeID = sarkiTurList.SelectedIndex+1 , artistID = SanatciAdList.SelectedIndex+1});
+            String value = SanatciAdList.Text;
+            String[] arr = value.Split('-');
+            int id = Convert.ToInt32(arr[0]);
+
+            Connection.spotifydb.albums.Add(new albums() { songCount = Convert.ToInt32(textSarkiSayi.Text), name = textAlbumAd.Text,
+           date = albumTarih.Value, typeID = sarkiTurList.SelectedIndex+1 , artistID = id});
            MessageBox.Show("Albüm Eklendi", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
             Connection.spotifydb.SaveChanges();
         }
@@ -106,8 +110,12 @@ namespace SpotiftClone.Admin.islemler
             String[] arr = value.Split('-');
             int id = Convert.ToInt32(arr[0]);
 
+            String value1 = sanatciAdlari.Text;
+            String[] arr1 = value1.Split('-');
+            int id1 = Convert.ToInt32(arr1[0]);
 
-            Connection.spotifydb.songs.Add(new songs() { artistID = sanatciAdlari.SelectedIndex + 1, albumID = id, typeID = sarkiTurleri.SelectedIndex + 1, name = sarkiAdi.Text,
+
+            Connection.spotifydb.songs.Add(new songs() { artistID = id1, albumID = id, typeID = sarkiTurleri.SelectedIndex + 1, name = sarkiAdi.Text,
             date = sarkiTarihi.Value, time = Convert.ToInt32(sarkiSure.Text) });
             Connection.spotifydb.SaveChanges();
             MessageBox.Show("Şarkı Eklendi", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
@@ -116,12 +124,22 @@ namespace SpotiftClone.Admin.islemler
         private void sanatciAdlari_SelectedIndexChanged(object sender, EventArgs e)
         {
             albumAdi.Items.Clear();
-            var albumler = Connection.spotifydb.albums.Where(c => c.artistID == sanatciAdlari.SelectedIndex + 1).ToList();
+
+            String value = sanatciAdlari.Text;
+            String[] arr = value.Split('-');
+            int id = Convert.ToInt32(arr[0]);
+
+            var albumler = Connection.spotifydb.albums.Where(c => c.artistID == id).ToList();
             foreach (var item in albumler)
             {
                 albumAdi.Items.Add(item.ID+"-"+item.name);
                 
             }
+        }
+
+        private void tabPage7_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

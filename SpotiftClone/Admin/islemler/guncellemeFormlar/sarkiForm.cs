@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpotiftClone.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -27,6 +28,16 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             sarkiTarih.Value = sarki.date;
             sarkiSuresi.Text = sarki.time.ToString();
 
+        }
+
+        private void sarkiGuncelle_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(ID.Text);
+            var x = Connection.spotifydb.songs.SingleOrDefault(c => c.ID == id);
+            x.name = sarkiAdi.Text;
+            x.date = sarkiTarih.Value;
+            x.time =Convert.ToInt32(sarkiSuresi.Text);
+            Connection.spotifydb.SaveChanges();
         }
     }
 }

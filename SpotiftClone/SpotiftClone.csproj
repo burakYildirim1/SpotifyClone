@@ -147,6 +147,24 @@
     <Compile Include="Admin\islemler\SilmeForm.Designer.cs">
       <DependentUpon>SilmeForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Admin\islemler\silmeFormlar\albumFormSilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\islemler\silmeFormlar\albumFormSilme.Designer.cs">
+      <DependentUpon>albumFormSilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\islemler\silmeFormlar\sanatciFormSilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\islemler\silmeFormlar\sanatciFormSilme.Designer.cs">
+      <DependentUpon>sanatciFormSilme.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Admin\islemler\silmeFormlar\sarkiFormSilme.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Admin\islemler\silmeFormlar\sarkiFormSilme.Designer.cs">
+      <DependentUpon>sarkiFormSilme.cs</DependentUpon>
+    </Compile>
     <Compile Include="albums.cs">
       <DependentUpon>spotifyDB.tt</DependentUpon>
     </Compile>
@@ -268,6 +286,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Admin\islemler\SilmeForm.resx">
       <DependentUpon>SilmeForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\islemler\silmeFormlar\albumFormSilme.resx">
+      <DependentUpon>albumFormSilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\islemler\silmeFormlar\sanatciFormSilme.resx">
+      <DependentUpon>sanatciFormSilme.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Admin\islemler\silmeFormlar\sarkiFormSilme.resx">
+      <DependentUpon>sarkiFormSilme.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForms\AnasayfaForm.resx">
       <DependentUpon>AnasayfaForm.cs</DependentUpon>

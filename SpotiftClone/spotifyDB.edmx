@@ -350,18 +350,18 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="spotifydbModelStoreContainer">
-          <EntitySet Name="admins" EntityType="Self.admins" Schema="spotifydb" store:Type="Tables" />
-          <EntitySet Name="albums" EntityType="Self.albums" Schema="spotifydb" store:Type="Tables" />
-          <EntitySet Name="albumsongs" EntityType="Self.albumsongs" Schema="spotifydb" store:Type="Tables" />
-          <EntitySet Name="artists" EntityType="Self.artists" Schema="spotifydb" store:Type="Tables" />
-          <EntitySet Name="artists_of_song" EntityType="Self.artists_of_song" Schema="spotifydb" store:Type="Tables" />
-          <EntitySet Name="countries" EntityType="Self.countries" Schema="spotifydb" store:Type="Tables" />
-          <EntitySet Name="playlists" EntityType="Self.playlists" Schema="spotifydb" store:Type="Tables" />
-          <EntitySet Name="song_type" EntityType="Self.song_type" Schema="spotifydb" store:Type="Tables" />
-          <EntitySet Name="songs" EntityType="Self.songs" Schema="spotifydb" store:Type="Tables" />
-          <EntitySet Name="subscriber_type" EntityType="Self.subscriber_type" Schema="spotifydb" store:Type="Tables" />
-          <EntitySet Name="user_playlist_songs" EntityType="Self.user_playlist_songs" Schema="spotifydb" store:Type="Tables" />
-          <EntitySet Name="users" EntityType="Self.users" Schema="spotifydb" store:Type="Tables" />
+          <EntitySet Name="admins" EntityType="Self.admins" Schema="" store:Type="Tables" />
+          <EntitySet Name="albums" EntityType="Self.albums" Schema="" store:Type="Tables" />
+          <EntitySet Name="albumsongs" EntityType="Self.albumsongs" Schema="" store:Type="Tables" />
+          <EntitySet Name="artists" EntityType="Self.artists" Schema="" store:Type="Tables" />
+          <EntitySet Name="artists_of_song" EntityType="Self.artists_of_song" Schema="" store:Type="Tables" />
+          <EntitySet Name="countries" EntityType="Self.countries" Schema="" store:Type="Tables" />
+          <EntitySet Name="playlists" EntityType="Self.playlists" Schema="" store:Type="Tables" />
+          <EntitySet Name="song_type" EntityType="Self.song_type" Schema="" store:Type="Tables" />
+          <EntitySet Name="songs" EntityType="Self.songs" Schema="" store:Type="Tables" />
+          <EntitySet Name="subscriber_type" EntityType="Self.subscriber_type" Schema="" store:Type="Tables" />
+          <EntitySet Name="user_playlist_songs" EntityType="Self.user_playlist_songs" Schema="" store:Type="Tables" />
+          <EntitySet Name="users" EntityType="Self.users" Schema="" store:Type="Tables" />
           <AssociationSet Name="admins_ibfk_1" Association="Self.admins_ibfk_1">
             <End Role="users" EntitySet="users" />
             <End Role="admins" EntitySet="admins" />

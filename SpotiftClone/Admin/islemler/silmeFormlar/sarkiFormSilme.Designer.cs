@@ -1,7 +1,7 @@
 ﻿
-namespace SpotiftClone.Admin.islemler
+namespace SpotiftClone.Admin.islemler.silmeFormlar
 {
-    partial class SilmeForm
+    partial class sarkiFormSilme
     {
         /// <summary>
         /// Required designer variable.
@@ -41,10 +41,10 @@ namespace SpotiftClone.Admin.islemler
             this.btnSarki.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSarki.IconColor = System.Drawing.Color.Black;
             this.btnSarki.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSarki.Location = new System.Drawing.Point(22, 483);
+            this.btnSarki.Location = new System.Drawing.Point(36, 461);
             this.btnSarki.Name = "btnSarki";
             this.btnSarki.Size = new System.Drawing.Size(231, 48);
-            this.btnSarki.TabIndex = 6;
+            this.btnSarki.TabIndex = 9;
             this.btnSarki.Text = "Şarkılar";
             this.btnSarki.UseVisualStyleBackColor = true;
             // 
@@ -53,10 +53,10 @@ namespace SpotiftClone.Admin.islemler
             this.btnSanatci.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnSanatci.IconColor = System.Drawing.Color.Black;
             this.btnSanatci.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSanatci.Location = new System.Drawing.Point(22, 389);
+            this.btnSanatci.Location = new System.Drawing.Point(36, 367);
             this.btnSanatci.Name = "btnSanatci";
             this.btnSanatci.Size = new System.Drawing.Size(231, 48);
-            this.btnSanatci.TabIndex = 5;
+            this.btnSanatci.TabIndex = 8;
             this.btnSanatci.Text = "Sanatçı";
             this.btnSanatci.UseVisualStyleBackColor = true;
             // 
@@ -65,43 +65,45 @@ namespace SpotiftClone.Admin.islemler
             this.btnAlbum.IconChar = FontAwesome.Sharp.IconChar.None;
             this.btnAlbum.IconColor = System.Drawing.Color.Black;
             this.btnAlbum.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAlbum.Location = new System.Drawing.Point(22, 298);
+            this.btnAlbum.Location = new System.Drawing.Point(36, 276);
             this.btnAlbum.Name = "btnAlbum";
             this.btnAlbum.Size = new System.Drawing.Size(231, 48);
-            this.btnAlbum.TabIndex = 4;
+            this.btnAlbum.TabIndex = 7;
             this.btnAlbum.Text = "Albüm";
             this.btnAlbum.UseVisualStyleBackColor = true;
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(-1, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(0, -2);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(994, 232);
-            this.dataGridView1.TabIndex = 7;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dataGridView1.Size = new System.Drawing.Size(996, 194);
+            this.dataGridView1.TabIndex = 10;
             // 
-            // SilmeForm
+            // sarkiFormSilme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(993, 631);
+            this.ClientSize = new System.Drawing.Size(975, 584);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnSarki);
             this.Controls.Add(this.btnSanatci);
             this.Controls.Add(this.btnAlbum);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "SilmeForm";
-            this.Text = "SilmeForm";
+            this.Name = "sarkiFormSilme";
+            this.Text = "sarkiFormSilme";
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
 
         #endregion
-
         private FontAwesome.Sharp.IconButton btnSarki;
         private FontAwesome.Sharp.IconButton btnSanatci;
         private FontAwesome.Sharp.IconButton btnAlbum;

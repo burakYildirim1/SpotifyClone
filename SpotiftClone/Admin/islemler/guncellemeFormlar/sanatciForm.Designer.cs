@@ -51,6 +51,7 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             this.sanatciGuncelle.TabIndex = 18;
             this.sanatciGuncelle.Text = "Güncelle";
             this.sanatciGuncelle.UseVisualStyleBackColor = true;
+            this.sanatciGuncelle.Click += new System.EventHandler(this.sanatciGuncelle_Click);
             // 
             // sahneAdi
             // 

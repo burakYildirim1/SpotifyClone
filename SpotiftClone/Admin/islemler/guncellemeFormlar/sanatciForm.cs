@@ -1,4 +1,5 @@
-﻿using System;
+﻿using SpotiftClone.Database;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -26,6 +27,16 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             sanatciSoyad.Text = sanatci.surname;
             sahneAdi.Text = sanatci.stageName;
 
+        }
+
+        private void sanatciGuncelle_Click(object sender, EventArgs e)
+        {
+            int id = Convert.ToInt32(ID.Text);
+            var x = Connection.spotifydb.artists.SingleOrDefault(c => c.ID == id);
+            x.name = sanatciAdi.Text;
+            x.surname = sanatciSoyad.Text;
+            x.stageName = sahneAdi.Text;
+            Connection.spotifydb.SaveChanges();
         }
     }
 }

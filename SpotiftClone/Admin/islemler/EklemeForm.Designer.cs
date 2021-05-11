@@ -31,47 +31,47 @@ namespace SpotiftClone.Admin.islemler
         {
             this.tabControl2 = new System.Windows.Forms.TabControl();
             this.tabPage5 = new System.Windows.Forms.TabPage();
-            this.tabPage6 = new System.Windows.Forms.TabPage();
-            this.tabPage7 = new System.Windows.Forms.TabPage();
-            this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.ulkeEkle = new System.Windows.Forms.Button();
-            this.ulkeListe = new System.Windows.Forms.ComboBox();
             this.ulkeAdi = new System.Windows.Forms.TextBox();
-            this.ulkeSec = new System.Windows.Forms.ComboBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.textSAdi = new System.Windows.Forms.TextBox();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.textSSoyad = new System.Windows.Forms.TextBox();
+            this.ulkeListe = new System.Windows.Forms.ComboBox();
+            this.ulkeEkle = new System.Windows.Forms.Button();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.tabPage6 = new System.Windows.Forms.TabPage();
+            this.btnKaydet = new System.Windows.Forms.Button();
             this.label8 = new System.Windows.Forms.Label();
             this.textSSahneAd = new System.Windows.Forms.TextBox();
-            this.btnKaydet = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.textSSoyad = new System.Windows.Forms.TextBox();
+            this.label6 = new System.Windows.Forms.Label();
+            this.textSAdi = new System.Windows.Forms.TextBox();
+            this.ulkeSec = new System.Windows.Forms.ComboBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tabPage7 = new System.Windows.Forms.TabPage();
+            this.btnAlbumEkle = new System.Windows.Forms.Button();
+            this.albumTarih = new System.Windows.Forms.DateTimePicker();
+            this.label13 = new System.Windows.Forms.Label();
+            this.label12 = new System.Windows.Forms.Label();
+            this.textSarkiSayi = new System.Windows.Forms.TextBox();
+            this.SanatciAdList = new System.Windows.Forms.ComboBox();
             this.label9 = new System.Windows.Forms.Label();
             this.textAlbumAd = new System.Windows.Forms.TextBox();
             this.label10 = new System.Windows.Forms.Label();
             this.sarkiTurList = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
-            this.SanatciAdList = new System.Windows.Forms.ComboBox();
-            this.label12 = new System.Windows.Forms.Label();
-            this.textSarkiSayi = new System.Windows.Forms.TextBox();
-            this.label13 = new System.Windows.Forms.Label();
-            this.albumTarih = new System.Windows.Forms.DateTimePicker();
-            this.btnAlbumEkle = new System.Windows.Forms.Button();
-            this.sanatciAdlari = new System.Windows.Forms.ComboBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.sarkiTurleri = new System.Windows.Forms.ComboBox();
-            this.label15 = new System.Windows.Forms.Label();
-            this.albumAdi = new System.Windows.Forms.ComboBox();
-            this.label16 = new System.Windows.Forms.Label();
-            this.label17 = new System.Windows.Forms.Label();
-            this.sarkiAdi = new System.Windows.Forms.TextBox();
-            this.sarkiTarihi = new System.Windows.Forms.DateTimePicker();
-            this.label18 = new System.Windows.Forms.Label();
+            this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.button1 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.sarkiSure = new System.Windows.Forms.TextBox();
-            this.button1 = new System.Windows.Forms.Button();
+            this.sarkiTarihi = new System.Windows.Forms.DateTimePicker();
+            this.label18 = new System.Windows.Forms.Label();
+            this.label17 = new System.Windows.Forms.Label();
+            this.sarkiAdi = new System.Windows.Forms.TextBox();
+            this.albumAdi = new System.Windows.Forms.ComboBox();
+            this.label16 = new System.Windows.Forms.Label();
+            this.sarkiTurleri = new System.Windows.Forms.ComboBox();
+            this.label15 = new System.Windows.Forms.Label();
+            this.sanatciAdlari = new System.Windows.Forms.ComboBox();
+            this.label14 = new System.Windows.Forms.Label();
             this.tabControl2.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -110,6 +110,53 @@ namespace SpotiftClone.Admin.islemler
             this.tabPage5.Text = "Ülke";
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
             // 
+            // ulkeAdi
+            // 
+            this.ulkeAdi.Location = new System.Drawing.Point(381, 162);
+            this.ulkeAdi.Name = "ulkeAdi";
+            this.ulkeAdi.Size = new System.Drawing.Size(196, 27);
+            this.ulkeAdi.TabIndex = 4;
+            // 
+            // ulkeListe
+            // 
+            this.ulkeListe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.ulkeListe.FormattingEnabled = true;
+            this.ulkeListe.Location = new System.Drawing.Point(381, 63);
+            this.ulkeListe.Name = "ulkeListe";
+            this.ulkeListe.Size = new System.Drawing.Size(196, 28);
+            this.ulkeListe.TabIndex = 3;
+            this.ulkeListe.SelectedIndexChanged += new System.EventHandler(this.ulkeListe_SelectedIndexChanged);
+            // 
+            // ulkeEkle
+            // 
+            this.ulkeEkle.Location = new System.Drawing.Point(399, 239);
+            this.ulkeEkle.Name = "ulkeEkle";
+            this.ulkeEkle.Size = new System.Drawing.Size(158, 36);
+            this.ulkeEkle.TabIndex = 2;
+            this.ulkeEkle.Text = "Ekle";
+            this.ulkeEkle.UseVisualStyleBackColor = true;
+            this.ulkeEkle.Click += new System.EventHandler(this.ulkeEkle_Click);
+            // 
+            // label4
+            // 
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label4.ForeColor = System.Drawing.Color.White;
+            this.label4.Location = new System.Drawing.Point(38, 158);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(306, 51);
+            this.label4.TabIndex = 1;
+            this.label4.Text = "Ülke Listede Yoksa Giriniz : ";
+            // 
+            // label3
+            // 
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.Color.White;
+            this.label3.Location = new System.Drawing.Point(242, 63);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(102, 51);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Ülkeler :";
+            // 
             // tabPage6
             // 
             this.tabPage6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
@@ -125,99 +172,71 @@ namespace SpotiftClone.Admin.islemler
             this.tabPage6.Location = new System.Drawing.Point(4, 39);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(955, 857);
+            this.tabPage6.Size = new System.Drawing.Size(1290, 710);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Sanatçı";
             this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
             // 
-            // tabPage7
+            // btnKaydet
             // 
-            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPage7.Controls.Add(this.btnAlbumEkle);
-            this.tabPage7.Controls.Add(this.albumTarih);
-            this.tabPage7.Controls.Add(this.label13);
-            this.tabPage7.Controls.Add(this.label12);
-            this.tabPage7.Controls.Add(this.textSarkiSayi);
-            this.tabPage7.Controls.Add(this.SanatciAdList);
-            this.tabPage7.Controls.Add(this.label9);
-            this.tabPage7.Controls.Add(this.textAlbumAd);
-            this.tabPage7.Controls.Add(this.label10);
-            this.tabPage7.Controls.Add(this.sarkiTurList);
-            this.tabPage7.Controls.Add(this.label11);
-            this.tabPage7.Location = new System.Drawing.Point(4, 39);
-            this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(955, 857);
-            this.tabPage7.TabIndex = 2;
-            this.tabPage7.Text = "Albüm";
+            this.btnKaydet.Location = new System.Drawing.Point(292, 411);
+            this.btnKaydet.Name = "btnKaydet";
+            this.btnKaydet.Size = new System.Drawing.Size(153, 35);
+            this.btnKaydet.TabIndex = 12;
+            this.btnKaydet.Text = "Kaydet";
+            this.btnKaydet.UseVisualStyleBackColor = true;
+            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
             // 
-            // tabPage8
+            // label8
             // 
-            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPage8.Controls.Add(this.button1);
-            this.tabPage8.Controls.Add(this.label19);
-            this.tabPage8.Controls.Add(this.sarkiSure);
-            this.tabPage8.Controls.Add(this.sarkiTarihi);
-            this.tabPage8.Controls.Add(this.label18);
-            this.tabPage8.Controls.Add(this.label17);
-            this.tabPage8.Controls.Add(this.sarkiAdi);
-            this.tabPage8.Controls.Add(this.albumAdi);
-            this.tabPage8.Controls.Add(this.label16);
-            this.tabPage8.Controls.Add(this.sarkiTurleri);
-            this.tabPage8.Controls.Add(this.label15);
-            this.tabPage8.Controls.Add(this.sanatciAdlari);
-            this.tabPage8.Controls.Add(this.label14);
-            this.tabPage8.Location = new System.Drawing.Point(4, 39);
-            this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(955, 857);
-            this.tabPage8.TabIndex = 3;
-            this.tabPage8.Text = "Şarkı";
+            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label8.ForeColor = System.Drawing.Color.White;
+            this.label8.Location = new System.Drawing.Point(115, 336);
+            this.label8.Name = "label8";
+            this.label8.Size = new System.Drawing.Size(136, 51);
+            this.label8.TabIndex = 11;
+            this.label8.Text = "Sahne Adı :";
             // 
-            // label3
+            // textSSahneAd
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(242, 63);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 51);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Ülkeler :";
+            this.textSSahneAd.Location = new System.Drawing.Point(272, 344);
+            this.textSSahneAd.Name = "textSSahneAd";
+            this.textSSahneAd.Size = new System.Drawing.Size(196, 27);
+            this.textSSahneAd.TabIndex = 10;
             // 
-            // label4
+            // label7
             // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(38, 158);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(306, 51);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Ülke Listede Yoksa Giriniz : ";
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label7.ForeColor = System.Drawing.Color.White;
+            this.label7.Location = new System.Drawing.Point(67, 247);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(184, 51);
+            this.label7.TabIndex = 9;
+            this.label7.Text = "Sanatçı Soyadı :";
             // 
-            // ulkeEkle
+            // textSSoyad
             // 
-            this.ulkeEkle.Location = new System.Drawing.Point(399, 239);
-            this.ulkeEkle.Name = "ulkeEkle";
-            this.ulkeEkle.Size = new System.Drawing.Size(158, 36);
-            this.ulkeEkle.TabIndex = 2;
-            this.ulkeEkle.Text = "Ekle";
-            this.ulkeEkle.UseVisualStyleBackColor = true;
-            this.ulkeEkle.Click += new System.EventHandler(this.ulkeEkle_Click);
+            this.textSSoyad.Location = new System.Drawing.Point(272, 255);
+            this.textSSoyad.Name = "textSSoyad";
+            this.textSSoyad.Size = new System.Drawing.Size(196, 27);
+            this.textSSoyad.TabIndex = 8;
             // 
-            // ulkeListe
+            // label6
             // 
-            this.ulkeListe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.ulkeListe.FormattingEnabled = true;
-            this.ulkeListe.Location = new System.Drawing.Point(381, 63);
-            this.ulkeListe.Name = "ulkeListe";
-            this.ulkeListe.Size = new System.Drawing.Size(196, 28);
-            this.ulkeListe.TabIndex = 3;
-            this.ulkeListe.SelectedIndexChanged += new System.EventHandler(this.ulkeListe_SelectedIndexChanged);
+            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label6.ForeColor = System.Drawing.Color.White;
+            this.label6.Location = new System.Drawing.Point(105, 165);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(146, 51);
+            this.label6.TabIndex = 7;
+            this.label6.Text = "Sanatçı Adı :";
             // 
-            // ulkeAdi
+            // textSAdi
             // 
-            this.ulkeAdi.Location = new System.Drawing.Point(381, 162);
-            this.ulkeAdi.Name = "ulkeAdi";
-            this.ulkeAdi.Size = new System.Drawing.Size(196, 27);
-            this.ulkeAdi.TabIndex = 4;
+            this.textSAdi.Location = new System.Drawing.Point(272, 173);
+            this.textSAdi.Name = "textSAdi";
+            this.textSAdi.Size = new System.Drawing.Size(196, 27);
+            this.textSAdi.TabIndex = 6;
             // 
             // ulkeSec
             // 
@@ -238,66 +257,81 @@ namespace SpotiftClone.Admin.islemler
             this.label5.TabIndex = 4;
             this.label5.Text = "Ülke Seçiniz :";
             // 
-            // textSAdi
+            // tabPage7
             // 
-            this.textSAdi.Location = new System.Drawing.Point(272, 173);
-            this.textSAdi.Name = "textSAdi";
-            this.textSAdi.Size = new System.Drawing.Size(196, 27);
-            this.textSAdi.TabIndex = 6;
+            this.tabPage7.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPage7.Controls.Add(this.btnAlbumEkle);
+            this.tabPage7.Controls.Add(this.albumTarih);
+            this.tabPage7.Controls.Add(this.label13);
+            this.tabPage7.Controls.Add(this.label12);
+            this.tabPage7.Controls.Add(this.textSarkiSayi);
+            this.tabPage7.Controls.Add(this.SanatciAdList);
+            this.tabPage7.Controls.Add(this.label9);
+            this.tabPage7.Controls.Add(this.textAlbumAd);
+            this.tabPage7.Controls.Add(this.label10);
+            this.tabPage7.Controls.Add(this.sarkiTurList);
+            this.tabPage7.Controls.Add(this.label11);
+            this.tabPage7.Location = new System.Drawing.Point(4, 39);
+            this.tabPage7.Name = "tabPage7";
+            this.tabPage7.Size = new System.Drawing.Size(1290, 710);
+            this.tabPage7.TabIndex = 2;
+            this.tabPage7.Text = "Albüm";
+            this.tabPage7.Click += new System.EventHandler(this.tabPage7_Click);
             // 
-            // label6
+            // btnAlbumEkle
             // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(105, 165);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 51);
-            this.label6.TabIndex = 7;
-            this.label6.Text = "Sanatçı Adı :";
+            this.btnAlbumEkle.Location = new System.Drawing.Point(399, 441);
+            this.btnAlbumEkle.Name = "btnAlbumEkle";
+            this.btnAlbumEkle.Size = new System.Drawing.Size(130, 39);
+            this.btnAlbumEkle.TabIndex = 22;
+            this.btnAlbumEkle.Text = "Ekle";
+            this.btnAlbumEkle.UseVisualStyleBackColor = true;
+            this.btnAlbumEkle.Click += new System.EventHandler(this.btnAlbumEkle_Click);
             // 
-            // label7
+            // albumTarih
             // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(67, 247);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(184, 51);
-            this.label7.TabIndex = 9;
-            this.label7.Text = "Sanatçı Soyadı :";
+            this.albumTarih.CustomFormat = "yyyy-MM-dd";
+            this.albumTarih.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.albumTarih.Location = new System.Drawing.Point(359, 380);
+            this.albumTarih.Name = "albumTarih";
+            this.albumTarih.Size = new System.Drawing.Size(214, 27);
+            this.albumTarih.TabIndex = 21;
             // 
-            // textSSoyad
+            // label13
             // 
-            this.textSSoyad.Location = new System.Drawing.Point(272, 255);
-            this.textSSoyad.Name = "textSSoyad";
-            this.textSSoyad.Size = new System.Drawing.Size(196, 27);
-            this.textSSoyad.TabIndex = 8;
+            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label13.ForeColor = System.Drawing.Color.White;
+            this.label13.Location = new System.Drawing.Point(158, 378);
+            this.label13.Name = "label13";
+            this.label13.Size = new System.Drawing.Size(136, 51);
+            this.label13.TabIndex = 20;
+            this.label13.Text = "Çıkış tarihi :";
             // 
-            // label8
+            // label12
             // 
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(115, 336);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 51);
-            this.label8.TabIndex = 11;
-            this.label8.Text = "Sahne Adı :";
+            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label12.ForeColor = System.Drawing.Color.White;
+            this.label12.Location = new System.Drawing.Point(25, 304);
+            this.label12.Name = "label12";
+            this.label12.Size = new System.Drawing.Size(269, 51);
+            this.label12.TabIndex = 18;
+            this.label12.Text = "Albümdeki şarkı sayısı  :";
             // 
-            // textSSahneAd
+            // textSarkiSayi
             // 
-            this.textSSahneAd.Location = new System.Drawing.Point(272, 344);
-            this.textSSahneAd.Name = "textSSahneAd";
-            this.textSSahneAd.Size = new System.Drawing.Size(196, 27);
-            this.textSSahneAd.TabIndex = 10;
+            this.textSarkiSayi.Location = new System.Drawing.Point(363, 312);
+            this.textSarkiSayi.Name = "textSarkiSayi";
+            this.textSarkiSayi.Size = new System.Drawing.Size(210, 27);
+            this.textSarkiSayi.TabIndex = 17;
             // 
-            // btnKaydet
+            // SanatciAdList
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(292, 411);
-            this.btnKaydet.Name = "btnKaydet";
-            this.btnKaydet.Size = new System.Drawing.Size(153, 35);
-            this.btnKaydet.TabIndex = 12;
-            this.btnKaydet.Text = "Kaydet";
-            this.btnKaydet.UseVisualStyleBackColor = true;
-            this.btnKaydet.Click += new System.EventHandler(this.btnKaydet_Click);
+            this.SanatciAdList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.SanatciAdList.FormattingEnabled = true;
+            this.SanatciAdList.Location = new System.Drawing.Point(363, 156);
+            this.SanatciAdList.Name = "SanatciAdList";
+            this.SanatciAdList.Size = new System.Drawing.Size(210, 28);
+            this.SanatciAdList.TabIndex = 16;
             // 
             // label9
             // 
@@ -345,135 +379,54 @@ namespace SpotiftClone.Admin.islemler
             this.label11.TabIndex = 10;
             this.label11.Text = "Şarkı türü :";
             // 
-            // SanatciAdList
+            // tabPage8
             // 
-            this.SanatciAdList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.SanatciAdList.FormattingEnabled = true;
-            this.SanatciAdList.Location = new System.Drawing.Point(363, 156);
-            this.SanatciAdList.Name = "SanatciAdList";
-            this.SanatciAdList.Size = new System.Drawing.Size(210, 28);
-            this.SanatciAdList.TabIndex = 16;
+            this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPage8.Controls.Add(this.button1);
+            this.tabPage8.Controls.Add(this.label19);
+            this.tabPage8.Controls.Add(this.sarkiSure);
+            this.tabPage8.Controls.Add(this.sarkiTarihi);
+            this.tabPage8.Controls.Add(this.label18);
+            this.tabPage8.Controls.Add(this.label17);
+            this.tabPage8.Controls.Add(this.sarkiAdi);
+            this.tabPage8.Controls.Add(this.albumAdi);
+            this.tabPage8.Controls.Add(this.label16);
+            this.tabPage8.Controls.Add(this.sarkiTurleri);
+            this.tabPage8.Controls.Add(this.label15);
+            this.tabPage8.Controls.Add(this.sanatciAdlari);
+            this.tabPage8.Controls.Add(this.label14);
+            this.tabPage8.Location = new System.Drawing.Point(4, 39);
+            this.tabPage8.Name = "tabPage8";
+            this.tabPage8.Size = new System.Drawing.Size(1290, 710);
+            this.tabPage8.TabIndex = 3;
+            this.tabPage8.Text = "Şarkı";
             // 
-            // label12
+            // button1
             // 
-            this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(25, 304);
-            this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(269, 51);
-            this.label12.TabIndex = 18;
-            this.label12.Text = "Albümdeki şarkı sayısı  :";
+            this.button1.Location = new System.Drawing.Point(454, 319);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(122, 34);
+            this.button1.TabIndex = 29;
+            this.button1.Text = "Ekle";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // textSarkiSayi
+            // label19
             // 
-            this.textSarkiSayi.Location = new System.Drawing.Point(363, 312);
-            this.textSarkiSayi.Name = "textSarkiSayi";
-            this.textSarkiSayi.Size = new System.Drawing.Size(210, 27);
-            this.textSarkiSayi.TabIndex = 17;
+            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label19.ForeColor = System.Drawing.Color.White;
+            this.label19.Location = new System.Drawing.Point(471, 223);
+            this.label19.Name = "label19";
+            this.label19.Size = new System.Drawing.Size(167, 51);
+            this.label19.TabIndex = 28;
+            this.label19.Text = "Süre (saniye) :";
             // 
-            // label13
+            // sarkiSure
             // 
-            this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(158, 378);
-            this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(136, 51);
-            this.label13.TabIndex = 20;
-            this.label13.Text = "Çıkış tarihi :";
-            // 
-            // albumTarih
-            // 
-            this.albumTarih.CustomFormat = "yyyy-MM-dd";
-            this.albumTarih.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.albumTarih.Location = new System.Drawing.Point(359, 380);
-            this.albumTarih.Name = "albumTarih";
-            this.albumTarih.Size = new System.Drawing.Size(214, 27);
-            this.albumTarih.TabIndex = 21;
-            // 
-            // btnAlbumEkle
-            // 
-            this.btnAlbumEkle.Location = new System.Drawing.Point(399, 441);
-            this.btnAlbumEkle.Name = "btnAlbumEkle";
-            this.btnAlbumEkle.Size = new System.Drawing.Size(130, 39);
-            this.btnAlbumEkle.TabIndex = 22;
-            this.btnAlbumEkle.Text = "Ekle";
-            this.btnAlbumEkle.UseVisualStyleBackColor = true;
-            this.btnAlbumEkle.Click += new System.EventHandler(this.btnAlbumEkle_Click);
-            // 
-            // sanatciAdlari
-            // 
-            this.sanatciAdlari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sanatciAdlari.FormattingEnabled = true;
-            this.sanatciAdlari.Location = new System.Drawing.Point(214, 74);
-            this.sanatciAdlari.Name = "sanatciAdlari";
-            this.sanatciAdlari.Size = new System.Drawing.Size(214, 28);
-            this.sanatciAdlari.TabIndex = 18;
-            this.sanatciAdlari.SelectedIndexChanged += new System.EventHandler(this.sanatciAdlari_SelectedIndexChanged);
-            // 
-            // label14
-            // 
-            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(45, 70);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(145, 51);
-            this.label14.TabIndex = 17;
-            this.label14.Text = "Sanatçı Adı :";
-            // 
-            // sarkiTurleri
-            // 
-            this.sarkiTurleri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.sarkiTurleri.FormattingEnabled = true;
-            this.sarkiTurleri.Location = new System.Drawing.Point(214, 148);
-            this.sarkiTurleri.Name = "sarkiTurleri";
-            this.sarkiTurleri.Size = new System.Drawing.Size(214, 28);
-            this.sarkiTurleri.TabIndex = 20;
-            // 
-            // label15
-            // 
-            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(64, 144);
-            this.label15.Name = "label15";
-            this.label15.Size = new System.Drawing.Size(126, 51);
-            this.label15.TabIndex = 19;
-            this.label15.Text = "Şarkı türü :";
-            // 
-            // albumAdi
-            // 
-            this.albumAdi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.albumAdi.FormattingEnabled = true;
-            this.albumAdi.Location = new System.Drawing.Point(214, 223);
-            this.albumAdi.Name = "albumAdi";
-            this.albumAdi.Size = new System.Drawing.Size(214, 28);
-            this.albumAdi.TabIndex = 22;
-            // 
-            // label16
-            // 
-            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(56, 211);
-            this.label16.Name = "label16";
-            this.label16.Size = new System.Drawing.Size(134, 51);
-            this.label16.TabIndex = 21;
-            this.label16.Text = "Albüm Adı :";
-            // 
-            // label17
-            // 
-            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(517, 70);
-            this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(121, 51);
-            this.label17.TabIndex = 24;
-            this.label17.Text = "Şarkı Adı :";
-            // 
-            // sarkiAdi
-            // 
-            this.sarkiAdi.Location = new System.Drawing.Point(662, 74);
-            this.sarkiAdi.Name = "sarkiAdi";
-            this.sarkiAdi.Size = new System.Drawing.Size(214, 27);
-            this.sarkiAdi.TabIndex = 23;
+            this.sarkiSure.Location = new System.Drawing.Point(662, 227);
+            this.sarkiSure.Name = "sarkiSure";
+            this.sarkiSure.Size = new System.Drawing.Size(214, 27);
+            this.sarkiSure.TabIndex = 27;
             // 
             // sarkiTarihi
             // 
@@ -494,32 +447,80 @@ namespace SpotiftClone.Admin.islemler
             this.label18.TabIndex = 25;
             this.label18.Text = "Yayın tarihi :";
             // 
-            // label19
+            // label17
             // 
-            this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(471, 223);
-            this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(167, 51);
-            this.label19.TabIndex = 28;
-            this.label19.Text = "Süre (saniye) :";
+            this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label17.ForeColor = System.Drawing.Color.White;
+            this.label17.Location = new System.Drawing.Point(517, 70);
+            this.label17.Name = "label17";
+            this.label17.Size = new System.Drawing.Size(121, 51);
+            this.label17.TabIndex = 24;
+            this.label17.Text = "Şarkı Adı :";
             // 
-            // sarkiSure
+            // sarkiAdi
             // 
-            this.sarkiSure.Location = new System.Drawing.Point(662, 227);
-            this.sarkiSure.Name = "sarkiSure";
-            this.sarkiSure.Size = new System.Drawing.Size(214, 27);
-            this.sarkiSure.TabIndex = 27;
+            this.sarkiAdi.Location = new System.Drawing.Point(662, 74);
+            this.sarkiAdi.Name = "sarkiAdi";
+            this.sarkiAdi.Size = new System.Drawing.Size(214, 27);
+            this.sarkiAdi.TabIndex = 23;
             // 
-            // button1
+            // albumAdi
             // 
-            this.button1.Location = new System.Drawing.Point(454, 319);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(122, 34);
-            this.button1.TabIndex = 29;
-            this.button1.Text = "Ekle";
-            this.button1.UseVisualStyleBackColor = true;
-            this.button1.Click += new System.EventHandler(this.button1_Click);
+            this.albumAdi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.albumAdi.FormattingEnabled = true;
+            this.albumAdi.Location = new System.Drawing.Point(214, 223);
+            this.albumAdi.Name = "albumAdi";
+            this.albumAdi.Size = new System.Drawing.Size(214, 28);
+            this.albumAdi.TabIndex = 22;
+            // 
+            // label16
+            // 
+            this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label16.ForeColor = System.Drawing.Color.White;
+            this.label16.Location = new System.Drawing.Point(56, 211);
+            this.label16.Name = "label16";
+            this.label16.Size = new System.Drawing.Size(134, 51);
+            this.label16.TabIndex = 21;
+            this.label16.Text = "Albüm Adı :";
+            // 
+            // sarkiTurleri
+            // 
+            this.sarkiTurleri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sarkiTurleri.FormattingEnabled = true;
+            this.sarkiTurleri.Location = new System.Drawing.Point(214, 148);
+            this.sarkiTurleri.Name = "sarkiTurleri";
+            this.sarkiTurleri.Size = new System.Drawing.Size(214, 28);
+            this.sarkiTurleri.TabIndex = 20;
+            // 
+            // label15
+            // 
+            this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label15.ForeColor = System.Drawing.Color.White;
+            this.label15.Location = new System.Drawing.Point(64, 144);
+            this.label15.Name = "label15";
+            this.label15.Size = new System.Drawing.Size(126, 51);
+            this.label15.TabIndex = 19;
+            this.label15.Text = "Şarkı türü :";
+            // 
+            // sanatciAdlari
+            // 
+            this.sanatciAdlari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.sanatciAdlari.FormattingEnabled = true;
+            this.sanatciAdlari.Location = new System.Drawing.Point(214, 74);
+            this.sanatciAdlari.Name = "sanatciAdlari";
+            this.sanatciAdlari.Size = new System.Drawing.Size(214, 28);
+            this.sanatciAdlari.TabIndex = 18;
+            this.sanatciAdlari.SelectedIndexChanged += new System.EventHandler(this.sanatciAdlari_SelectedIndexChanged);
+            // 
+            // label14
+            // 
+            this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label14.ForeColor = System.Drawing.Color.White;
+            this.label14.Location = new System.Drawing.Point(45, 70);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(145, 51);
+            this.label14.TabIndex = 17;
+            this.label14.Text = "Sanatçı Adı :";
             // 
             // EklemeForm
             // 

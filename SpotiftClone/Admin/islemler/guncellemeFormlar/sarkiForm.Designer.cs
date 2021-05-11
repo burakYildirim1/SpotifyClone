@@ -51,6 +51,7 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             this.sarkiGuncelle.TabIndex = 27;
             this.sarkiGuncelle.Text = "Güncelle";
             this.sarkiGuncelle.UseVisualStyleBackColor = true;
+            this.sarkiGuncelle.Click += new System.EventHandler(this.sarkiGuncelle_Click);
             // 
             // sarkiSuresi
             // 
