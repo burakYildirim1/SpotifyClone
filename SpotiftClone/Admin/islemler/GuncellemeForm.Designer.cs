@@ -39,12 +39,13 @@ namespace SpotiftClone.Admin.islemler
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Location = new System.Drawing.Point(150, -2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(993, 233);
+            this.dataGridView1.Size = new System.Drawing.Size(683, 194);
             this.dataGridView1.TabIndex = 0;
             // 
             // ıconButton1
@@ -84,6 +85,7 @@ namespace SpotiftClone.Admin.islemler
             this.ıconButton3.TabIndex = 3;
             this.ıconButton3.Text = "Şarkılar";
             this.ıconButton3.UseVisualStyleBackColor = true;
+            this.ıconButton3.Click += new System.EventHandler(this.ıconButton3_Click);
             // 
             // ıconButton4
             // 

@@ -21,17 +21,51 @@ namespace SpotiftClone.Admin.islemler
         private void ıconButton1_Click(object sender, EventArgs e)
         {
             //spotifydbEntities 
-            var album = Connection.spotifydb.albums.ToList();
+            var query = from item in Connection.spotifydb.albums
+                        select new
+                        {
+                           // item.artists,
+                           // item.song_type,
+                            item.ID,
+                            item.songCount,
+                            item.name,
+                            item.date
+                        };
 
-            dataGridView1.DataSource = album;
+
+            dataGridView1.DataSource = query.ToList();
 
         }
 
         private void ıconButton2_Click(object sender, EventArgs e)
         {
-            var sanatcilar = Connection.spotifydb.artists.ToList();
+            var query = from item in Connection.spotifydb.artists
+                        select new
+                        {
+                            item.ID,
+                            item.name,
+                            item.surname,
+                            item.stageName,
+                        };
 
-            dataGridView1.DataSource = sanatcilar;
+
+            dataGridView1.DataSource = query.ToList();
+        }
+
+        private void ıconButton3_Click(object sender, EventArgs e)
+        {
+            var query = from item in Connection.spotifydb.songs
+                        select new
+                        {
+                            item.ID,
+                            item.name,
+                            item.date,
+                            item.time,
+                            item.playedCount
+                        };
+
+
+            dataGridView1.DataSource = query.ToList();
         }
     }
 }
