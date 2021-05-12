@@ -93,6 +93,7 @@ namespace SpotiftClone.Admin.islemler
             this.tabControl2.Size = new System.Drawing.Size(1298, 753);
             this.tabControl2.SizeMode = System.Windows.Forms.TabSizeMode.Fixed;
             this.tabControl2.TabIndex = 0;
+            this.tabControl2.SelectedIndexChanged += new System.EventHandler(this.tabControl2_SelectedIndexChanged);
             // 
             // tabPage5
             // 
@@ -102,10 +103,10 @@ namespace SpotiftClone.Admin.islemler
             this.tabPage5.Controls.Add(this.ulkeEkle);
             this.tabPage5.Controls.Add(this.label4);
             this.tabPage5.Controls.Add(this.label3);
-            this.tabPage5.Location = new System.Drawing.Point(4, 39);
+            this.tabPage5.Location = new System.Drawing.Point(4, 36);
             this.tabPage5.Name = "tabPage5";
             this.tabPage5.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage5.Size = new System.Drawing.Size(1290, 710);
+            this.tabPage5.Size = new System.Drawing.Size(1290, 713);
             this.tabPage5.TabIndex = 0;
             this.tabPage5.Text = "Ülke";
             this.tabPage5.Click += new System.EventHandler(this.tabPage5_Click);
@@ -114,7 +115,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.ulkeAdi.Location = new System.Drawing.Point(381, 162);
             this.ulkeAdi.Name = "ulkeAdi";
-            this.ulkeAdi.Size = new System.Drawing.Size(196, 27);
+            this.ulkeAdi.Size = new System.Drawing.Size(196, 23);
             this.ulkeAdi.TabIndex = 4;
             // 
             // ulkeListe
@@ -123,7 +124,7 @@ namespace SpotiftClone.Admin.islemler
             this.ulkeListe.FormattingEnabled = true;
             this.ulkeListe.Location = new System.Drawing.Point(381, 63);
             this.ulkeListe.Name = "ulkeListe";
-            this.ulkeListe.Size = new System.Drawing.Size(196, 28);
+            this.ulkeListe.Size = new System.Drawing.Size(196, 25);
             this.ulkeListe.TabIndex = 3;
             this.ulkeListe.SelectedIndexChanged += new System.EventHandler(this.ulkeListe_SelectedIndexChanged);
             // 
@@ -169,10 +170,10 @@ namespace SpotiftClone.Admin.islemler
             this.tabPage6.Controls.Add(this.textSAdi);
             this.tabPage6.Controls.Add(this.ulkeSec);
             this.tabPage6.Controls.Add(this.label5);
-            this.tabPage6.Location = new System.Drawing.Point(4, 39);
+            this.tabPage6.Location = new System.Drawing.Point(4, 36);
             this.tabPage6.Name = "tabPage6";
             this.tabPage6.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage6.Size = new System.Drawing.Size(1290, 710);
+            this.tabPage6.Size = new System.Drawing.Size(1290, 713);
             this.tabPage6.TabIndex = 1;
             this.tabPage6.Text = "Sanatçı";
             this.tabPage6.Click += new System.EventHandler(this.tabPage6_Click);
@@ -201,7 +202,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.textSSahneAd.Location = new System.Drawing.Point(272, 344);
             this.textSSahneAd.Name = "textSSahneAd";
-            this.textSSahneAd.Size = new System.Drawing.Size(196, 27);
+            this.textSSahneAd.Size = new System.Drawing.Size(196, 23);
             this.textSSahneAd.TabIndex = 10;
             // 
             // label7
@@ -218,7 +219,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.textSSoyad.Location = new System.Drawing.Point(272, 255);
             this.textSSoyad.Name = "textSSoyad";
-            this.textSSoyad.Size = new System.Drawing.Size(196, 27);
+            this.textSSoyad.Size = new System.Drawing.Size(196, 23);
             this.textSSoyad.TabIndex = 8;
             // 
             // label6
@@ -235,7 +236,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.textSAdi.Location = new System.Drawing.Point(272, 173);
             this.textSAdi.Name = "textSAdi";
-            this.textSAdi.Size = new System.Drawing.Size(196, 27);
+            this.textSAdi.Size = new System.Drawing.Size(196, 23);
             this.textSAdi.TabIndex = 6;
             // 
             // ulkeSec
@@ -244,8 +245,9 @@ namespace SpotiftClone.Admin.islemler
             this.ulkeSec.FormattingEnabled = true;
             this.ulkeSec.Location = new System.Drawing.Point(272, 79);
             this.ulkeSec.Name = "ulkeSec";
-            this.ulkeSec.Size = new System.Drawing.Size(196, 28);
+            this.ulkeSec.Size = new System.Drawing.Size(196, 25);
             this.ulkeSec.TabIndex = 5;
+            this.ulkeSec.SelectedIndexChanged += new System.EventHandler(this.ulkeSec_SelectedIndexChanged);
             // 
             // label5
             // 
@@ -271,9 +273,9 @@ namespace SpotiftClone.Admin.islemler
             this.tabPage7.Controls.Add(this.label10);
             this.tabPage7.Controls.Add(this.sarkiTurList);
             this.tabPage7.Controls.Add(this.label11);
-            this.tabPage7.Location = new System.Drawing.Point(4, 39);
+            this.tabPage7.Location = new System.Drawing.Point(4, 36);
             this.tabPage7.Name = "tabPage7";
-            this.tabPage7.Size = new System.Drawing.Size(1290, 710);
+            this.tabPage7.Size = new System.Drawing.Size(1290, 713);
             this.tabPage7.TabIndex = 2;
             this.tabPage7.Text = "Albüm";
             this.tabPage7.Click += new System.EventHandler(this.tabPage7_Click);
@@ -294,7 +296,7 @@ namespace SpotiftClone.Admin.islemler
             this.albumTarih.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.albumTarih.Location = new System.Drawing.Point(359, 380);
             this.albumTarih.Name = "albumTarih";
-            this.albumTarih.Size = new System.Drawing.Size(214, 27);
+            this.albumTarih.Size = new System.Drawing.Size(214, 23);
             this.albumTarih.TabIndex = 21;
             // 
             // label13
@@ -321,7 +323,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.textSarkiSayi.Location = new System.Drawing.Point(363, 312);
             this.textSarkiSayi.Name = "textSarkiSayi";
-            this.textSarkiSayi.Size = new System.Drawing.Size(210, 27);
+            this.textSarkiSayi.Size = new System.Drawing.Size(210, 23);
             this.textSarkiSayi.TabIndex = 17;
             // 
             // SanatciAdList
@@ -330,7 +332,7 @@ namespace SpotiftClone.Admin.islemler
             this.SanatciAdList.FormattingEnabled = true;
             this.SanatciAdList.Location = new System.Drawing.Point(363, 156);
             this.SanatciAdList.Name = "SanatciAdList";
-            this.SanatciAdList.Size = new System.Drawing.Size(210, 28);
+            this.SanatciAdList.Size = new System.Drawing.Size(210, 25);
             this.SanatciAdList.TabIndex = 16;
             // 
             // label9
@@ -347,7 +349,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.textAlbumAd.Location = new System.Drawing.Point(363, 242);
             this.textAlbumAd.Name = "textAlbumAd";
-            this.textAlbumAd.Size = new System.Drawing.Size(210, 27);
+            this.textAlbumAd.Size = new System.Drawing.Size(210, 23);
             this.textAlbumAd.TabIndex = 14;
             // 
             // label10
@@ -366,7 +368,7 @@ namespace SpotiftClone.Admin.islemler
             this.sarkiTurList.FormattingEnabled = true;
             this.sarkiTurList.Location = new System.Drawing.Point(363, 66);
             this.sarkiTurList.Name = "sarkiTurList";
-            this.sarkiTurList.Size = new System.Drawing.Size(210, 28);
+            this.sarkiTurList.Size = new System.Drawing.Size(210, 25);
             this.sarkiTurList.TabIndex = 11;
             // 
             // label11
@@ -395,9 +397,9 @@ namespace SpotiftClone.Admin.islemler
             this.tabPage8.Controls.Add(this.label15);
             this.tabPage8.Controls.Add(this.sanatciAdlari);
             this.tabPage8.Controls.Add(this.label14);
-            this.tabPage8.Location = new System.Drawing.Point(4, 39);
+            this.tabPage8.Location = new System.Drawing.Point(4, 36);
             this.tabPage8.Name = "tabPage8";
-            this.tabPage8.Size = new System.Drawing.Size(1290, 710);
+            this.tabPage8.Size = new System.Drawing.Size(1290, 713);
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "Şarkı";
             // 
@@ -415,17 +417,18 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(471, 223);
+            this.label19.Location = new System.Drawing.Point(477, 222);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(167, 51);
             this.label19.TabIndex = 28;
             this.label19.Text = "Süre (saniye) :";
+            this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // sarkiSure
             // 
             this.sarkiSure.Location = new System.Drawing.Point(662, 227);
             this.sarkiSure.Name = "sarkiSure";
-            this.sarkiSure.Size = new System.Drawing.Size(214, 27);
+            this.sarkiSure.Size = new System.Drawing.Size(214, 23);
             this.sarkiSure.TabIndex = 27;
             // 
             // sarkiTarihi
@@ -434,7 +437,7 @@ namespace SpotiftClone.Admin.islemler
             this.sarkiTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.sarkiTarihi.Location = new System.Drawing.Point(662, 150);
             this.sarkiTarihi.Name = "sarkiTarihi";
-            this.sarkiTarihi.Size = new System.Drawing.Size(214, 27);
+            this.sarkiTarihi.Size = new System.Drawing.Size(214, 23);
             this.sarkiTarihi.TabIndex = 26;
             // 
             // label18
@@ -461,7 +464,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.sarkiAdi.Location = new System.Drawing.Point(662, 74);
             this.sarkiAdi.Name = "sarkiAdi";
-            this.sarkiAdi.Size = new System.Drawing.Size(214, 27);
+            this.sarkiAdi.Size = new System.Drawing.Size(214, 23);
             this.sarkiAdi.TabIndex = 23;
             // 
             // albumAdi
@@ -470,7 +473,7 @@ namespace SpotiftClone.Admin.islemler
             this.albumAdi.FormattingEnabled = true;
             this.albumAdi.Location = new System.Drawing.Point(214, 223);
             this.albumAdi.Name = "albumAdi";
-            this.albumAdi.Size = new System.Drawing.Size(214, 28);
+            this.albumAdi.Size = new System.Drawing.Size(214, 25);
             this.albumAdi.TabIndex = 22;
             // 
             // label16
@@ -489,7 +492,7 @@ namespace SpotiftClone.Admin.islemler
             this.sarkiTurleri.FormattingEnabled = true;
             this.sarkiTurleri.Location = new System.Drawing.Point(214, 148);
             this.sarkiTurleri.Name = "sarkiTurleri";
-            this.sarkiTurleri.Size = new System.Drawing.Size(214, 28);
+            this.sarkiTurleri.Size = new System.Drawing.Size(214, 25);
             this.sarkiTurleri.TabIndex = 20;
             // 
             // label15
@@ -508,7 +511,7 @@ namespace SpotiftClone.Admin.islemler
             this.sanatciAdlari.FormattingEnabled = true;
             this.sanatciAdlari.Location = new System.Drawing.Point(214, 74);
             this.sanatciAdlari.Name = "sanatciAdlari";
-            this.sanatciAdlari.Size = new System.Drawing.Size(214, 28);
+            this.sanatciAdlari.Size = new System.Drawing.Size(214, 25);
             this.sanatciAdlari.TabIndex = 18;
             this.sanatciAdlari.SelectedIndexChanged += new System.EventHandler(this.sanatciAdlari_SelectedIndexChanged);
             // 

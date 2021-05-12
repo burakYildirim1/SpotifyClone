@@ -90,5 +90,10 @@ namespace SpotiftClone
             TakipEdilenForm takipEdilenForm = new TakipEdilenForm();
             FormGetir2(takipEdilenForm);
         }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
     }
 }

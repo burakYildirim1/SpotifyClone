@@ -29,85 +29,94 @@ namespace SpotiftClone.Admin.islemler.silmeFormlar
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSarki = new FontAwesome.Sharp.IconButton();
-            this.btnSanatci = new FontAwesome.Sharp.IconButton();
-            this.btnAlbum = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.albumSil = new FontAwesome.Sharp.IconButton();
+            this.albumAdi = new System.Windows.Forms.TextBox();
+            this.textID = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnSarki
+            // albumSil
             // 
-            this.btnSarki.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnSarki.IconColor = System.Drawing.Color.Black;
-            this.btnSarki.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSarki.Location = new System.Drawing.Point(37, 454);
-            this.btnSarki.Name = "btnSarki";
-            this.btnSarki.Size = new System.Drawing.Size(231, 48);
-            this.btnSarki.TabIndex = 12;
-            this.btnSarki.Text = "Şarkılar";
-            this.btnSarki.UseVisualStyleBackColor = true;
+            this.albumSil.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.albumSil.IconColor = System.Drawing.Color.Black;
+            this.albumSil.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.albumSil.Location = new System.Drawing.Point(195, 144);
+            this.albumSil.Margin = new System.Windows.Forms.Padding(2);
+            this.albumSil.Name = "albumSil";
+            this.albumSil.Size = new System.Drawing.Size(84, 23);
+            this.albumSil.TabIndex = 18;
+            this.albumSil.Text = "Sil";
+            this.albumSil.UseVisualStyleBackColor = true;
+            this.albumSil.Click += new System.EventHandler(this.albumSil_Click);
             // 
-            // btnSanatci
+            // albumAdi
             // 
-            this.btnSanatci.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnSanatci.IconColor = System.Drawing.Color.Black;
-            this.btnSanatci.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSanatci.Location = new System.Drawing.Point(37, 360);
-            this.btnSanatci.Name = "btnSanatci";
-            this.btnSanatci.Size = new System.Drawing.Size(231, 48);
-            this.btnSanatci.TabIndex = 11;
-            this.btnSanatci.Text = "Sanatçı";
-            this.btnSanatci.UseVisualStyleBackColor = true;
+            this.albumAdi.Location = new System.Drawing.Point(186, 100);
+            this.albumAdi.Margin = new System.Windows.Forms.Padding(2);
+            this.albumAdi.Name = "albumAdi";
+            this.albumAdi.Size = new System.Drawing.Size(105, 20);
+            this.albumAdi.TabIndex = 17;
             // 
-            // btnAlbum
+            // textID
             // 
-            this.btnAlbum.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAlbum.IconColor = System.Drawing.Color.Black;
-            this.btnAlbum.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAlbum.Location = new System.Drawing.Point(37, 269);
-            this.btnAlbum.Name = "btnAlbum";
-            this.btnAlbum.Size = new System.Drawing.Size(231, 48);
-            this.btnAlbum.TabIndex = 10;
-            this.btnAlbum.Text = "Albüm";
-            this.btnAlbum.UseVisualStyleBackColor = true;
+            this.textID.Enabled = false;
+            this.textID.Location = new System.Drawing.Point(186, 54);
+            this.textID.Margin = new System.Windows.Forms.Padding(2);
+            this.textID.Name = "textID";
+            this.textID.ReadOnly = true;
+            this.textID.Size = new System.Drawing.Size(105, 20);
+            this.textID.TabIndex = 15;
             // 
-            // dataGridView1
+            // label3
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(1, -1);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(979, 194);
-            this.dataGridView1.TabIndex = 13;
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label3.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label3.Location = new System.Drawing.Point(103, 100);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(79, 17);
+            this.label3.TabIndex = 13;
+            this.label3.Text = "Albüm Adı :";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(147, 54);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 17);
+            this.label2.TabIndex = 12;
+            this.label2.Text = "ID :";
             // 
             // albumFormSilme
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(975, 584);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnSarki);
-            this.Controls.Add(this.btnSanatci);
-            this.Controls.Add(this.btnAlbum);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.albumSil);
+            this.Controls.Add(this.albumAdi);
+            this.Controls.Add(this.textID);
+            this.Controls.Add(this.label3);
+            this.Controls.Add(this.label2);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "albumFormSilme";
-            this.Text = "albumForm";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Text = "albumFormSilme";
+            this.Load += new System.EventHandler(this.albumFormSilme_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-
-        private FontAwesome.Sharp.IconButton btnSarki;
-        private FontAwesome.Sharp.IconButton btnSanatci;
-        private FontAwesome.Sharp.IconButton btnAlbum;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private FontAwesome.Sharp.IconButton albumSil;
+        private System.Windows.Forms.TextBox albumAdi;
+        private System.Windows.Forms.TextBox textID;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
     }
 }

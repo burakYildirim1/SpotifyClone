@@ -37,21 +37,43 @@ namespace SpotiftClone.Admin.islemler
 
         private void ıconButton1_Click(object sender, EventArgs e)
         {
-            dataGridView1.ClearSelection();
-            //spotifydbEntities 
-            var query = from item in Connection.spotifydb.albums
+            //dataGridView1.AutoGenerateColumns = true;
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
+
+
+            //var query = from item in Connection.spotifydb.albums
+            //            from item2 in Connection.spotifydb.artists
+            //            where item.state == true && item2.ID == item.ID
+            //            select new
+            //            {
+            //                ad = item2.name,
+            //                item.ID,
+            //                item.songCount,
+            //                item.name,
+            //                item.date
+            //            };
+
+            // 
+
+
+
+            var query = from artists1 in Connection.spotifydb.artists
+                        join album1 in Connection.spotifydb.albums
+                        on artists1.ID equals album1.artistID
                         select new
                         {
-                            // item.artists,
-                            // item.song_type,
-                            item.ID,
-                            item.songCount,
-                            item.name,
-                            item.date
+                            artistName = artists1.name,
+                            album1.name,
+                            album1.ID,
+                            album1.songCount,
+                            album1.date
+
                         };
-
-
-            dataGridView1.DataSource = query.ToList();
+            
+            dataGridView1.DataSource = query.ToList(); //queryden gelen dataları liste olarak yazdır
+            dataGridView1.Columns[0].HeaderText = "Sanatçı Adı";
             control = 0;
 
 
@@ -61,15 +83,17 @@ namespace SpotiftClone.Admin.islemler
 
         private void ıconButton2_Click(object sender, EventArgs e)
         {
-            dataGridView1.ClearSelection();
-            var query = from item in Connection.spotifydb.artists
-                        select new
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
+            var query = from item in Connection.spotifydb.artists where item.state == true
+                        select new 
                         {
                             item.ID,
                             item.name,
                             item.surname,
                             item.stageName,
-                        };
+                        }  ;
 
 
             dataGridView1.DataSource = query.ToList();
@@ -81,20 +105,26 @@ namespace SpotiftClone.Admin.islemler
 
         private void ıconButton3_Click(object sender, EventArgs e)
         {
-            dataGridView1.ClearSelection();
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
 
-            var query = from item in Connection.spotifydb.songs
+
+            var query = from artists1 in Connection.spotifydb.artists
+                        join sarki1 in Connection.spotifydb.songs
+                        on artists1.ID equals sarki1.artistID
                         select new
                         {
-                            item.ID,
-                            item.name,
-                            item.date,
-                            item.time,
-                            item.playedCount
+                            artistName = artists1.name,
+                            sarki1.name,
+                            sarki1.ID,
+                            sarki1.time,
+                            sarki.playedCount
+
                         };
 
-
-            dataGridView1.DataSource = query.ToList();
+            dataGridView1.DataSource = query.ToList(); //queryden gelen dataları liste olarak yazdır
+            dataGridView1.Columns[0].HeaderText = "Sanatçı Adı";
             control = 2;
 
         }
@@ -143,6 +173,11 @@ namespace SpotiftClone.Admin.islemler
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panelGuncel_Paint(object sender, PaintEventArgs e)
         {
 
         }

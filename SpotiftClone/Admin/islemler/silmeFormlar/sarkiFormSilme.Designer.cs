@@ -29,84 +29,94 @@ namespace SpotiftClone.Admin.islemler.silmeFormlar
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnSarki = new FontAwesome.Sharp.IconButton();
-            this.btnSanatci = new FontAwesome.Sharp.IconButton();
-            this.btnAlbum = new FontAwesome.Sharp.IconButton();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.sarkiSil = new FontAwesome.Sharp.IconButton();
+            this.sarkiAdi = new System.Windows.Forms.TextBox();
+            this.ID = new System.Windows.Forms.TextBox();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
-            // btnSarki
+            // sarkiSil
             // 
-            this.btnSarki.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnSarki.IconColor = System.Drawing.Color.Black;
-            this.btnSarki.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSarki.Location = new System.Drawing.Point(36, 461);
-            this.btnSarki.Name = "btnSarki";
-            this.btnSarki.Size = new System.Drawing.Size(231, 48);
-            this.btnSarki.TabIndex = 9;
-            this.btnSarki.Text = "Şarkılar";
-            this.btnSarki.UseVisualStyleBackColor = true;
+            this.sarkiSil.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.sarkiSil.IconColor = System.Drawing.Color.Black;
+            this.sarkiSil.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.sarkiSil.Location = new System.Drawing.Point(229, 133);
+            this.sarkiSil.Margin = new System.Windows.Forms.Padding(2);
+            this.sarkiSil.Name = "sarkiSil";
+            this.sarkiSil.Size = new System.Drawing.Size(84, 23);
+            this.sarkiSil.TabIndex = 36;
+            this.sarkiSil.Text = "Sil";
+            this.sarkiSil.UseVisualStyleBackColor = true;
+            this.sarkiSil.Click += new System.EventHandler(this.sarkiSil_Click);
             // 
-            // btnSanatci
+            // sarkiAdi
             // 
-            this.btnSanatci.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnSanatci.IconColor = System.Drawing.Color.Black;
-            this.btnSanatci.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnSanatci.Location = new System.Drawing.Point(36, 367);
-            this.btnSanatci.Name = "btnSanatci";
-            this.btnSanatci.Size = new System.Drawing.Size(231, 48);
-            this.btnSanatci.TabIndex = 8;
-            this.btnSanatci.Text = "Sanatçı";
-            this.btnSanatci.UseVisualStyleBackColor = true;
+            this.sarkiAdi.Location = new System.Drawing.Point(218, 97);
+            this.sarkiAdi.Margin = new System.Windows.Forms.Padding(2);
+            this.sarkiAdi.Name = "sarkiAdi";
+            this.sarkiAdi.Size = new System.Drawing.Size(105, 20);
+            this.sarkiAdi.TabIndex = 34;
             // 
-            // btnAlbum
+            // ID
             // 
-            this.btnAlbum.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.btnAlbum.IconColor = System.Drawing.Color.Black;
-            this.btnAlbum.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnAlbum.Location = new System.Drawing.Point(36, 276);
-            this.btnAlbum.Name = "btnAlbum";
-            this.btnAlbum.Size = new System.Drawing.Size(231, 48);
-            this.btnAlbum.TabIndex = 7;
-            this.btnAlbum.Text = "Albüm";
-            this.btnAlbum.UseVisualStyleBackColor = true;
+            this.ID.Location = new System.Drawing.Point(218, 64);
+            this.ID.Margin = new System.Windows.Forms.Padding(2);
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Size = new System.Drawing.Size(105, 20);
+            this.ID.TabIndex = 33;
             // 
-            // dataGridView1
+            // label2
             // 
-            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(0, -2);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(996, 194);
-            this.dataGridView1.TabIndex = 10;
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label2.Location = new System.Drawing.Point(181, 64);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(29, 17);
+            this.label2.TabIndex = 30;
+            this.label2.Text = "ID :";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
+            this.label1.Location = new System.Drawing.Point(143, 97);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(72, 17);
+            this.label1.TabIndex = 29;
+            this.label1.Text = "Şarkı Adı :";
             // 
             // sarkiFormSilme
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(975, 584);
-            this.Controls.Add(this.dataGridView1);
-            this.Controls.Add(this.btnSarki);
-            this.Controls.Add(this.btnSanatci);
-            this.Controls.Add(this.btnAlbum);
+            this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.sarkiSil);
+            this.Controls.Add(this.sarkiAdi);
+            this.Controls.Add(this.ID);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "sarkiFormSilme";
             this.Text = "sarkiFormSilme";
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.Load += new System.EventHandler(this.sarkiFormSilme_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
-        private FontAwesome.Sharp.IconButton btnSarki;
-        private FontAwesome.Sharp.IconButton btnSanatci;
-        private FontAwesome.Sharp.IconButton btnAlbum;
-        private System.Windows.Forms.DataGridView dataGridView1;
+
+        private FontAwesome.Sharp.IconButton sarkiSil;
+        private System.Windows.Forms.TextBox sarkiAdi;
+        private System.Windows.Forms.TextBox ID;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label1;
     }
 }

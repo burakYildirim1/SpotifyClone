@@ -1,4 +1,3 @@
-C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.csprojAssemblyReference.cache
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Properties.Resources.resources
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.csproj.GenerateResource.cache
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.csproj.CoreCompileInputs.cache
@@ -53,3 +52,4 @@ C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.is
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.silmeFormlar.albumFormSilme.resources
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.silmeFormlar.sanatciFormSilme.resources
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.silmeFormlar.sarkiFormSilme.resources
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.csprojAssemblyReference.cache

@@ -4,36 +4,36 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fb3a612c14914c44ae5453eaec6e39fb" Name="Diagram1">
-        <EntityTypeShape EntityType="spotifydbModel.admins" Width="1.5" PointX="6" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="spotifydbModel.albums" Width="1.5" PointX="3" PointY="5" IsExpanded="true" />
-        <EntityTypeShape EntityType="spotifydbModel.albumsongs" Width="1.5" PointX="5.25" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="spotifydbModel.artists" Width="1.5" PointX="0.75" PointY="1.125" IsExpanded="true" />
-        <EntityTypeShape EntityType="spotifydbModel.artists_of_song" Width="1.5" PointX="10.5" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="spotifydbModel.countries" Width="1.5" PointX="1.5" PointY="9.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="spotifydbModel.playlists" Width="1.5" PointX="6" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="spotifydbModel.song_type" Width="1.5" PointX="0.75" PointY="5.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="spotifydbModel.songs" Width="1.5" PointX="8.25" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="spotifydbModel.subscriber_type" Width="1.5" PointX="1.5" PointY="13.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="spotifydbModel.user_playlist_songs" Width="1.5" PointX="10.5" PointY="2.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="spotifydbModel.users" Width="1.5" PointX="3.75" PointY="13" IsExpanded="true" />
-        <AssociationConnector Association="spotifydbModel.admins_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.albums_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.albums_ibfk_2" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.albumsongs_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.songs_ibfk_3" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.albumsongs_ibfk_2" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.artists_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.artists_of_song_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.songs_ibfk_2" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.artists_of_song_ibfk_2" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.users_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.playlists_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.playlists_ibfk_2" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.user_playlist_songs_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.songs_ibfk_1" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.user_playlist_songs_ibfk_2" ManuallyRouted="false" />
-        <AssociationConnector Association="spotifydbModel.users_ibfk_2" ManuallyRouted="false" />
+      <Diagram DiagramId="fb3a612c14914c44ae5453eaec6e39fb" Name="Diagram1" ZoomLevel="95">
+        <EntityTypeShape EntityType="spotifydbModel.admins" Width="1.5" PointX="6" PointY="13.75" />
+        <EntityTypeShape EntityType="spotifydbModel.albums" Width="1.5" PointX="3" PointY="5" />
+        <EntityTypeShape EntityType="spotifydbModel.albumsongs" Width="1.5" PointX="5.25" PointY="2.5" />
+        <EntityTypeShape EntityType="spotifydbModel.artists" Width="1.5" PointX="0.75" PointY="1" />
+        <EntityTypeShape EntityType="spotifydbModel.artists_of_song" Width="1.5" PointX="10.5" PointY="5.5" />
+        <EntityTypeShape EntityType="spotifydbModel.countries" Width="1.5" PointX="1.5" PointY="9.625" />
+        <EntityTypeShape EntityType="spotifydbModel.playlists" Width="1.5" PointX="6" PointY="5.5" />
+        <EntityTypeShape EntityType="spotifydbModel.song_type" Width="1.5" PointX="0.75" PointY="5.5" />
+        <EntityTypeShape EntityType="spotifydbModel.songs" Width="1.5" PointX="8.25" PointY="4.625" />
+        <EntityTypeShape EntityType="spotifydbModel.subscriber_type" Width="1.5" PointX="1.5" PointY="13.75" />
+        <EntityTypeShape EntityType="spotifydbModel.user_playlist_songs" Width="1.5" PointX="10.5" PointY="2.5" />
+        <EntityTypeShape EntityType="spotifydbModel.users" Width="1.5" PointX="3.75" PointY="13" />
+        <AssociationConnector Association="spotifydbModel.admins_ibfk_1" />
+        <AssociationConnector Association="spotifydbModel.albums_ibfk_1" />
+        <AssociationConnector Association="spotifydbModel.albums_ibfk_2" />
+        <AssociationConnector Association="spotifydbModel.albumsongs_ibfk_1" />
+        <AssociationConnector Association="spotifydbModel.songs_ibfk_3" />
+        <AssociationConnector Association="spotifydbModel.albumsongs_ibfk_2" />
+        <AssociationConnector Association="spotifydbModel.artists_ibfk_1" />
+        <AssociationConnector Association="spotifydbModel.artists_of_song_ibfk_1" />
+        <AssociationConnector Association="spotifydbModel.songs_ibfk_2" />
+        <AssociationConnector Association="spotifydbModel.artists_of_song_ibfk_2" />
+        <AssociationConnector Association="spotifydbModel.users_ibfk_1" />
+        <AssociationConnector Association="spotifydbModel.playlists_ibfk_1" />
+        <AssociationConnector Association="spotifydbModel.playlists_ibfk_2" />
+        <AssociationConnector Association="spotifydbModel.user_playlist_songs_ibfk_1" />
+        <AssociationConnector Association="spotifydbModel.songs_ibfk_1" />
+        <AssociationConnector Association="spotifydbModel.user_playlist_songs_ibfk_2" />
+        <AssociationConnector Association="spotifydbModel.users_ibfk_2" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>
