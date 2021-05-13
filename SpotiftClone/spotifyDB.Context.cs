@@ -27,7 +27,6 @@ namespace SpotiftClone
     
         public virtual DbSet<admins> admins { get; set; }
         public virtual DbSet<albums> albums { get; set; }
-        public virtual DbSet<albumsongs> albumsongs { get; set; }
         public virtual DbSet<artists> artists { get; set; }
         public virtual DbSet<artists_of_song> artists_of_song { get; set; }
         public virtual DbSet<countries> countries { get; set; }

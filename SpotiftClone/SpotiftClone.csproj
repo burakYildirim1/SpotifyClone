@@ -168,9 +168,6 @@
     <Compile Include="albums.cs">
       <DependentUpon>spotifyDB.tt</DependentUpon>
     </Compile>
-    <Compile Include="albumsongs.cs">
-      <DependentUpon>spotifyDB.tt</DependentUpon>
-    </Compile>
     <Compile Include="artists.cs">
       <DependentUpon>spotifyDB.tt</DependentUpon>
     </Compile>
@@ -194,6 +191,12 @@
     </Compile>
     <Compile Include="MenuForms\playListForm.Designer.cs">
       <DependentUpon>playListForm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="MenuForms\sarkilarForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MenuForms\sarkilarForm.Designer.cs">
+      <DependentUpon>sarkilarForm.cs</DependentUpon>
     </Compile>
     <Compile Include="MenuForms\TakipEdilenForm.cs">
       <SubType>Form</SubType>
@@ -301,6 +304,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForms\playListForm.resx">
       <DependentUpon>playListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MenuForms\sarkilarForm.resx">
+      <DependentUpon>sarkilarForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MenuForms\TakipEdilenForm.resx">
       <DependentUpon>TakipEdilenForm.cs</DependentUpon>

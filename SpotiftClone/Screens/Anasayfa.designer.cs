@@ -39,6 +39,7 @@
             this.panel3 = new System.Windows.Forms.Panel();
             this.backgroundWorker1 = new System.ComponentModel.BackgroundWorker();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.ıconButton4 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -47,6 +48,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            this.panel1.Controls.Add(this.ıconButton4);
             this.panel1.Controls.Add(this.ıconButton3);
             this.panel1.Controls.Add(this.ıconButton2);
             this.panel1.Controls.Add(this.ıconButton1);
@@ -92,7 +94,7 @@
             this.ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ıconButton2.IconSize = 32;
             this.ıconButton2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ıconButton2.Location = new System.Drawing.Point(0, 129);
+            this.ıconButton2.Location = new System.Drawing.Point(2, 129);
             this.ıconButton2.Margin = new System.Windows.Forms.Padding(2);
             this.ıconButton2.Name = "ıconButton2";
             this.ıconButton2.Size = new System.Drawing.Size(198, 33);
@@ -113,7 +115,7 @@
             this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ıconButton1.IconSize = 34;
             this.ıconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.ıconButton1.Location = new System.Drawing.Point(0, 82);
+            this.ıconButton1.Location = new System.Drawing.Point(2, 82);
             this.ıconButton1.Margin = new System.Windows.Forms.Padding(2);
             this.ıconButton1.Name = "ıconButton1";
             this.ıconButton1.Size = new System.Drawing.Size(194, 33);
@@ -147,7 +149,7 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.MediumSeaGreen;
             this.panel4.Controls.Add(this.label1);
-            this.panel4.Location = new System.Drawing.Point(1, 43);
+            this.panel4.Location = new System.Drawing.Point(2, 43);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(197, 26);
             this.panel4.TabIndex = 3;
@@ -179,6 +181,27 @@
             this.panel2.Size = new System.Drawing.Size(745, 513);
             this.panel2.TabIndex = 5;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // ıconButton4
+            // 
+            this.ıconButton4.FlatAppearance.BorderSize = 0;
+            this.ıconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ıconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ıconButton4.ForeColor = System.Drawing.Color.White;
+            this.ıconButton4.IconChar = FontAwesome.Sharp.IconChar.Music;
+            this.ıconButton4.IconColor = System.Drawing.Color.White;
+            this.ıconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton4.IconSize = 32;
+            this.ıconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ıconButton4.Location = new System.Drawing.Point(0, 222);
+            this.ıconButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.ıconButton4.Name = "ıconButton4";
+            this.ıconButton4.Size = new System.Drawing.Size(194, 33);
+            this.ıconButton4.TabIndex = 9;
+            this.ıconButton4.Text = "Şarkılar";
+            this.ıconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ıconButton4.UseVisualStyleBackColor = true;
+            this.ıconButton4.Click += new System.EventHandler(this.ıconButton4_Click);
             // 
             // Anasayfa
             // 
@@ -214,5 +237,6 @@
         private FontAwesome.Sharp.IconButton ıconButton2;
         private System.ComponentModel.BackgroundWorker backgroundWorker1;
         private System.Windows.Forms.Panel panel2;
+        private FontAwesome.Sharp.IconButton ıconButton4;
     }
 }

@@ -59,6 +59,8 @@ namespace SpotiftClone.Admin.islemler
             this.sarkiTurList = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage8 = new System.Windows.Forms.TabPage();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.sarkiSure = new System.Windows.Forms.TextBox();
@@ -72,6 +74,7 @@ namespace SpotiftClone.Admin.islemler
             this.label15 = new System.Windows.Forms.Label();
             this.sanatciAdlari = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
+            this.customInstaller1 = new MySql.Data.MySqlClient.CustomInstaller();
             this.tabControl2.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -117,6 +120,7 @@ namespace SpotiftClone.Admin.islemler
             this.ulkeAdi.Name = "ulkeAdi";
             this.ulkeAdi.Size = new System.Drawing.Size(196, 23);
             this.ulkeAdi.TabIndex = 4;
+            this.ulkeAdi.TextChanged += new System.EventHandler(this.ulkeAdi_TextChanged);
             // 
             // ulkeListe
             // 
@@ -384,6 +388,8 @@ namespace SpotiftClone.Admin.islemler
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.tabPage8.Controls.Add(this.textBox1);
+            this.tabPage8.Controls.Add(this.checkedListBox1);
             this.tabPage8.Controls.Add(this.button1);
             this.tabPage8.Controls.Add(this.label19);
             this.tabPage8.Controls.Add(this.sarkiSure);
@@ -402,6 +408,23 @@ namespace SpotiftClone.Admin.islemler
             this.tabPage8.Size = new System.Drawing.Size(1290, 713);
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "Şarkı";
+            // 
+            // textBox1
+            // 
+            this.textBox1.Location = new System.Drawing.Point(214, 33);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(214, 23);
+            this.textBox1.TabIndex = 31;
+            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
+            // 
+            // checkedListBox1
+            // 
+            this.checkedListBox1.FormattingEnabled = true;
+            this.checkedListBox1.Location = new System.Drawing.Point(214, 306);
+            this.checkedListBox1.Name = "checkedListBox1";
+            this.checkedListBox1.Size = new System.Drawing.Size(188, 94);
+            this.checkedListBox1.TabIndex = 30;
+            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // button1
             // 
@@ -494,6 +517,7 @@ namespace SpotiftClone.Admin.islemler
             this.sarkiTurleri.Name = "sarkiTurleri";
             this.sarkiTurleri.Size = new System.Drawing.Size(214, 25);
             this.sarkiTurleri.TabIndex = 20;
+            this.sarkiTurleri.SelectedIndexChanged += new System.EventHandler(this.sarkiTurleri_SelectedIndexChanged);
             // 
             // label15
             // 
@@ -599,5 +623,8 @@ namespace SpotiftClone.Admin.islemler
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox sanatciAdlari;
         private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.CheckedListBox checkedListBox1;
+        private MySql.Data.MySqlClient.CustomInstaller customInstaller1;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }

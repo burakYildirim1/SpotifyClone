@@ -1,4 +1,6 @@
-﻿using System;
+﻿using SpotiftClone.Admin;
+using SpotiftClone.Admin.islemler;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
@@ -14,6 +16,7 @@ namespace SpotiftClone
         [STAThread]
         static void Main()
         {
+
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new GenelGiris());

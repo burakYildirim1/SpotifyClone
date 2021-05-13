@@ -1,4 +1,5 @@
 ﻿using SpotiftClone.DataAccess;
+using SpotiftClone.Database;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -28,7 +29,9 @@ namespace SpotiftClone
             EFUserDal eFUserDal = new EFUserDal();
             if(eFUserDal.checkIfEmail(textMail.Text))
             {
-                var subscribeID = (comboBox1.SelectedIndex == 0) ? 1 : 2;
+                var subscribeID = Connection.spotifydb.subscriber_type.FirstOrDefault(c => c.type == comboBox1.Text).ID;
+               
+                //var subscribeID = (comboBox1.SelectedIndex == 0) ? 3 : 4; //database'den idleri alıp ata --- country id aynı sekilde
                 eFUserDal.addUser(new users()
                 {
                     name = textAd.Text,
@@ -36,7 +39,7 @@ namespace SpotiftClone
                     mail = textMail.Text,
                     password = textSifre.Text,
                     subscriberID = subscribeID,
-                    countryID = 1
+                    countryID = 53
                 });
                 
             }

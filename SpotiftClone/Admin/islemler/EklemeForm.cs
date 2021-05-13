@@ -1,7 +1,9 @@
 ﻿using SpotiftClone.Database;
 using System;
+using System.Data;
 using System.Linq;
 using System.Windows.Forms;
+
 
 namespace SpotiftClone.Admin.islemler
 {
@@ -28,13 +30,41 @@ namespace SpotiftClone.Admin.islemler
 
         }
 
-        private void ulkeEkle_Click(object sender, EventArgs e)
-        {
-            Connection.spotifydb.countries.Add(new countries() { name = ulkeAdi.Text });
-            Connection.spotifydb.SaveChanges();
-            MessageBox.Show("Ülke Eklendi", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
-            ulkeListe.Items.Clear();
 
+        private int GetItemIndex(string item)
+        {
+            int index = 0;
+
+            foreach (object o in checkedListBox1.Items)
+            {
+                if (item == o.ToString())
+                {
+                    return index;
+                }
+
+                index++;
+            }
+
+            return -1;
+        }
+
+
+            private void ulkeEkle_Click(object sender, EventArgs e)
+        {
+            String ulkeAd =(ulkeAdi.Text.ToUpper());
+            if (Connection.spotifydb.countries.FirstOrDefault(c=> c.name == ulkeAd) == null)
+            {
+                Connection.spotifydb.countries.Add(new countries() { name = ulkeAd });
+                Connection.spotifydb.SaveChanges();
+                MessageBox.Show("Ülke Eklendi", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                
+            }
+            else
+            {
+                MessageBox.Show("Ülke zaten listede var!", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+
+            ulkeListe.Items.Clear();
             var ulkeList = Connection.spotifydb.countries.ToList();
             foreach (var item in ulkeList)
             {
@@ -87,19 +117,18 @@ namespace SpotiftClone.Admin.islemler
 
         private void button1_Click(object sender, EventArgs e)
         {
-            //String value = albumAdi.Text;
-            //String[] arr = value.Split('-');
-            //int id = Convert.ToInt32(arr[0]);
-
-            //String value1 = sanatciAdlari.Text;
-            //String[] arr1 = value1.Split('-');
-            //int id1 = Convert.ToInt32(arr1[0]);
 
             int typeID = Connection.spotifydb.song_type.FirstOrDefault(c => c.name == sarkiTurleri.Text).ID;
             int id = Connection.spotifydb.albums.FirstOrDefault(c => c.name == albumAdi.Text).ID;
             int artistID = Connection.spotifydb.artists.FirstOrDefault(c => c.name == sanatciAdlari.Text).ID;
-            Connection.spotifydb.songs.Add(new songs() { artistID = artistID, albumID = id, typeID = typeID, name = sarkiAdi.Text,
+            Connection.spotifydb.songs.Add(new songs() { albumID = id, typeID = typeID, name = sarkiAdi.Text,
             date = sarkiTarihi.Value, time = Convert.ToInt32(sarkiSure.Text) });
+            Connection.spotifydb.SaveChanges();
+            var sarkiID = Connection.spotifydb.songs.OrderByDescending(c => c.ID).Take(1).FirstOrDefault();
+
+            Connection.spotifydb.artists_of_song.Add(new artists_of_song() { artistID = artistID, songID = sarkiID.ID });
+
+
             Connection.spotifydb.SaveChanges();
             MessageBox.Show("Şarkı Eklendi", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
@@ -108,17 +137,6 @@ namespace SpotiftClone.Admin.islemler
         {
             albumAdi.Items.Clear();
 
-            //String value = sanatciAdlari.Text;
-            //String[] arr = value.Split('-');
-            //int id = Convert.ToInt32(arr[0]);
-
-            int id = Connection.spotifydb.artists.FirstOrDefault(c => c.name == sanatciAdlari.Text).ID;
-            var albumler = Connection.spotifydb.albums.Where(c => c.artistID == id).ToList();
-            foreach (var item in albumler)
-            {
-                albumAdi.Items.Add(item.name);
-                
-            }
         }
 
         private void tabPage7_Click(object sender, EventArgs e)
@@ -191,10 +209,11 @@ namespace SpotiftClone.Admin.islemler
                     sarkiTurleri.Items.Add(item.name);
                 }
                 //-------------------------------------------------------------
-                var sanatciAdiList = Connection.spotifydb.artists.ToList();
+                var sanatciAdiList = Connection.spotifydb.artists.Where(c => c.state == true).ToList(); 
                 foreach (var item in sanatciAdiList)
                 {
                     sanatciAdlari.Items.Add(item.name);
+                    checkedListBox1.Items.Add(item.name);
                 }
 
                 //-------------------------------------------------------------
@@ -212,6 +231,43 @@ namespace SpotiftClone.Admin.islemler
         private void label19_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void ulkeAdi_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void checkedListBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+
+       
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+            
+        }
+
+        private void sarkiTurleri_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            albumAdi.Items.Clear();
+
+            int id = Connection.spotifydb.artists.FirstOrDefault(c => c.name == sanatciAdlari.Text).ID;
+            //int sarkiID = 6;
+            //if (sarkiTurleri.Text != "")
+            //{
+                
+            //}
+            int sarkiID = Connection.spotifydb.song_type.FirstOrDefault(c => c.name == sarkiTurleri.Text).ID;
+            var albumler = Connection.spotifydb.albums.Where(c => c.artistID == id && c.typeID == sarkiID).ToList();
+            foreach (var item in albumler)
+            {
+                albumAdi.Items.Add(item.name);
+
+            }
         }
     }
 }

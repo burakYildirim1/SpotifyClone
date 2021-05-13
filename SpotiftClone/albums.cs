@@ -18,7 +18,6 @@ namespace SpotiftClone
         public albums()
         {
             this.state = true;
-            this.albumsongs = new HashSet<albumsongs>();
             this.songs = new HashSet<songs>();
         }
     
@@ -32,8 +31,6 @@ namespace SpotiftClone
     
         public virtual artists artists { get; set; }
         public virtual song_type song_type { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<albumsongs> albumsongs { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<songs> songs { get; set; }
     }

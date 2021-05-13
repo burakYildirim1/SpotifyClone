@@ -64,16 +64,21 @@ namespace SpotiftClone.Admin.islemler
                         on artists1.ID equals album1.artistID
                         select new
                         {
+                            album1.ID,
                             artistName = artists1.name,
                             album1.name,
-                            album1.ID,
-                            album1.songCount,
+                             album1.songCount,
                             album1.date
 
                         };
             
             dataGridView1.DataSource = query.ToList(); //queryden gelen dataları liste olarak yazdır
-            dataGridView1.Columns[0].HeaderText = "Sanatçı Adı";
+
+            dataGridView1.Columns[1].HeaderText = "Sanatçı Adı";
+            dataGridView1.Columns[2].HeaderText = "Albüm Adı";
+            dataGridView1.Columns[3].HeaderText = "Şarkı Süresi";
+            dataGridView1.Columns[4].HeaderText = "Çıkış Tarihi";
+
             control = 0;
 
 
@@ -98,6 +103,9 @@ namespace SpotiftClone.Admin.islemler
 
             dataGridView1.DataSource = query.ToList();
 
+            dataGridView1.Columns[1].HeaderText = "Sanatçı Adı";
+            dataGridView1.Columns[2].HeaderText = "Sanatçı Soyadı";
+            dataGridView1.Columns[3].HeaderText = "Sahne Adı";
 
 
             control = 1;
@@ -110,21 +118,53 @@ namespace SpotiftClone.Admin.islemler
             dataGridView1.Refresh();
 
 
-            var query = from artists1 in Connection.spotifydb.artists
-                        join sarki1 in Connection.spotifydb.songs
-                        on artists1.ID equals sarki1.artistID
+            //var query = from artists1 in Connection.spotifydb.artists
+            //            join sarki1 in Connection.spotifydb.songs
+            //            on artists1.ID equals sarki1.artistID
+            //            select new
+            //            {
+            //                sarki1.ID,
+            //                artistName = artists1.name,
+            //                sarki1.name,
+
+            //                sarki1.time,
+            //                sarki.playedCount
+
+            //            };
+
+
+
+
+            var query = from artSong in Connection.spotifydb.artists_of_song
+                        join artist1 in Connection.spotifydb.artists
+
+                        on artSong.artistID equals artist1.ID
+                        join songs in Connection.spotifydb.songs
+                        on artSong.songID equals songs.ID
                         select new
                         {
-                            artistName = artists1.name,
-                            sarki1.name,
-                            sarki1.ID,
-                            sarki1.time,
-                            sarki.playedCount
+                            artSong.ID,
+                            artistName = artist1.name,
+                            songs.name,
+                            songs.time,
+                            songs.playedCount
+                            //sarki1.name,
+
+                            //sarki1.time,
+                            //sarki.playedCount
 
                         };
 
+
             dataGridView1.DataSource = query.ToList(); //queryden gelen dataları liste olarak yazdır
-            dataGridView1.Columns[0].HeaderText = "Sanatçı Adı";
+                                                       //dataGridView1.Columns[0].HeaderText = "Sanatçı Adı";
+
+            //dataGridView1.Columns[1].HeaderText = "Sanatçı Adı";
+            //dataGridView1.Columns[2].HeaderText = "Şarkı Adı";
+            //dataGridView1.Columns[3].HeaderText = "Şarkı Süresi";
+            //dataGridView1.Columns[3].HeaderText = "Oynatma Sayısı";
+
+
             control = 2;
 
         }

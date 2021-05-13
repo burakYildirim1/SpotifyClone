@@ -87,12 +87,30 @@ namespace SpotiftClone
 
         private void ıconButton3_Click(object sender, EventArgs e)
         {
-            TakipEdilenForm takipEdilenForm = new TakipEdilenForm();
-            FormGetir2(takipEdilenForm);
+
+            
+            if(User.user.subscriber_type.type == "Premium")
+            {
+                TakipEdilenForm takipEdilenForm = new TakipEdilenForm();
+                FormGetir2(takipEdilenForm);
+            }
+            else
+            {
+                MessageBox.Show("para yükle");
+            }
+
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
+
+        }
+
+        private void ıconButton4_Click(object sender, EventArgs e)
+        {
+            sarkilarForm sarkilarForm = new sarkilarForm();
+            FormGetir2(sarkilarForm);
+
 
         }
     }

@@ -11,10 +11,18 @@ namespace SpotiftClone.DataAccess
     {
         private void createPlaylist(users user)
         {
-            for (int i = 1; i <= Connection.spotifydb.song_type.Count(); i++)
+            
+            //int[] songTypeID = Connection.spotifydb.song_type
+            var type = Connection.spotifydb.song_type.ToList();
+
+            foreach (var item in type)
             {
-                Connection.spotifydb.playlists.Add(new playlists() { userID = user.ID, songTypeID = i });
+                
+                Connection.spotifydb.playlists.Add(new playlists() { userID = user.ID, songTypeID = item.ID });
             }
+
+
+            //Connection.spotifydb.playlists.Add(new playlists() { userID = user.ID, songTypeID = songTypeID[i] });
         }
 
 

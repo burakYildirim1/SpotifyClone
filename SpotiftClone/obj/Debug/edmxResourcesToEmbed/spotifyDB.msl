@@ -22,15 +22,6 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="albumsongs">
-      <EntityTypeMapping TypeName="spotifydbModel.albumsongs">
-        <MappingFragment StoreEntitySet="albumsongs">
-          <ScalarProperty Name="songID" ColumnName="songID" />
-          <ScalarProperty Name="albumID" ColumnName="albumID" />
-          <ScalarProperty Name="ID" ColumnName="ID" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="artists">
       <EntityTypeMapping TypeName="spotifydbModel.artists">
         <MappingFragment StoreEntitySet="artists">
@@ -87,7 +78,6 @@
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="typeID" ColumnName="typeID" />
           <ScalarProperty Name="albumID" ColumnName="albumID" />
-          <ScalarProperty Name="artistID" ColumnName="artistID" />
           <ScalarProperty Name="ID" ColumnName="ID" />
         </MappingFragment>
       </EntityTypeMapping>

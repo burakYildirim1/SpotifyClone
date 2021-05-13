@@ -24,14 +24,6 @@
           <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
           <Property Name="state" Type="bit" Nullable="false" />
         </EntityType>
-        <EntityType Name="albumsongs">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="albumID" Type="int" Nullable="false" />
-          <Property Name="songID" Type="int" Nullable="false" />
-        </EntityType>
         <EntityType Name="artists">
           <Key>
             <PropertyRef Name="ID" />
@@ -78,7 +70,6 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-          <Property Name="artistID" Type="int" Nullable="false" />
           <Property Name="albumID" Type="int" Nullable="false" />
           <Property Name="typeID" Type="int" Nullable="false" />
           <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
@@ -153,34 +144,6 @@
             </Principal>
             <Dependent Role="albums">
               <PropertyRef Name="typeID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="albumsongs_ibfk_1">
-          <End Role="albums" Type="Self.albums" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="albumsongs" Type="Self.albumsongs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="albums">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="albumsongs">
-              <PropertyRef Name="albumID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="albumsongs_ibfk_2">
-          <End Role="songs" Type="Self.songs" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="albumsongs" Type="Self.albumsongs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="songs">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="albumsongs">
-              <PropertyRef Name="songID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -268,20 +231,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="songs_ibfk_2">
-          <End Role="artists" Type="Self.artists" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Role="songs" Type="Self.songs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="artists">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="songs">
-              <PropertyRef Name="artistID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="songs_ibfk_3">
           <End Role="albums" Type="Self.albums" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -355,7 +304,6 @@
         <EntityContainer Name="spotifydbModelStoreContainer">
           <EntitySet Name="admins" EntityType="Self.admins" Schema="" store:Type="Tables" />
           <EntitySet Name="albums" EntityType="Self.albums" Schema="" store:Type="Tables" />
-          <EntitySet Name="albumsongs" EntityType="Self.albumsongs" Schema="" store:Type="Tables" />
           <EntitySet Name="artists" EntityType="Self.artists" Schema="" store:Type="Tables" />
           <EntitySet Name="artists_of_song" EntityType="Self.artists_of_song" Schema="" store:Type="Tables" />
           <EntitySet Name="countries" EntityType="Self.countries" Schema="" store:Type="Tables" />
@@ -376,14 +324,6 @@
           <AssociationSet Name="albums_ibfk_2" Association="Self.albums_ibfk_2">
             <End Role="song_type" EntitySet="song_type" />
             <End Role="albums" EntitySet="albums" />
-          </AssociationSet>
-          <AssociationSet Name="albumsongs_ibfk_1" Association="Self.albumsongs_ibfk_1">
-            <End Role="albums" EntitySet="albums" />
-            <End Role="albumsongs" EntitySet="albumsongs" />
-          </AssociationSet>
-          <AssociationSet Name="albumsongs_ibfk_2" Association="Self.albumsongs_ibfk_2">
-            <End Role="songs" EntitySet="songs" />
-            <End Role="albumsongs" EntitySet="albumsongs" />
           </AssociationSet>
           <AssociationSet Name="artists_ibfk_1" Association="Self.artists_ibfk_1">
             <End Role="countries" EntitySet="countries" />
@@ -407,10 +347,6 @@
           </AssociationSet>
           <AssociationSet Name="songs_ibfk_1" Association="Self.songs_ibfk_1">
             <End Role="song_type" EntitySet="song_type" />
-            <End Role="songs" EntitySet="songs" />
-          </AssociationSet>
-          <AssociationSet Name="songs_ibfk_2" Association="Self.songs_ibfk_2">
-            <End Role="artists" EntitySet="artists" />
             <End Role="songs" EntitySet="songs" />
           </AssociationSet>
           <AssociationSet Name="songs_ibfk_3" Association="Self.songs_ibfk_3">
@@ -441,7 +377,6 @@
         <EntityContainer Name="spotifydbEntities" annotation:LazyLoadingEnabled="true">
           <EntitySet Name="admins" EntityType="spotifydbModel.admins" />
           <EntitySet Name="albums" EntityType="spotifydbModel.albums" />
-          <EntitySet Name="albumsongs" EntityType="spotifydbModel.albumsongs" />
           <EntitySet Name="artists" EntityType="spotifydbModel.artists" />
           <EntitySet Name="artists_of_song" EntityType="spotifydbModel.artists_of_song" />
           <EntitySet Name="countries" EntityType="spotifydbModel.countries" />
@@ -463,17 +398,9 @@
             <End Role="song_type" EntitySet="song_type" />
             <End Role="albums" EntitySet="albums" />
           </AssociationSet>
-          <AssociationSet Name="albumsongs_ibfk_1" Association="spotifydbModel.albumsongs_ibfk_1">
-            <End Role="albums" EntitySet="albums" />
-            <End Role="albumsongs" EntitySet="albumsongs" />
-          </AssociationSet>
           <AssociationSet Name="songs_ibfk_3" Association="spotifydbModel.songs_ibfk_3">
             <End Role="albums" EntitySet="albums" />
             <End Role="songs" EntitySet="songs" />
-          </AssociationSet>
-          <AssociationSet Name="albumsongs_ibfk_2" Association="spotifydbModel.albumsongs_ibfk_2">
-            <End Role="songs" EntitySet="songs" />
-            <End Role="albumsongs" EntitySet="albumsongs" />
           </AssociationSet>
           <AssociationSet Name="artists_ibfk_1" Association="spotifydbModel.artists_ibfk_1">
             <End Role="countries" EntitySet="countries" />
@@ -482,10 +409,6 @@
           <AssociationSet Name="artists_of_song_ibfk_1" Association="spotifydbModel.artists_of_song_ibfk_1">
             <End Role="artists" EntitySet="artists" />
             <End Role="artists_of_song" EntitySet="artists_of_song" />
-          </AssociationSet>
-          <AssociationSet Name="songs_ibfk_2" Association="spotifydbModel.songs_ibfk_2">
-            <End Role="artists" EntitySet="artists" />
-            <End Role="songs" EntitySet="songs" />
           </AssociationSet>
           <AssociationSet Name="artists_of_song_ibfk_2" Association="spotifydbModel.artists_of_song_ibfk_2">
             <End Role="songs" EntitySet="songs" />
@@ -538,21 +461,10 @@
           <Property Name="songCount" Type="Int32" Nullable="false" />
           <Property Name="date" Type="DateTime" Nullable="false" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="state" Type="Boolean" Nullable="false" DefaultValue="true" />
+          <Property Name="state" Type="Boolean" Nullable="false" DefaultValue="True" />
           <NavigationProperty Name="artists" Relationship="spotifydbModel.albums_ibfk_1" FromRole="albums" ToRole="artists" />
           <NavigationProperty Name="song_type" Relationship="spotifydbModel.albums_ibfk_2" FromRole="albums" ToRole="song_type" />
-          <NavigationProperty Name="albumsongs" Relationship="spotifydbModel.albumsongs_ibfk_1" FromRole="albums" ToRole="albumsongs" />
           <NavigationProperty Name="songs" Relationship="spotifydbModel.songs_ibfk_3" FromRole="albums" ToRole="songs" />
-        </EntityType>
-        <EntityType Name="albumsongs">
-          <Key>
-            <PropertyRef Name="ID" />
-          </Key>
-          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="albumID" Type="Int32" Nullable="false" />
-          <Property Name="songID" Type="Int32" Nullable="false" />
-          <NavigationProperty Name="albums" Relationship="spotifydbModel.albumsongs_ibfk_1" FromRole="albumsongs" ToRole="albums" />
-          <NavigationProperty Name="songs" Relationship="spotifydbModel.albumsongs_ibfk_2" FromRole="albumsongs" ToRole="songs" />
         </EntityType>
         <EntityType Name="artists">
           <Key>
@@ -563,11 +475,10 @@
           <Property Name="surname" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="stageName" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="countryID" Type="Int32" Nullable="false" />
-          <Property Name="state" Type="Boolean" Nullable="false" DefaultValue="true" />
+          <Property Name="state" Type="Boolean" Nullable="false" DefaultValue="True" />
           <NavigationProperty Name="albums" Relationship="spotifydbModel.albums_ibfk_1" FromRole="artists" ToRole="albums" />
           <NavigationProperty Name="countries" Relationship="spotifydbModel.artists_ibfk_1" FromRole="artists" ToRole="countries" />
           <NavigationProperty Name="artists_of_song" Relationship="spotifydbModel.artists_of_song_ibfk_1" FromRole="artists" ToRole="artists_of_song" />
-          <NavigationProperty Name="songs" Relationship="spotifydbModel.songs_ibfk_2" FromRole="artists" ToRole="songs" />
         </EntityType>
         <EntityType Name="artists_of_song">
           <Key>
@@ -614,17 +525,14 @@
             <PropertyRef Name="ID" />
           </Key>
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="artistID" Type="Int32" Nullable="false" />
           <Property Name="albumID" Type="Int32" Nullable="false" />
           <Property Name="typeID" Type="Int32" Nullable="false" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="date" Type="DateTime" Nullable="false" />
           <Property Name="time" Type="Int32" Nullable="false" />
           <Property Name="playedCount" Type="Int32" Nullable="false" />
-          <Property Name="state" Type="Boolean" Nullable="false" DefaultValue="true" />
+          <Property Name="state" Type="Boolean" Nullable="false" DefaultValue="True" />
           <NavigationProperty Name="albums" Relationship="spotifydbModel.songs_ibfk_3" FromRole="songs" ToRole="albums" />
-          <NavigationProperty Name="albumsongs" Relationship="spotifydbModel.albumsongs_ibfk_2" FromRole="songs" ToRole="albumsongs" />
-          <NavigationProperty Name="artists" Relationship="spotifydbModel.songs_ibfk_2" FromRole="songs" ToRole="artists" />
           <NavigationProperty Name="artists_of_song" Relationship="spotifydbModel.artists_of_song_ibfk_2" FromRole="songs" ToRole="artists_of_song" />
           <NavigationProperty Name="song_type" Relationship="spotifydbModel.songs_ibfk_1" FromRole="songs" ToRole="song_type" />
           <NavigationProperty Name="user_playlist_songs" Relationship="spotifydbModel.user_playlist_songs_ibfk_2" FromRole="songs" ToRole="user_playlist_songs" />
@@ -705,20 +613,6 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
-        <Association Name="albumsongs_ibfk_1">
-          <End Type="spotifydbModel.albums" Role="albums" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="spotifydbModel.albumsongs" Role="albumsongs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="albums">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="albumsongs">
-              <PropertyRef Name="albumID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
         <Association Name="songs_ibfk_3">
           <End Type="spotifydbModel.albums" Role="albums" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -730,20 +624,6 @@
             </Principal>
             <Dependent Role="songs">
               <PropertyRef Name="albumID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="albumsongs_ibfk_2">
-          <End Type="spotifydbModel.songs" Role="songs" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="spotifydbModel.albumsongs" Role="albumsongs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="songs">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="albumsongs">
-              <PropertyRef Name="songID" />
             </Dependent>
           </ReferentialConstraint>
         </Association>
@@ -771,20 +651,6 @@
               <PropertyRef Name="ID" />
             </Principal>
             <Dependent Role="artists_of_song">
-              <PropertyRef Name="artistID" />
-            </Dependent>
-          </ReferentialConstraint>
-        </Association>
-        <Association Name="songs_ibfk_2">
-          <End Type="spotifydbModel.artists" Role="artists" Multiplicity="1">
-            <OnDelete Action="Cascade" />
-          </End>
-          <End Type="spotifydbModel.songs" Role="songs" Multiplicity="*" />
-          <ReferentialConstraint>
-            <Principal Role="artists">
-              <PropertyRef Name="ID" />
-            </Principal>
-            <Dependent Role="songs">
               <PropertyRef Name="artistID" />
             </Dependent>
           </ReferentialConstraint>
@@ -928,15 +794,6 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="albumsongs">
-            <EntityTypeMapping TypeName="spotifydbModel.albumsongs">
-              <MappingFragment StoreEntitySet="albumsongs">
-                <ScalarProperty Name="songID" ColumnName="songID" />
-                <ScalarProperty Name="albumID" ColumnName="albumID" />
-                <ScalarProperty Name="ID" ColumnName="ID" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
           <EntitySetMapping Name="artists">
             <EntityTypeMapping TypeName="spotifydbModel.artists">
               <MappingFragment StoreEntitySet="artists">
@@ -993,7 +850,6 @@
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="typeID" ColumnName="typeID" />
                 <ScalarProperty Name="albumID" ColumnName="albumID" />
-                <ScalarProperty Name="artistID" ColumnName="artistID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>
