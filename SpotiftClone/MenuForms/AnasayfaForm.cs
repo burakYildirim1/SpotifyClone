@@ -33,10 +33,22 @@ namespace SpotiftClone.MenuForms
             dataGridView1.DataSource = null;
             dataGridView1.Rows.Clear();
             dataGridView1.Refresh();
-            
-           // var query = Connection.spotifydb.songs.Where(c => c.state == true).ToList();
 
-           
+
+            var ulkeList = Connection.spotifydb.countries.ToList();
+            ulkeListe.Items.Insert(0, "Ülkelere Göre");
+            ulkeListe.SelectedIndex = 0;
+            foreach (var item in ulkeList)
+            {
+                ulkeListe.Items.Add(item.name);
+            }
+
+
+
+
+            // var query = Connection.spotifydb.songs.Where(c => c.state == true).ToList();
+
+
 
             var query1 = from sarki in Connection.spotifydb.songs
                          join artistSong in Connection.spotifydb.artists_of_song
@@ -63,12 +75,26 @@ namespace SpotiftClone.MenuForms
 
         private void btnPause_Click(object sender, EventArgs e)
         {
+            var countryID=User.user.countryID;
             var sarkiID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
             var query = Connection.spotifydb.songs.SingleOrDefault(c => c.ID == sarkiID);
             query.playedCount++;
-            Connection.spotifydb.SaveChanges();
-            
 
+            var query2 = Connection.spotifydb.playedcount_countries.Where(c => c.countryID == countryID && c.songID == sarkiID).Count();
+            
+            if(query2 == 0)
+            {
+                Connection.spotifydb.playedcount_countries.Add(new playedcount_countries() { countryID = countryID, songID = sarkiID,playedCount = 1 });
+                
+            }
+            
+            else
+            {
+               var result = Connection.spotifydb.playedcount_countries.SingleOrDefault(c => c.countryID == countryID && c.songID == sarkiID);
+               result.playedCount++;
+            }
+
+            Connection.spotifydb.SaveChanges();
         }
         
         private void btnNext_Click(object sender, EventArgs e)
@@ -123,8 +149,6 @@ namespace SpotiftClone.MenuForms
             dataGridView1.DataSource = query1.ToList();
             dataGridView1.Columns[4].DefaultCellStyle.Format = "N2";
             dataGridView1.Columns[0].Visible = false;
-
-
 
 
         }
@@ -228,6 +252,49 @@ namespace SpotiftClone.MenuForms
 
             dataGridView1.DataSource = query1.ToList();
             dataGridView1.Columns[4].DefaultCellStyle.Format = "N2";
+            dataGridView1.Columns[0].Visible = false;
+        }
+
+        private void ulkeListe_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+
+            dataGridView1.DataSource = null;
+            dataGridView1.Rows.Clear();
+            dataGridView1.Refresh();
+
+            int countryID = 1;
+            var firstID = Connection.spotifydb.countries.FirstOrDefault(c => c.name == ulkeListe.Text);
+            if (firstID != null)
+            {
+                countryID = Connection.spotifydb.countries.FirstOrDefault(c => c.name == ulkeListe.Text).ID;
+            }
+            
+
+            
+
+
+
+            //var query = Connection.spotifydb.songs.OrderByDescending(c => c.playedCount).Take(10).ToList();
+            //dataGridView1.DataSource = query.ToList();
+
+
+            var query1 = (from playedcount_countries in Connection.spotifydb.playedcount_countries
+                                      join songs in Connection.spotifydb.songs
+                                      on playedcount_countries.songID equals songs.ID
+                                      where(playedcount_countries.countryID == countryID )
+                                     orderby playedcount_countries.playedCount descending
+                                    select new
+                                      {
+                                          songs.ID,
+                                          songs.name,
+                                          playedcount_countries.playedCount
+                                      }).Take(10);
+                   
+
+
+
+            dataGridView1.DataSource = query1.ToList();
             dataGridView1.Columns[0].Visible = false;
         }
     }

@@ -51,6 +51,16 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="playedcount_countries">
+      <EntityTypeMapping TypeName="spotifydbModel.playedcount_countries">
+        <MappingFragment StoreEntitySet="playedcount_countries">
+          <ScalarProperty Name="playedCount" ColumnName="playedCount" />
+          <ScalarProperty Name="songID" ColumnName="songID" />
+          <ScalarProperty Name="countryID" ColumnName="countryID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="playlists">
       <EntityTypeMapping TypeName="spotifydbModel.playlists">
         <MappingFragment StoreEntitySet="playlists">

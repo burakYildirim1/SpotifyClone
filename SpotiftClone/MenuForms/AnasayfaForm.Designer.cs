@@ -38,10 +38,10 @@ namespace SpotiftClone.MenuForms
             this.ıconButton1 = new FontAwesome.Sharp.IconButton();
             this.customInstaller1 = new MySql.Data.MySqlClient.CustomInstaller();
             this.label1 = new System.Windows.Forms.Label();
-            this.ıconButton2 = new FontAwesome.Sharp.IconButton();
             this.ıconButton3 = new FontAwesome.Sharp.IconButton();
             this.ıconButton4 = new FontAwesome.Sharp.IconButton();
             this.ıconButton5 = new FontAwesome.Sharp.IconButton();
+            this.ulkeListe = new System.Windows.Forms.ComboBox();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
@@ -156,24 +156,12 @@ namespace SpotiftClone.MenuForms
             this.label1.Text = "TOP 10 LİSTELERİ";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
-            // ıconButton2
-            // 
-            this.ıconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
-            this.ıconButton2.IconColor = System.Drawing.Color.Black;
-            this.ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton2.Location = new System.Drawing.Point(616, 291);
-            this.ıconButton2.Name = "ıconButton2";
-            this.ıconButton2.Size = new System.Drawing.Size(95, 23);
-            this.ıconButton2.TabIndex = 16;
-            this.ıconButton2.Text = "Ülkelere Göre";
-            this.ıconButton2.UseVisualStyleBackColor = true;
-            // 
             // ıconButton3
             // 
             this.ıconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ıconButton3.IconColor = System.Drawing.Color.Black;
             this.ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton3.Location = new System.Drawing.Point(616, 338);
+            this.ıconButton3.Location = new System.Drawing.Point(616, 332);
             this.ıconButton3.Name = "ıconButton3";
             this.ıconButton3.Size = new System.Drawing.Size(95, 23);
             this.ıconButton3.TabIndex = 17;
@@ -186,7 +174,7 @@ namespace SpotiftClone.MenuForms
             this.ıconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ıconButton4.IconColor = System.Drawing.Color.Black;
             this.ıconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton4.Location = new System.Drawing.Point(616, 381);
+            this.ıconButton4.Location = new System.Drawing.Point(616, 375);
             this.ıconButton4.Name = "ıconButton4";
             this.ıconButton4.Size = new System.Drawing.Size(95, 23);
             this.ıconButton4.TabIndex = 18;
@@ -199,7 +187,7 @@ namespace SpotiftClone.MenuForms
             this.ıconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ıconButton5.IconColor = System.Drawing.Color.Black;
             this.ıconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton5.Location = new System.Drawing.Point(616, 422);
+            this.ıconButton5.Location = new System.Drawing.Point(616, 416);
             this.ıconButton5.Name = "ıconButton5";
             this.ıconButton5.Size = new System.Drawing.Size(95, 23);
             this.ıconButton5.TabIndex = 19;
@@ -207,16 +195,26 @@ namespace SpotiftClone.MenuForms
             this.ıconButton5.UseVisualStyleBackColor = true;
             this.ıconButton5.Click += new System.EventHandler(this.ıconButton5_Click);
             // 
+            // ulkeListe
+            // 
+            this.ulkeListe.FormattingEnabled = true;
+            this.ulkeListe.Location = new System.Drawing.Point(616, 290);
+            this.ulkeListe.Name = "ulkeListe";
+            this.ulkeListe.Size = new System.Drawing.Size(95, 21);
+            this.ulkeListe.TabIndex = 20;
+            this.ulkeListe.Tag = "";
+            this.ulkeListe.SelectedIndexChanged += new System.EventHandler(this.ulkeListe_SelectedIndexChanged);
+            // 
             // AnasayfaForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(745, 513);
+            this.Controls.Add(this.ulkeListe);
             this.Controls.Add(this.ıconButton5);
             this.Controls.Add(this.ıconButton4);
             this.Controls.Add(this.ıconButton3);
-            this.Controls.Add(this.ıconButton2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.ıconButton1);
             this.Controls.Add(this.dataGridView1);
@@ -247,9 +245,9 @@ namespace SpotiftClone.MenuForms
         private FontAwesome.Sharp.IconButton ıconButton1;
         private MySql.Data.MySqlClient.CustomInstaller customInstaller1;
         private System.Windows.Forms.Label label1;
-        private FontAwesome.Sharp.IconButton ıconButton2;
         private FontAwesome.Sharp.IconButton ıconButton3;
         private FontAwesome.Sharp.IconButton ıconButton4;
         private FontAwesome.Sharp.IconButton ıconButton5;
+        private System.Windows.Forms.ComboBox ulkeListe;
     }
 }

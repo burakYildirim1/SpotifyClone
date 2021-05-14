@@ -18,6 +18,7 @@ namespace SpotiftClone
         public songs()
         {
             this.artists_of_song = new HashSet<artists_of_song>();
+            this.playedcount_countries = new HashSet<playedcount_countries>();
             this.user_playlist_songs = new HashSet<user_playlist_songs>();
         }
     
@@ -33,6 +34,8 @@ namespace SpotiftClone
         public virtual albums albums { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<artists_of_song> artists_of_song { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<playedcount_countries> playedcount_countries { get; set; }
         public virtual song_type song_type { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<user_playlist_songs> user_playlist_songs { get; set; }

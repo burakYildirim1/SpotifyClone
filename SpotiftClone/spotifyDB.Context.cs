@@ -30,6 +30,7 @@ namespace SpotiftClone
         public virtual DbSet<artists> artists { get; set; }
         public virtual DbSet<artists_of_song> artists_of_song { get; set; }
         public virtual DbSet<countries> countries { get; set; }
+        public virtual DbSet<playedcount_countries> playedcount_countries { get; set; }
         public virtual DbSet<playlists> playlists { get; set; }
         public virtual DbSet<song_type> song_type { get; set; }
         public virtual DbSet<songs> songs { get; set; }

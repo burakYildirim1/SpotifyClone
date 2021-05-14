@@ -210,6 +210,9 @@
     <Compile Include="MenuForms\TakipEdilenForm.Designer.cs">
       <DependentUpon>TakipEdilenForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="playedcount_countries.cs">
+      <DependentUpon>spotifyDB.tt</DependentUpon>
+    </Compile>
     <Compile Include="playlists.cs">
       <DependentUpon>spotifyDB.tt</DependentUpon>
     </Compile>

@@ -6,6 +6,7 @@
     <EntitySet Name="artists" EntityType="spotifydbModel.artists" />
     <EntitySet Name="artists_of_song" EntityType="spotifydbModel.artists_of_song" />
     <EntitySet Name="countries" EntityType="spotifydbModel.countries" />
+    <EntitySet Name="playedcount_countries" EntityType="spotifydbModel.playedcount_countries" />
     <EntitySet Name="playlists" EntityType="spotifydbModel.playlists" />
     <EntitySet Name="song_type" EntityType="spotifydbModel.song_type" />
     <EntitySet Name="songs" EntityType="spotifydbModel.songs" />
@@ -41,9 +42,17 @@
       <End Role="songs" EntitySet="songs" />
       <End Role="artists_of_song" EntitySet="artists_of_song" />
     </AssociationSet>
+    <AssociationSet Name="playedcount_countries_ibfk_1" Association="spotifydbModel.playedcount_countries_ibfk_1">
+      <End Role="countries" EntitySet="countries" />
+      <End Role="playedcount_countries" EntitySet="playedcount_countries" />
+    </AssociationSet>
     <AssociationSet Name="users_ibfk_1" Association="spotifydbModel.users_ibfk_1">
       <End Role="countries" EntitySet="countries" />
       <End Role="users" EntitySet="users" />
+    </AssociationSet>
+    <AssociationSet Name="playedcount_countries_ibfk_2" Association="spotifydbModel.playedcount_countries_ibfk_2">
+      <End Role="songs" EntitySet="songs" />
+      <End Role="playedcount_countries" EntitySet="playedcount_countries" />
     </AssociationSet>
     <AssociationSet Name="playlists_ibfk_1" Association="spotifydbModel.playlists_ibfk_1">
       <End Role="song_type" EntitySet="song_type" />
@@ -132,7 +141,19 @@
     <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="name" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
     <NavigationProperty Name="artists" Relationship="spotifydbModel.artists_ibfk_1" FromRole="countries" ToRole="artists" />
+    <NavigationProperty Name="playedcount_countries" Relationship="spotifydbModel.playedcount_countries_ibfk_1" FromRole="countries" ToRole="playedcount_countries" />
     <NavigationProperty Name="users" Relationship="spotifydbModel.users_ibfk_1" FromRole="countries" ToRole="users" />
+  </EntityType>
+  <EntityType Name="playedcount_countries">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="countryID" Type="Int32" Nullable="false" />
+    <Property Name="songID" Type="Int32" Nullable="false" />
+    <Property Name="playedCount" Type="Int32" Nullable="false" />
+    <NavigationProperty Name="countries" Relationship="spotifydbModel.playedcount_countries_ibfk_1" FromRole="playedcount_countries" ToRole="countries" />
+    <NavigationProperty Name="songs" Relationship="spotifydbModel.playedcount_countries_ibfk_2" FromRole="playedcount_countries" ToRole="songs" />
   </EntityType>
   <EntityType Name="playlists">
     <Key>
@@ -169,6 +190,7 @@
     <Property Name="state" Type="Boolean" Nullable="false" />
     <NavigationProperty Name="albums" Relationship="spotifydbModel.songs_ibfk_3" FromRole="songs" ToRole="albums" />
     <NavigationProperty Name="artists_of_song" Relationship="spotifydbModel.artists_of_song_ibfk_2" FromRole="songs" ToRole="artists_of_song" />
+    <NavigationProperty Name="playedcount_countries" Relationship="spotifydbModel.playedcount_countries_ibfk_2" FromRole="songs" ToRole="playedcount_countries" />
     <NavigationProperty Name="song_type" Relationship="spotifydbModel.songs_ibfk_1" FromRole="songs" ToRole="song_type" />
     <NavigationProperty Name="user_playlist_songs" Relationship="spotifydbModel.user_playlist_songs_ibfk_2" FromRole="songs" ToRole="user_playlist_songs" />
   </EntityType>
@@ -316,6 +338,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="playedcount_countries_ibfk_1">
+    <End Type="spotifydbModel.countries" Role="countries" Multiplicity="1" />
+    <End Type="spotifydbModel.playedcount_countries" Role="playedcount_countries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="countries">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="playedcount_countries">
+        <PropertyRef Name="countryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="users_ibfk_1">
     <End Type="spotifydbModel.countries" Role="countries" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -327,6 +361,18 @@
       </Principal>
       <Dependent Role="users">
         <PropertyRef Name="countryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="playedcount_countries_ibfk_2">
+    <End Type="spotifydbModel.songs" Role="songs" Multiplicity="1" />
+    <End Type="spotifydbModel.playedcount_countries" Role="playedcount_countries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="songs">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="playedcount_countries">
+        <PropertyRef Name="songID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

@@ -39,5 +39,10 @@ namespace SpotiftClone
             hesapOlustur.Show();
             this.Hide();
         }
+
+        private void GenelGiris_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

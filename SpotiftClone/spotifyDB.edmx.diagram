@@ -5,18 +5,19 @@
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
       <Diagram DiagramId="fb3a612c14914c44ae5453eaec6e39fb" Name="Diagram1" ZoomLevel="95">
-        <EntityTypeShape EntityType="spotifydbModel.admins" Width="1.5" PointX="5.25" PointY="15.25" />
-        <EntityTypeShape EntityType="spotifydbModel.albums" Width="1.5" PointX="5.25" PointY="11.375" />
-        <EntityTypeShape EntityType="spotifydbModel.artists" Width="1.5" PointX="3" PointY="11.5" />
-        <EntityTypeShape EntityType="spotifydbModel.artists_of_song" Width="1.5" PointX="9.75" PointY="12.875" />
-        <EntityTypeShape EntityType="spotifydbModel.countries" Width="1.5" PointX="0.75" PointY="6.875" />
-        <EntityTypeShape EntityType="spotifydbModel.playlists" Width="1.5" PointX="8.25" PointY="6.75" />
-        <EntityTypeShape EntityType="spotifydbModel.song_type" Width="1.5" PointX="6" PointY="2.875" />
-        <EntityTypeShape EntityType="spotifydbModel.songs" Width="1.5" PointX="7.5" PointY="11.25" />
-        <EntityTypeShape EntityType="spotifydbModel.subscriber_type" Width="1.5" PointX="0.75" PointY="4" />
-        <EntityTypeShape EntityType="spotifydbModel.user_follows" Width="1.5" PointX="5.25" PointY="5.625" />
-        <EntityTypeShape EntityType="spotifydbModel.user_playlist_songs" Width="1.5" PointX="10.5" PointY="9.625" />
-        <EntityTypeShape EntityType="spotifydbModel.users" Width="1.5" PointX="3" PointY="6" />
+        <EntityTypeShape EntityType="spotifydbModel.admins" Width="1.5" PointX="5.25" PointY="16.875" />
+        <EntityTypeShape EntityType="spotifydbModel.albums" Width="1.5" PointX="5.25" PointY="13" />
+        <EntityTypeShape EntityType="spotifydbModel.artists" Width="1.5" PointX="3" PointY="13.125" />
+        <EntityTypeShape EntityType="spotifydbModel.artists_of_song" Width="1.5" PointX="9.75" PointY="16.5" />
+        <EntityTypeShape EntityType="spotifydbModel.countries" Width="1.5" PointX="0.75" PointY="8.375" />
+        <EntityTypeShape EntityType="spotifydbModel.playedcount_countries" Width="1.5" PointX="9.75" PointY="13.25" />
+        <EntityTypeShape EntityType="spotifydbModel.playlists" Width="1.5" PointX="5.25" PointY="6.375" />
+        <EntityTypeShape EntityType="spotifydbModel.song_type" Width="1.5" PointX="3" PointY="4.375" />
+        <EntityTypeShape EntityType="spotifydbModel.songs" Width="1.5" PointX="7.5" PointY="12.75" />
+        <EntityTypeShape EntityType="spotifydbModel.subscriber_type" Width="1.5" PointX="0.75" PointY="5.625" />
+        <EntityTypeShape EntityType="spotifydbModel.user_follows" Width="1.5" PointX="5.25" PointY="10.125" />
+        <EntityTypeShape EntityType="spotifydbModel.user_playlist_songs" Width="1.5" PointX="9.75" PointY="10.25" />
+        <EntityTypeShape EntityType="spotifydbModel.users" Width="1.5" PointX="3" PointY="7.625" />
         <AssociationConnector Association="spotifydbModel.admins_ibfk_1" />
         <AssociationConnector Association="spotifydbModel.albums_ibfk_1" />
         <AssociationConnector Association="spotifydbModel.albums_ibfk_2" />
@@ -24,7 +25,9 @@
         <AssociationConnector Association="spotifydbModel.artists_ibfk_1" />
         <AssociationConnector Association="spotifydbModel.artists_of_song_ibfk_1" />
         <AssociationConnector Association="spotifydbModel.artists_of_song_ibfk_2" />
+        <AssociationConnector Association="spotifydbModel.playedcount_countries_ibfk_1" />
         <AssociationConnector Association="spotifydbModel.users_ibfk_1" />
+        <AssociationConnector Association="spotifydbModel.playedcount_countries_ibfk_2" />
         <AssociationConnector Association="spotifydbModel.playlists_ibfk_1" />
         <AssociationConnector Association="spotifydbModel.playlists_ibfk_2" />
         <AssociationConnector Association="spotifydbModel.user_playlist_songs_ibfk_1" />

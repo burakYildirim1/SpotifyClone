@@ -21,7 +21,11 @@ namespace SpotiftClone
 
         private void HesapOlustur_Load(object sender, EventArgs e)
         {
-
+            var ulkeList = Connection.spotifydb.countries.ToList();
+            foreach (var item in ulkeList)
+            {
+                ulkeListe.Items.Add(item.name);
+            }
         }
 
         private void btnGiris_Click(object sender, EventArgs e)
@@ -30,7 +34,8 @@ namespace SpotiftClone
             if(eFUserDal.checkIfEmail(textMail.Text))
             {
                 var subscribeID = Connection.spotifydb.subscriber_type.FirstOrDefault(c => c.type == comboBox1.Text).ID;
-               
+                var countryID = Connection.spotifydb.countries.FirstOrDefault(c => c.name == ulkeListe.Text).ID;
+
                 //var subscribeID = (comboBox1.SelectedIndex == 0) ? 3 : 4; //database'den idleri alıp ata --- country id aynı sekilde
                 eFUserDal.addUser(new users()
                 {
@@ -39,7 +44,7 @@ namespace SpotiftClone
                     mail = textMail.Text,
                     password = textSifre.Text,
                     subscriberID = subscribeID,
-                    countryID = 53
+                    countryID = countryID
                 });
                 
             }
@@ -57,5 +62,9 @@ namespace SpotiftClone
 
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

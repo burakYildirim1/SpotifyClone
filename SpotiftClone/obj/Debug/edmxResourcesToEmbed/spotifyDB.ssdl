@@ -45,6 +45,15 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="name" Type="varchar" MaxLength="45" Nullable="false" />
   </EntityType>
+  <EntityType Name="playedcount_countries">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="countryID" Type="int" Nullable="false" />
+    <Property Name="songID" Type="int" Nullable="false" />
+    <Property Name="playedCount" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="playlists">
     <Key>
       <PropertyRef Name="ID" />
@@ -192,6 +201,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="playedcount_countries_ibfk_1">
+    <End Role="countries" Type="Self.countries" Multiplicity="1" />
+    <End Role="playedcount_countries" Type="Self.playedcount_countries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="countries">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="playedcount_countries">
+        <PropertyRef Name="countryID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="playedcount_countries_ibfk_2">
+    <End Role="songs" Type="Self.songs" Multiplicity="1" />
+    <End Role="playedcount_countries" Type="Self.playedcount_countries" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="songs">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="playedcount_countries">
+        <PropertyRef Name="songID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="playlists_ibfk_1">
     <End Role="song_type" Type="Self.song_type" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -334,6 +367,7 @@
     <EntitySet Name="artists" EntityType="Self.artists" Schema="" store:Type="Tables" />
     <EntitySet Name="artists_of_song" EntityType="Self.artists_of_song" Schema="" store:Type="Tables" />
     <EntitySet Name="countries" EntityType="Self.countries" Schema="" store:Type="Tables" />
+    <EntitySet Name="playedcount_countries" EntityType="Self.playedcount_countries" Schema="" store:Type="Tables" />
     <EntitySet Name="playlists" EntityType="Self.playlists" Schema="" store:Type="Tables" />
     <EntitySet Name="song_type" EntityType="Self.song_type" Schema="" store:Type="Tables" />
     <EntitySet Name="songs" EntityType="Self.songs" Schema="" store:Type="Tables" />
@@ -364,6 +398,14 @@
     <AssociationSet Name="artists_of_song_ibfk_2" Association="Self.artists_of_song_ibfk_2">
       <End Role="songs" EntitySet="songs" />
       <End Role="artists_of_song" EntitySet="artists_of_song" />
+    </AssociationSet>
+    <AssociationSet Name="playedcount_countries_ibfk_1" Association="Self.playedcount_countries_ibfk_1">
+      <End Role="countries" EntitySet="countries" />
+      <End Role="playedcount_countries" EntitySet="playedcount_countries" />
+    </AssociationSet>
+    <AssociationSet Name="playedcount_countries_ibfk_2" Association="Self.playedcount_countries_ibfk_2">
+      <End Role="songs" EntitySet="songs" />
+      <End Role="playedcount_countries" EntitySet="playedcount_countries" />
     </AssociationSet>
     <AssociationSet Name="playlists_ibfk_1" Association="Self.playlists_ibfk_1">
       <End Role="song_type" EntitySet="song_type" />

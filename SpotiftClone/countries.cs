@@ -18,6 +18,7 @@ namespace SpotiftClone
         public countries()
         {
             this.artists = new HashSet<artists>();
+            this.playedcount_countries = new HashSet<playedcount_countries>();
             this.users = new HashSet<users>();
         }
     
@@ -26,6 +27,8 @@ namespace SpotiftClone
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<artists> artists { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<playedcount_countries> playedcount_countries { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<users> users { get; set; }
     }
