@@ -52,5 +52,6 @@ C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.is
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.silmeFormlar.albumFormSilme.resources
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.silmeFormlar.sanatciFormSilme.resources
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.silmeFormlar.sarkiFormSilme.resources
-C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.csprojAssemblyReference.cache
 C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.MenuForms.sarkilarForm.resources
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.MenuForms.sosyalForm.resources
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.csprojAssemblyReference.cache

@@ -90,6 +90,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="user_follows">
+      <EntityTypeMapping TypeName="spotifydbModel.user_follows">
+        <MappingFragment StoreEntitySet="user_follows">
+          <ScalarProperty Name="followingID" ColumnName="followingID" />
+          <ScalarProperty Name="userID" ColumnName="userID" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
     <EntitySetMapping Name="user_playlist_songs">
       <EntityTypeMapping TypeName="spotifydbModel.user_playlist_songs">
         <MappingFragment StoreEntitySet="user_playlist_songs">

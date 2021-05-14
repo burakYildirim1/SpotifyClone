@@ -85,6 +85,14 @@
           <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="type" Type="varchar" MaxLength="45" Nullable="false" />
         </EntityType>
+        <EntityType Name="user_follows">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="userID" Type="int" Nullable="false" />
+          <Property Name="followingID" Type="int" Nullable="false" />
+        </EntityType>
         <EntityType Name="user_playlist_songs">
           <Key>
             <PropertyRef Name="ID" />
@@ -245,6 +253,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="user_follows_ibfk_1">
+          <End Role="users" Type="Self.users" Multiplicity="1" />
+          <End Role="user_follows" Type="Self.user_follows" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="user_follows">
+              <PropertyRef Name="userID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="user_follows_ibfk_2">
+          <End Role="users" Type="Self.users" Multiplicity="1" />
+          <End Role="user_follows" Type="Self.user_follows" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="user_follows">
+              <PropertyRef Name="followingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="user_playlist_songs_ibfk_1">
           <End Role="playlists" Type="Self.playlists" Multiplicity="1">
             <OnDelete Action="Cascade" />
@@ -311,6 +343,7 @@
           <EntitySet Name="song_type" EntityType="Self.song_type" Schema="" store:Type="Tables" />
           <EntitySet Name="songs" EntityType="Self.songs" Schema="" store:Type="Tables" />
           <EntitySet Name="subscriber_type" EntityType="Self.subscriber_type" Schema="" store:Type="Tables" />
+          <EntitySet Name="user_follows" EntityType="Self.user_follows" Schema="" store:Type="Tables" />
           <EntitySet Name="user_playlist_songs" EntityType="Self.user_playlist_songs" Schema="" store:Type="Tables" />
           <EntitySet Name="users" EntityType="Self.users" Schema="" store:Type="Tables" />
           <AssociationSet Name="admins_ibfk_1" Association="Self.admins_ibfk_1">
@@ -353,6 +386,14 @@
             <End Role="albums" EntitySet="albums" />
             <End Role="songs" EntitySet="songs" />
           </AssociationSet>
+          <AssociationSet Name="user_follows_ibfk_1" Association="Self.user_follows_ibfk_1">
+            <End Role="users" EntitySet="users" />
+            <End Role="user_follows" EntitySet="user_follows" />
+          </AssociationSet>
+          <AssociationSet Name="user_follows_ibfk_2" Association="Self.user_follows_ibfk_2">
+            <End Role="users" EntitySet="users" />
+            <End Role="user_follows" EntitySet="user_follows" />
+          </AssociationSet>
           <AssociationSet Name="user_playlist_songs_ibfk_1" Association="Self.user_playlist_songs_ibfk_1">
             <End Role="playlists" EntitySet="playlists" />
             <End Role="user_playlist_songs" EntitySet="user_playlist_songs" />
@@ -384,6 +425,7 @@
           <EntitySet Name="song_type" EntityType="spotifydbModel.song_type" />
           <EntitySet Name="songs" EntityType="spotifydbModel.songs" />
           <EntitySet Name="subscriber_type" EntityType="spotifydbModel.subscriber_type" />
+          <EntitySet Name="user_follows" EntityType="spotifydbModel.user_follows" />
           <EntitySet Name="user_playlist_songs" EntityType="spotifydbModel.user_playlist_songs" />
           <EntitySet Name="users" EntityType="spotifydbModel.users" />
           <AssociationSet Name="admins_ibfk_1" Association="spotifydbModel.admins_ibfk_1">
@@ -442,6 +484,14 @@
             <End Role="subscriber_type" EntitySet="subscriber_type" />
             <End Role="users" EntitySet="users" />
           </AssociationSet>
+          <AssociationSet Name="user_follows_ibfk_1" Association="spotifydbModel.user_follows_ibfk_1">
+            <End Role="users" EntitySet="users" />
+            <End Role="user_follows" EntitySet="user_follows" />
+          </AssociationSet>
+          <AssociationSet Name="user_follows_ibfk_2" Association="spotifydbModel.user_follows_ibfk_2">
+            <End Role="users" EntitySet="users" />
+            <End Role="user_follows" EntitySet="user_follows" />
+          </AssociationSet>
         </EntityContainer>
         <EntityType Name="admins">
           <Key>
@@ -461,7 +511,7 @@
           <Property Name="songCount" Type="Int32" Nullable="false" />
           <Property Name="date" Type="DateTime" Nullable="false" />
           <Property Name="name" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
-          <Property Name="state" Type="Boolean" Nullable="false" DefaultValue="True" />
+          <Property Name="state" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="artists" Relationship="spotifydbModel.albums_ibfk_1" FromRole="albums" ToRole="artists" />
           <NavigationProperty Name="song_type" Relationship="spotifydbModel.albums_ibfk_2" FromRole="albums" ToRole="song_type" />
           <NavigationProperty Name="songs" Relationship="spotifydbModel.songs_ibfk_3" FromRole="albums" ToRole="songs" />
@@ -475,7 +525,7 @@
           <Property Name="surname" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="stageName" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <Property Name="countryID" Type="Int32" Nullable="false" />
-          <Property Name="state" Type="Boolean" Nullable="false" DefaultValue="True" />
+          <Property Name="state" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="albums" Relationship="spotifydbModel.albums_ibfk_1" FromRole="artists" ToRole="albums" />
           <NavigationProperty Name="countries" Relationship="spotifydbModel.artists_ibfk_1" FromRole="artists" ToRole="countries" />
           <NavigationProperty Name="artists_of_song" Relationship="spotifydbModel.artists_of_song_ibfk_1" FromRole="artists" ToRole="artists_of_song" />
@@ -531,7 +581,7 @@
           <Property Name="date" Type="DateTime" Nullable="false" />
           <Property Name="time" Type="Int32" Nullable="false" />
           <Property Name="playedCount" Type="Int32" Nullable="false" />
-          <Property Name="state" Type="Boolean" Nullable="false" DefaultValue="True" />
+          <Property Name="state" Type="Boolean" Nullable="false" />
           <NavigationProperty Name="albums" Relationship="spotifydbModel.songs_ibfk_3" FromRole="songs" ToRole="albums" />
           <NavigationProperty Name="artists_of_song" Relationship="spotifydbModel.artists_of_song_ibfk_2" FromRole="songs" ToRole="artists_of_song" />
           <NavigationProperty Name="song_type" Relationship="spotifydbModel.songs_ibfk_1" FromRole="songs" ToRole="song_type" />
@@ -544,6 +594,16 @@
           <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="type" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
           <NavigationProperty Name="users" Relationship="spotifydbModel.users_ibfk_2" FromRole="subscriber_type" ToRole="users" />
+        </EntityType>
+        <EntityType Name="user_follows">
+          <Key>
+            <PropertyRef Name="ID" />
+          </Key>
+          <Property Name="ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="userID" Type="Int32" Nullable="false" />
+          <Property Name="followingID" Type="Int32" Nullable="false" />
+          <NavigationProperty Name="users" Relationship="spotifydbModel.user_follows_ibfk_1" FromRole="user_follows" ToRole="users" />
+          <NavigationProperty Name="users1" Relationship="spotifydbModel.user_follows_ibfk_2" FromRole="user_follows" ToRole="users" />
         </EntityType>
         <EntityType Name="user_playlist_songs">
           <Key>
@@ -570,6 +630,8 @@
           <NavigationProperty Name="countries" Relationship="spotifydbModel.users_ibfk_1" FromRole="users" ToRole="countries" />
           <NavigationProperty Name="playlists" Relationship="spotifydbModel.playlists_ibfk_2" FromRole="users" ToRole="playlists" />
           <NavigationProperty Name="subscriber_type" Relationship="spotifydbModel.users_ibfk_2" FromRole="users" ToRole="subscriber_type" />
+          <NavigationProperty Name="user_follows" Relationship="spotifydbModel.user_follows_ibfk_1" FromRole="users" ToRole="user_follows" />
+          <NavigationProperty Name="user_follows1" Relationship="spotifydbModel.user_follows_ibfk_2" FromRole="users" ToRole="user_follows" />
         </EntityType>
         <Association Name="admins_ibfk_1">
           <End Type="spotifydbModel.users" Role="users" Multiplicity="1">
@@ -767,6 +829,30 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Association Name="user_follows_ibfk_1">
+          <End Type="spotifydbModel.users" Role="users" Multiplicity="1" />
+          <End Type="spotifydbModel.user_follows" Role="user_follows" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="user_follows">
+              <PropertyRef Name="userID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="user_follows_ibfk_2">
+          <End Type="spotifydbModel.users" Role="users" Multiplicity="1" />
+          <End Type="spotifydbModel.user_follows" Role="user_follows" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="users">
+              <PropertyRef Name="ID" />
+            </Principal>
+            <Dependent Role="user_follows">
+              <PropertyRef Name="followingID" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -858,6 +944,15 @@
             <EntityTypeMapping TypeName="spotifydbModel.subscriber_type">
               <MappingFragment StoreEntitySet="subscriber_type">
                 <ScalarProperty Name="type" ColumnName="type" />
+                <ScalarProperty Name="ID" ColumnName="ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="user_follows">
+            <EntityTypeMapping TypeName="spotifydbModel.user_follows">
+              <MappingFragment StoreEntitySet="user_follows">
+                <ScalarProperty Name="followingID" ColumnName="followingID" />
+                <ScalarProperty Name="userID" ColumnName="userID" />
                 <ScalarProperty Name="ID" ColumnName="ID" />
               </MappingFragment>
             </EntityTypeMapping>

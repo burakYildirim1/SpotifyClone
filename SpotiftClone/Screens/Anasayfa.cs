@@ -113,5 +113,11 @@ namespace SpotiftClone
 
 
         }
+
+        private void ıconButton5_Click(object sender, EventArgs e)
+        {
+            sosyalForm sosyalForm = new sosyalForm();
+            FormGetir2(sosyalForm);
+        }
     }
 }

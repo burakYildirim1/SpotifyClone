@@ -19,6 +19,8 @@ namespace SpotiftClone
         {
             this.admins = new HashSet<admins>();
             this.playlists = new HashSet<playlists>();
+            this.user_follows = new HashSet<user_follows>();
+            this.user_follows1 = new HashSet<user_follows>();
         }
     
         public int ID { get; set; }
@@ -35,5 +37,9 @@ namespace SpotiftClone
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<playlists> playlists { get; set; }
         public virtual subscriber_type subscriber_type { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<user_follows> user_follows { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<user_follows> user_follows1 { get; set; }
     }
 }

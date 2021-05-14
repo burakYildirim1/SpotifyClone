@@ -80,6 +80,14 @@
     <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="type" Type="varchar" MaxLength="45" Nullable="false" />
   </EntityType>
+  <EntityType Name="user_follows">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="userID" Type="int" Nullable="false" />
+    <Property Name="followingID" Type="int" Nullable="false" />
+  </EntityType>
   <EntityType Name="user_playlist_songs">
     <Key>
       <PropertyRef Name="ID" />
@@ -240,6 +248,30 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="user_follows_ibfk_1">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="user_follows" Type="Self.user_follows" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="user_follows">
+        <PropertyRef Name="userID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="user_follows_ibfk_2">
+    <End Role="users" Type="Self.users" Multiplicity="1" />
+    <End Role="user_follows" Type="Self.user_follows" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="users">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="user_follows">
+        <PropertyRef Name="followingID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="user_playlist_songs_ibfk_1">
     <End Role="playlists" Type="Self.playlists" Multiplicity="1">
       <OnDelete Action="Cascade" />
@@ -306,6 +338,7 @@
     <EntitySet Name="song_type" EntityType="Self.song_type" Schema="" store:Type="Tables" />
     <EntitySet Name="songs" EntityType="Self.songs" Schema="" store:Type="Tables" />
     <EntitySet Name="subscriber_type" EntityType="Self.subscriber_type" Schema="" store:Type="Tables" />
+    <EntitySet Name="user_follows" EntityType="Self.user_follows" Schema="" store:Type="Tables" />
     <EntitySet Name="user_playlist_songs" EntityType="Self.user_playlist_songs" Schema="" store:Type="Tables" />
     <EntitySet Name="users" EntityType="Self.users" Schema="" store:Type="Tables" />
     <AssociationSet Name="admins_ibfk_1" Association="Self.admins_ibfk_1">
@@ -347,6 +380,14 @@
     <AssociationSet Name="songs_ibfk_3" Association="Self.songs_ibfk_3">
       <End Role="albums" EntitySet="albums" />
       <End Role="songs" EntitySet="songs" />
+    </AssociationSet>
+    <AssociationSet Name="user_follows_ibfk_1" Association="Self.user_follows_ibfk_1">
+      <End Role="users" EntitySet="users" />
+      <End Role="user_follows" EntitySet="user_follows" />
+    </AssociationSet>
+    <AssociationSet Name="user_follows_ibfk_2" Association="Self.user_follows_ibfk_2">
+      <End Role="users" EntitySet="users" />
+      <End Role="user_follows" EntitySet="user_follows" />
     </AssociationSet>
     <AssociationSet Name="user_playlist_songs_ibfk_1" Association="Self.user_playlist_songs_ibfk_1">
       <End Role="playlists" EntitySet="playlists" />

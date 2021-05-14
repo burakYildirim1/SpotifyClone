@@ -34,6 +34,7 @@ namespace SpotiftClone
         public virtual DbSet<song_type> song_type { get; set; }
         public virtual DbSet<songs> songs { get; set; }
         public virtual DbSet<subscriber_type> subscriber_type { get; set; }
+        public virtual DbSet<user_follows> user_follows { get; set; }
         public virtual DbSet<user_playlist_songs> user_playlist_songs { get; set; }
         public virtual DbSet<users> users { get; set; }
     }

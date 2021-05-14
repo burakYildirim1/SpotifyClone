@@ -57,15 +57,19 @@ namespace SpotiftClone.MenuForms
         private void playListeEkle_Click(object sender, EventArgs e)
         {
 
-            var x = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            var y = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-            var sarkiID = Connection.spotifydb.songs.FirstOrDefault(c => c.name == x).ID;
-            var typeID = Connection.spotifydb.songs.FirstOrDefault(c => c.name == y).typeID;
-            var userID = User.user.ID;
-            var pl = Connection.spotifydb.playlists.SingleOrDefault(c => c.userID == userID && c.songTypeID == typeID).ID;
-            var plTypeID = Connection.spotifydb.playlists.SingleOrDefault(c => c.userID == userID && c.songTypeID == typeID).songTypeID;
-
-            var sorgu = Connection.spotifydb.user_playlist_songs.Where(c => c.playlistID == pl && c.songID == sarkiID ).Count();
+            var x = dataGridView1.CurrentRow.Cells[1].Value.ToString();//seçilen satırdaki sarki adini aliyoruz
+            //var y = dataGridView1.CurrentRow.Cells[1].Value.ToString();
+            var sarkiID = Connection.spotifydb.songs.FirstOrDefault(c => c.name == x).ID;//songs tablosundan, secilen sarkinin ID'sini aliyoruz
+            var typeID = Connection.spotifydb.songs.FirstOrDefault(c => c.name == x).typeID;//songs tablosundan, secilen sarkinin typeID'sini aliyoruz
+            var userID = User.user.ID; // giris yapan kullanicinin IDsi
+            var playListID = Connection.spotifydb.playlists.SingleOrDefault(c => c.userID == userID && c.songTypeID == typeID).ID;  //playlist tablosundan; secilen sarkinin ve sarkiyi secen kullanıcının
+            //idsini iceren satirin ID'sini aliyoruz (yani o sarkinin bulundugu playList IDsi)
+            //MessageBox.Show("songID: " + typeID);
+            
+            var plTypeID = Connection.spotifydb.playlists.SingleOrDefault(c => c.userID == userID && c.songTypeID == typeID).songTypeID; //playlist tablosundan; giris yapan kullanicinin IDsine ve
+            //secilen sarkinin typeID'sine esit satirin, typeIDsi?? (bu degisken degeri her zaman typeID ile esit)
+            //MessageBox.Show("plTypeID: " + plTypeID);
+            var sorgu = Connection.spotifydb.user_playlist_songs.Where(c => c.playlistID == playListID && c.songID == sarkiID ).Count();//sarkinin kullanicinin playlistinde olup olmadiginin kontrolu
             if(sorgu>0)
             {
                 MessageBox.Show("Şarkı daha önce eklenmiş!", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -73,7 +77,7 @@ namespace SpotiftClone.MenuForms
 
             else
             {
-                Connection.spotifydb.user_playlist_songs.Add(new user_playlist_songs() { playlistID = pl, songID = sarkiID });
+                Connection.spotifydb.user_playlist_songs.Add(new user_playlist_songs() { playlistID = playListID, songID = sarkiID });
 
                 Connection.spotifydb.SaveChanges();
                 MessageBox.Show("Playliste Eklendi", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
