@@ -29,6 +29,9 @@ namespace SpotiftClone.MenuForms
         /// </summary>
         private void InitializeComponent()
         {
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.anasayfaUsername = new System.Windows.Forms.Label();
             this.ıconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
             this.btnNext = new FontAwesome.Sharp.IconButton();
@@ -68,7 +71,7 @@ namespace SpotiftClone.MenuForms
             this.ıconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.ıconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.ıconPictureBox1.IconSize = 120;
-            this.ıconPictureBox1.Location = new System.Drawing.Point(603, 19);
+            this.ıconPictureBox1.Location = new System.Drawing.Point(604, 20);
             this.ıconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.ıconPictureBox1.Name = "ıconPictureBox1";
             this.ıconPictureBox1.Size = new System.Drawing.Size(120, 130);
@@ -124,9 +127,39 @@ namespace SpotiftClone.MenuForms
             // 
             // dataGridView1
             // 
+            this.dataGridView1.AllowUserToResizeColumns = false;
+            this.dataGridView1.AllowUserToResizeRows = false;
+            dataGridViewCellStyle1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dataGridView1.AlternatingRowsDefaultCellStyle = dataGridViewCellStyle1;
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dataGridView1.AutoSizeRowsMode = System.Windows.Forms.DataGridViewAutoSizeRowsMode.AllCells;
+            this.dataGridView1.BackgroundColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dataGridView1.ColumnHeadersBorderStyle = System.Windows.Forms.DataGridViewHeaderBorderStyle.None;
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle2.BackColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle2;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.ColumnHeadersVisible = false;
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.ScrollBar;
+            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.InactiveCaptionText;
+            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dataGridView1.DefaultCellStyle = dataGridViewCellStyle3;
+            this.dataGridView1.GridColor = System.Drawing.Color.Gray;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowHeadersVisible = false;
+            this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dataGridView1.Size = new System.Drawing.Size(590, 404);
             this.dataGridView1.TabIndex = 13;
             // 
@@ -135,7 +168,7 @@ namespace SpotiftClone.MenuForms
             this.ıconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ıconButton1.IconColor = System.Drawing.Color.Black;
             this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton1.Location = new System.Drawing.Point(616, 247);
+            this.ıconButton1.Location = new System.Drawing.Point(617, 262);
             this.ıconButton1.Name = "ıconButton1";
             this.ıconButton1.Size = new System.Drawing.Size(95, 23);
             this.ıconButton1.TabIndex = 14;
@@ -148,7 +181,7 @@ namespace SpotiftClone.MenuForms
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(594, 190);
+            this.label1.Location = new System.Drawing.Point(595, 213);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 32);
@@ -161,7 +194,7 @@ namespace SpotiftClone.MenuForms
             this.ıconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ıconButton3.IconColor = System.Drawing.Color.Black;
             this.ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton3.Location = new System.Drawing.Point(616, 332);
+            this.ıconButton3.Location = new System.Drawing.Point(617, 347);
             this.ıconButton3.Name = "ıconButton3";
             this.ıconButton3.Size = new System.Drawing.Size(95, 23);
             this.ıconButton3.TabIndex = 17;
@@ -174,7 +207,7 @@ namespace SpotiftClone.MenuForms
             this.ıconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ıconButton4.IconColor = System.Drawing.Color.Black;
             this.ıconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton4.Location = new System.Drawing.Point(616, 375);
+            this.ıconButton4.Location = new System.Drawing.Point(617, 390);
             this.ıconButton4.Name = "ıconButton4";
             this.ıconButton4.Size = new System.Drawing.Size(95, 23);
             this.ıconButton4.TabIndex = 18;
@@ -187,7 +220,7 @@ namespace SpotiftClone.MenuForms
             this.ıconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
             this.ıconButton5.IconColor = System.Drawing.Color.Black;
             this.ıconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconButton5.Location = new System.Drawing.Point(616, 416);
+            this.ıconButton5.Location = new System.Drawing.Point(617, 431);
             this.ıconButton5.Name = "ıconButton5";
             this.ıconButton5.Size = new System.Drawing.Size(95, 23);
             this.ıconButton5.TabIndex = 19;
@@ -198,7 +231,7 @@ namespace SpotiftClone.MenuForms
             // ulkeListe
             // 
             this.ulkeListe.FormattingEnabled = true;
-            this.ulkeListe.Location = new System.Drawing.Point(616, 290);
+            this.ulkeListe.Location = new System.Drawing.Point(617, 305);
             this.ulkeListe.Name = "ulkeListe";
             this.ulkeListe.Size = new System.Drawing.Size(95, 21);
             this.ulkeListe.TabIndex = 20;
