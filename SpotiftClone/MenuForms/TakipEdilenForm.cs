@@ -143,7 +143,7 @@ namespace SpotiftClone.MenuForms
         private void button5_Click(object sender, EventArgs e)
         {
             var playListID = Connection.spotifydb.playlists.Where(c => c.userID == User.user.ID).ToList();
-            int jazz = playListID[1].ID;
+            int jazz = playListID[2].ID;
 
 
 
@@ -165,7 +165,7 @@ namespace SpotiftClone.MenuForms
         private void button7_Click(object sender, EventArgs e)
         {
             var playListID = Connection.spotifydb.playlists.Where(c => c.userID == User.user.ID).ToList();
-            int pop = playListID[2].ID;
+            int pop = playListID[1].ID;
 
 
 
@@ -216,7 +216,7 @@ namespace SpotiftClone.MenuForms
         {
 
             var playListID = Connection.spotifydb.playlists.Where(c => c.userID == User.user.ID).ToList();
-            int jazz = playListID[1].ID;
+            int jazz = playListID[2].ID;
 
             foreach (DataGridViewRow item in dataGridView3.Rows)
             {
@@ -237,7 +237,7 @@ namespace SpotiftClone.MenuForms
         private void button6_Click(object sender, EventArgs e)
         {
             var playListID = Connection.spotifydb.playlists.Where(c => c.userID == User.user.ID).ToList();
-            int pop = playListID[2].ID;
+            int pop = playListID[1].ID;
 
             foreach (DataGridViewRow item in dataGridView4.Rows)
             {

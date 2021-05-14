@@ -31,15 +31,28 @@ namespace SpotiftClone.MenuForms
         {
             this.anasayfaUsername = new System.Windows.Forms.Label();
             this.ıconPictureBox1 = new FontAwesome.Sharp.IconPictureBox();
+            this.btnNext = new FontAwesome.Sharp.IconButton();
+            this.btnPause = new FontAwesome.Sharp.IconButton();
+            this.btnBack = new FontAwesome.Sharp.IconButton();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ıconButton1 = new FontAwesome.Sharp.IconButton();
+            this.customInstaller1 = new MySql.Data.MySqlClient.CustomInstaller();
+            this.label1 = new System.Windows.Forms.Label();
+            this.ıconButton2 = new FontAwesome.Sharp.IconButton();
+            this.ıconButton3 = new FontAwesome.Sharp.IconButton();
+            this.ıconButton4 = new FontAwesome.Sharp.IconButton();
+            this.ıconButton5 = new FontAwesome.Sharp.IconButton();
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
             // anasayfaUsername
             // 
             this.anasayfaUsername.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.anasayfaUsername.Location = new System.Drawing.Point(778, 205);
+            this.anasayfaUsername.Location = new System.Drawing.Point(603, 166);
+            this.anasayfaUsername.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.anasayfaUsername.Name = "anasayfaUsername";
-            this.anasayfaUsername.Size = new System.Drawing.Size(160, 58);
+            this.anasayfaUsername.Size = new System.Drawing.Size(120, 47);
             this.anasayfaUsername.TabIndex = 9;
             this.anasayfaUsername.Text = "label3";
             this.anasayfaUsername.TextAlign = System.Drawing.ContentAlignment.TopCenter;
@@ -54,26 +67,171 @@ namespace SpotiftClone.MenuForms
             this.ıconPictureBox1.IconChar = FontAwesome.Sharp.IconChar.User;
             this.ıconPictureBox1.IconColor = System.Drawing.SystemColors.ControlText;
             this.ıconPictureBox1.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.ıconPictureBox1.IconSize = 160;
-            this.ıconPictureBox1.Location = new System.Drawing.Point(782, 27);
+            this.ıconPictureBox1.IconSize = 120;
+            this.ıconPictureBox1.Location = new System.Drawing.Point(603, 19);
+            this.ıconPictureBox1.Margin = new System.Windows.Forms.Padding(2);
             this.ıconPictureBox1.Name = "ıconPictureBox1";
-            this.ıconPictureBox1.Size = new System.Drawing.Size(160, 160);
+            this.ıconPictureBox1.Size = new System.Drawing.Size(120, 130);
             this.ıconPictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
             this.ıconPictureBox1.TabIndex = 8;
             this.ıconPictureBox1.TabStop = false;
             // 
+            // btnNext
+            // 
+            this.btnNext.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnNext.FlatAppearance.BorderSize = 0;
+            this.btnNext.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnNext.IconChar = FontAwesome.Sharp.IconChar.Forward;
+            this.btnNext.IconColor = System.Drawing.Color.Black;
+            this.btnNext.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnNext.Location = new System.Drawing.Point(332, 422);
+            this.btnNext.Name = "btnNext";
+            this.btnNext.Size = new System.Drawing.Size(87, 49);
+            this.btnNext.TabIndex = 10;
+            this.btnNext.UseVisualStyleBackColor = true;
+            this.btnNext.Click += new System.EventHandler(this.btnNext_Click);
+            // 
+            // btnPause
+            // 
+            this.btnPause.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnPause.FlatAppearance.BorderSize = 0;
+            this.btnPause.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnPause.IconChar = FontAwesome.Sharp.IconChar.Play;
+            this.btnPause.IconColor = System.Drawing.Color.Black;
+            this.btnPause.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnPause.Location = new System.Drawing.Point(239, 422);
+            this.btnPause.Name = "btnPause";
+            this.btnPause.Size = new System.Drawing.Size(87, 49);
+            this.btnPause.TabIndex = 11;
+            this.btnPause.UseVisualStyleBackColor = true;
+            this.btnPause.Click += new System.EventHandler(this.btnPause_Click);
+            // 
+            // btnBack
+            // 
+            this.btnBack.FlatAppearance.BorderColor = System.Drawing.Color.White;
+            this.btnBack.FlatAppearance.BorderSize = 0;
+            this.btnBack.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnBack.Flip = FontAwesome.Sharp.FlipOrientation.Horizontal;
+            this.btnBack.IconChar = FontAwesome.Sharp.IconChar.Forward;
+            this.btnBack.IconColor = System.Drawing.Color.Black;
+            this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.btnBack.Location = new System.Drawing.Point(146, 422);
+            this.btnBack.Name = "btnBack";
+            this.btnBack.Size = new System.Drawing.Size(87, 49);
+            this.btnBack.TabIndex = 12;
+            this.btnBack.UseVisualStyleBackColor = true;
+            this.btnBack.Click += new System.EventHandler(this.btnBack_Click);
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.Size = new System.Drawing.Size(590, 404);
+            this.dataGridView1.TabIndex = 13;
+            // 
+            // ıconButton1
+            // 
+            this.ıconButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ıconButton1.IconColor = System.Drawing.Color.Black;
+            this.ıconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton1.Location = new System.Drawing.Point(616, 247);
+            this.ıconButton1.Name = "ıconButton1";
+            this.ıconButton1.Size = new System.Drawing.Size(95, 23);
+            this.ıconButton1.TabIndex = 14;
+            this.ıconButton1.Text = "Tüm Şarkılar";
+            this.ıconButton1.UseVisualStyleBackColor = true;
+            this.ıconButton1.Click += new System.EventHandler(this.ıconButton1_Click);
+            // 
+            // label1
+            // 
+            this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
+            this.label1.Location = new System.Drawing.Point(594, 190);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(148, 32);
+            this.label1.TabIndex = 15;
+            this.label1.Text = "TOP 10 LİSTELERİ";
+            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // ıconButton2
+            // 
+            this.ıconButton2.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ıconButton2.IconColor = System.Drawing.Color.Black;
+            this.ıconButton2.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton2.Location = new System.Drawing.Point(616, 291);
+            this.ıconButton2.Name = "ıconButton2";
+            this.ıconButton2.Size = new System.Drawing.Size(95, 23);
+            this.ıconButton2.TabIndex = 16;
+            this.ıconButton2.Text = "Ülkelere Göre";
+            this.ıconButton2.UseVisualStyleBackColor = true;
+            // 
+            // ıconButton3
+            // 
+            this.ıconButton3.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ıconButton3.IconColor = System.Drawing.Color.Black;
+            this.ıconButton3.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton3.Location = new System.Drawing.Point(616, 338);
+            this.ıconButton3.Name = "ıconButton3";
+            this.ıconButton3.Size = new System.Drawing.Size(95, 23);
+            this.ıconButton3.TabIndex = 17;
+            this.ıconButton3.Text = "Klasik";
+            this.ıconButton3.UseVisualStyleBackColor = true;
+            this.ıconButton3.Click += new System.EventHandler(this.ıconButton3_Click);
+            // 
+            // ıconButton4
+            // 
+            this.ıconButton4.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ıconButton4.IconColor = System.Drawing.Color.Black;
+            this.ıconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton4.Location = new System.Drawing.Point(616, 381);
+            this.ıconButton4.Name = "ıconButton4";
+            this.ıconButton4.Size = new System.Drawing.Size(95, 23);
+            this.ıconButton4.TabIndex = 18;
+            this.ıconButton4.Text = "Pop";
+            this.ıconButton4.UseVisualStyleBackColor = true;
+            this.ıconButton4.Click += new System.EventHandler(this.ıconButton4_Click);
+            // 
+            // ıconButton5
+            // 
+            this.ıconButton5.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.ıconButton5.IconColor = System.Drawing.Color.Black;
+            this.ıconButton5.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton5.Location = new System.Drawing.Point(616, 422);
+            this.ıconButton5.Name = "ıconButton5";
+            this.ıconButton5.Size = new System.Drawing.Size(95, 23);
+            this.ıconButton5.TabIndex = 19;
+            this.ıconButton5.Text = "Jazz";
+            this.ıconButton5.UseVisualStyleBackColor = true;
+            this.ıconButton5.Click += new System.EventHandler(this.ıconButton5_Click);
+            // 
             // AnasayfaForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.ClientSize = new System.Drawing.Size(993, 631);
+            this.ClientSize = new System.Drawing.Size(745, 513);
+            this.Controls.Add(this.ıconButton5);
+            this.Controls.Add(this.ıconButton4);
+            this.Controls.Add(this.ıconButton3);
+            this.Controls.Add(this.ıconButton2);
+            this.Controls.Add(this.label1);
+            this.Controls.Add(this.ıconButton1);
+            this.Controls.Add(this.dataGridView1);
+            this.Controls.Add(this.btnBack);
+            this.Controls.Add(this.btnPause);
+            this.Controls.Add(this.btnNext);
             this.Controls.Add(this.anasayfaUsername);
             this.Controls.Add(this.ıconPictureBox1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "AnasayfaForm";
             this.Text = "AnasayfaForm";
+            this.Load += new System.EventHandler(this.AnasayfaForm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.ıconPictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -82,5 +240,16 @@ namespace SpotiftClone.MenuForms
 
         private System.Windows.Forms.Label anasayfaUsername;
         private FontAwesome.Sharp.IconPictureBox ıconPictureBox1;
+        private FontAwesome.Sharp.IconButton btnNext;
+        private FontAwesome.Sharp.IconButton btnPause;
+        private FontAwesome.Sharp.IconButton btnBack;
+        private System.Windows.Forms.DataGridView dataGridView1;
+        private FontAwesome.Sharp.IconButton ıconButton1;
+        private MySql.Data.MySqlClient.CustomInstaller customInstaller1;
+        private System.Windows.Forms.Label label1;
+        private FontAwesome.Sharp.IconButton ıconButton2;
+        private FontAwesome.Sharp.IconButton ıconButton3;
+        private FontAwesome.Sharp.IconButton ıconButton4;
+        private FontAwesome.Sharp.IconButton ıconButton5;
     }
 }
