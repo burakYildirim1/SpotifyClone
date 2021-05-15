@@ -53,5 +53,10 @@ namespace SpotiftClone
         {
             
         }
+
+        private void txtUserPass_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

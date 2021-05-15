@@ -78,6 +78,7 @@
             this.txtUserPass.Size = new System.Drawing.Size(136, 17);
             this.txtUserPass.TabIndex = 11;
             this.txtUserPass.UseSystemPasswordChar = true;
+            this.txtUserPass.TextChanged += new System.EventHandler(this.txtUserPass_TextChanged);
             // 
             // panel4
             // 

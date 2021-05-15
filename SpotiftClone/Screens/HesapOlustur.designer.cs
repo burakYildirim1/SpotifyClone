@@ -101,6 +101,7 @@ namespace SpotiftClone
             // 
             this.textAd.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.textAd.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textAd.ForeColor = System.Drawing.Color.SeaGreen;
             this.textAd.Location = new System.Drawing.Point(95, 144);
             this.textAd.Margin = new System.Windows.Forms.Padding(2);
             this.textAd.Name = "textAd";
@@ -111,6 +112,7 @@ namespace SpotiftClone
             // 
             this.textSoyad.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.textSoyad.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textSoyad.ForeColor = System.Drawing.Color.SeaGreen;
             this.textSoyad.Location = new System.Drawing.Point(95, 178);
             this.textSoyad.Margin = new System.Windows.Forms.Padding(2);
             this.textSoyad.Name = "textSoyad";
@@ -121,6 +123,7 @@ namespace SpotiftClone
             // 
             this.textSifre.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.textSifre.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textSifre.ForeColor = System.Drawing.Color.SeaGreen;
             this.textSifre.Location = new System.Drawing.Point(363, 143);
             this.textSifre.Margin = new System.Windows.Forms.Padding(2);
             this.textSifre.Name = "textSifre";
@@ -159,6 +162,7 @@ namespace SpotiftClone
             // 
             this.textMail.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.textMail.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.textMail.ForeColor = System.Drawing.Color.SeaGreen;
             this.textMail.Location = new System.Drawing.Point(95, 210);
             this.textMail.Margin = new System.Windows.Forms.Padding(2);
             this.textMail.Name = "textMail";
@@ -181,6 +185,7 @@ namespace SpotiftClone
             // 
             this.comboBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.comboBox1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.comboBox1.ForeColor = System.Drawing.Color.SeaGreen;
             this.comboBox1.FormattingEnabled = true;
             this.comboBox1.Items.AddRange(new object[] {
             "Premium",
@@ -196,6 +201,7 @@ namespace SpotiftClone
             // 
             this.ulkeListe.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(55)))), ((int)(((byte)(55)))), ((int)(((byte)(55)))));
             this.ulkeListe.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.ulkeListe.ForeColor = System.Drawing.Color.SeaGreen;
             this.ulkeListe.FormattingEnabled = true;
             this.ulkeListe.Location = new System.Drawing.Point(363, 176);
             this.ulkeListe.Margin = new System.Windows.Forms.Padding(2);

@@ -73,10 +73,10 @@
             this.txtPassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.txtPassword.ForeColor = System.Drawing.Color.SeaGreen;
             this.txtPassword.Location = new System.Drawing.Point(56, 84);
-            this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(136, 20);
+            this.txtPassword.Size = new System.Drawing.Size(136, 17);
             this.txtPassword.TabIndex = 11;
+            this.txtPassword.UseSystemPasswordChar = true;
             // 
             // panel4
             // 

@@ -69,7 +69,8 @@ namespace SpotiftClone
         {
             AnasayfaForm anasayfaForm = new AnasayfaForm();
             FormGetir2(anasayfaForm);
-            
+      
+
         }
 
         private void anasayfaUsername_Click(object sender, EventArgs e)
@@ -118,6 +119,11 @@ namespace SpotiftClone
         {
             sosyalForm sosyalForm = new sosyalForm();
             FormGetir2(sosyalForm);
+        }
+
+        private void Anasayfa_MouseHover(object sender, EventArgs e)
+        {
+            
         }
     }
 }
