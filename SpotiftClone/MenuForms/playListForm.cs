@@ -44,6 +44,8 @@ namespace SpotiftClone.MenuForms
 
 
             dataGridView1.DataSource = query2.ToList();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Şarkı Adı";
         }
 
         private void ıconButton5_Click(object sender, EventArgs e)
@@ -69,6 +71,8 @@ namespace SpotiftClone.MenuForms
 
 
             dataGridView1.DataSource = query2.ToList();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Şarkı Adı";
         }
 
         private void ıconButton6_Click(object sender, EventArgs e)
@@ -94,6 +98,8 @@ namespace SpotiftClone.MenuForms
 
 
             dataGridView1.DataSource = query2.ToList();
+            dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Şarkı Adı";
         }
 
         private void button1_Click(object sender, EventArgs e)
@@ -104,6 +110,11 @@ namespace SpotiftClone.MenuForms
             Connection.spotifydb.SaveChanges();
             MessageBox.Show("Şarkı silindi!", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
             dataGridView1.Refresh();
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

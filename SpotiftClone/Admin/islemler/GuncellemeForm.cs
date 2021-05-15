@@ -43,20 +43,6 @@ namespace SpotiftClone.Admin.islemler
             dataGridView1.Refresh();
 
 
-            //var query = from item in Connection.spotifydb.albums
-            //            from item2 in Connection.spotifydb.artists
-            //            where item.state == true && item2.ID == item.ID
-            //            select new
-            //            {
-            //                ad = item2.name,
-            //                item.ID,
-            //                item.songCount,
-            //                item.name,
-            //                item.date
-            //            };
-
-            // 
-
 
 
             var query = from artists1 in Connection.spotifydb.artists

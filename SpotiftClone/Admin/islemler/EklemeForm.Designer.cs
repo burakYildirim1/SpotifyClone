@@ -146,19 +146,19 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(38, 158);
+            this.label4.Location = new System.Drawing.Point(92, 161);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(306, 51);
+            this.label4.Size = new System.Drawing.Size(256, 51);
             this.label4.TabIndex = 1;
-            this.label4.Text = "Ülke Listede Yoksa Giriniz : ";
+            this.label4.Text = "Eklenecek Ülke Adını Giriniz : ";
             // 
             // label3
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(242, 63);
+            this.label3.Location = new System.Drawing.Point(269, 62);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(102, 51);
+            this.label3.Size = new System.Drawing.Size(79, 51);
             this.label3.TabIndex = 0;
             this.label3.Text = "Ülkeler :";
             // 
@@ -196,9 +196,9 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(115, 336);
+            this.label8.Location = new System.Drawing.Point(131, 343);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(136, 51);
+            this.label8.Size = new System.Drawing.Size(108, 51);
             this.label8.TabIndex = 11;
             this.label8.Text = "Sahne Adı :";
             // 
@@ -213,9 +213,9 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(67, 247);
+            this.label7.Location = new System.Drawing.Point(96, 254);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(184, 51);
+            this.label7.Size = new System.Drawing.Size(143, 51);
             this.label7.TabIndex = 9;
             this.label7.Text = "Sanatçı Soyadı :";
             // 
@@ -230,9 +230,9 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(105, 165);
+            this.label6.Location = new System.Drawing.Point(125, 172);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(146, 51);
+            this.label6.Size = new System.Drawing.Size(114, 51);
             this.label6.TabIndex = 7;
             this.label6.Text = "Sanatçı Adı :";
             // 
@@ -247,7 +247,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.ulkeSec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ulkeSec.FormattingEnabled = true;
-            this.ulkeSec.Location = new System.Drawing.Point(272, 79);
+            this.ulkeSec.Location = new System.Drawing.Point(272, 83);
             this.ulkeSec.Name = "ulkeSec";
             this.ulkeSec.Size = new System.Drawing.Size(196, 25);
             this.ulkeSec.TabIndex = 5;
@@ -257,9 +257,9 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(92, 75);
+            this.label5.Location = new System.Drawing.Point(116, 82);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(159, 51);
+            this.label5.Size = new System.Drawing.Size(123, 51);
             this.label5.TabIndex = 4;
             this.label5.Text = "Ülke Seçiniz :";
             // 
@@ -298,18 +298,18 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.albumTarih.CustomFormat = "yyyy-MM-dd";
             this.albumTarih.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.albumTarih.Location = new System.Drawing.Point(359, 380);
+            this.albumTarih.Location = new System.Drawing.Point(359, 379);
             this.albumTarih.Name = "albumTarih";
-            this.albumTarih.Size = new System.Drawing.Size(214, 23);
+            this.albumTarih.Size = new System.Drawing.Size(210, 23);
             this.albumTarih.TabIndex = 21;
             // 
             // label13
             // 
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(158, 378);
+            this.label13.Location = new System.Drawing.Point(229, 380);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(136, 51);
+            this.label13.Size = new System.Drawing.Size(104, 51);
             this.label13.TabIndex = 20;
             this.label13.Text = "Çıkış tarihi :";
             // 
@@ -317,15 +317,15 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(25, 304);
+            this.label12.Location = new System.Drawing.Point(125, 306);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(269, 51);
+            this.label12.Size = new System.Drawing.Size(208, 51);
             this.label12.TabIndex = 18;
             this.label12.Text = "Albümdeki şarkı sayısı  :";
             // 
             // textSarkiSayi
             // 
-            this.textSarkiSayi.Location = new System.Drawing.Point(363, 312);
+            this.textSarkiSayi.Location = new System.Drawing.Point(359, 307);
             this.textSarkiSayi.Name = "textSarkiSayi";
             this.textSarkiSayi.Size = new System.Drawing.Size(210, 23);
             this.textSarkiSayi.TabIndex = 17;
@@ -334,7 +334,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.SanatciAdList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SanatciAdList.FormattingEnabled = true;
-            this.SanatciAdList.Location = new System.Drawing.Point(363, 156);
+            this.SanatciAdList.Location = new System.Drawing.Point(359, 155);
             this.SanatciAdList.Name = "SanatciAdList";
             this.SanatciAdList.Size = new System.Drawing.Size(210, 25);
             this.SanatciAdList.TabIndex = 16;
@@ -343,15 +343,15 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(160, 234);
+            this.label9.Location = new System.Drawing.Point(228, 236);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(134, 51);
+            this.label9.Size = new System.Drawing.Size(105, 51);
             this.label9.TabIndex = 15;
             this.label9.Text = "Albüm adı :";
             // 
             // textAlbumAd
             // 
-            this.textAlbumAd.Location = new System.Drawing.Point(363, 242);
+            this.textAlbumAd.Location = new System.Drawing.Point(359, 237);
             this.textAlbumAd.Name = "textAlbumAd";
             this.textAlbumAd.Size = new System.Drawing.Size(210, 23);
             this.textAlbumAd.TabIndex = 14;
@@ -360,9 +360,9 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(149, 152);
+            this.label10.Location = new System.Drawing.Point(218, 154);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(145, 51);
+            this.label10.Size = new System.Drawing.Size(115, 51);
             this.label10.TabIndex = 13;
             this.label10.Text = "Sanatçı Adı :";
             // 
@@ -370,7 +370,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.sarkiTurList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sarkiTurList.FormattingEnabled = true;
-            this.sarkiTurList.Location = new System.Drawing.Point(363, 66);
+            this.sarkiTurList.Location = new System.Drawing.Point(359, 65);
             this.sarkiTurList.Name = "sarkiTurList";
             this.sarkiTurList.Size = new System.Drawing.Size(210, 25);
             this.sarkiTurList.TabIndex = 11;
@@ -379,9 +379,9 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(168, 62);
+            this.label11.Location = new System.Drawing.Point(233, 64);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(126, 51);
+            this.label11.Size = new System.Drawing.Size(100, 51);
             this.label11.TabIndex = 10;
             this.label11.Text = "Şarkı türü :";
             // 

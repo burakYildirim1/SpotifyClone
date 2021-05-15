@@ -87,7 +87,7 @@ namespace SpotiftClone.MenuForms
             this.btnNext.IconChar = FontAwesome.Sharp.IconChar.Forward;
             this.btnNext.IconColor = System.Drawing.Color.Black;
             this.btnNext.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnNext.Location = new System.Drawing.Point(332, 422);
+            this.btnNext.Location = new System.Drawing.Point(348, 420);
             this.btnNext.Name = "btnNext";
             this.btnNext.Size = new System.Drawing.Size(87, 49);
             this.btnNext.TabIndex = 10;
@@ -102,7 +102,7 @@ namespace SpotiftClone.MenuForms
             this.btnPause.IconChar = FontAwesome.Sharp.IconChar.Play;
             this.btnPause.IconColor = System.Drawing.Color.Black;
             this.btnPause.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnPause.Location = new System.Drawing.Point(239, 422);
+            this.btnPause.Location = new System.Drawing.Point(255, 420);
             this.btnPause.Name = "btnPause";
             this.btnPause.Size = new System.Drawing.Size(87, 49);
             this.btnPause.TabIndex = 11;
@@ -118,7 +118,7 @@ namespace SpotiftClone.MenuForms
             this.btnBack.IconChar = FontAwesome.Sharp.IconChar.Forward;
             this.btnBack.IconColor = System.Drawing.Color.Black;
             this.btnBack.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.btnBack.Location = new System.Drawing.Point(146, 422);
+            this.btnBack.Location = new System.Drawing.Point(162, 420);
             this.btnBack.Name = "btnBack";
             this.btnBack.Size = new System.Drawing.Size(87, 49);
             this.btnBack.TabIndex = 12;
@@ -181,12 +181,12 @@ namespace SpotiftClone.MenuForms
             this.label1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label1.ForeColor = System.Drawing.Color.WhiteSmoke;
-            this.label1.Location = new System.Drawing.Point(595, 213);
+            this.label1.Location = new System.Drawing.Point(591, 213);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(148, 32);
             this.label1.TabIndex = 15;
-            this.label1.Text = "TOP 10 LİSTELERİ";
+            this.label1.Text = "TOP 10 LİSTELER";
             this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // ıconButton3
