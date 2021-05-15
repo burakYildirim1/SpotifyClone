@@ -16,6 +16,7 @@ namespace SpotiftClone
 {
     public partial class KullaniciGiris : Form
     {
+
         public KullaniciGiris()
         {
             InitializeComponent();
@@ -37,5 +38,20 @@ namespace SpotiftClone
             }
         }
 
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+            this.Dispose();
+        }
+
+        private void ıconPictureBox1_Click(object sender, EventArgs e)
+        {
+            Anasayfa anasayfa = new Anasayfa();
+           
+        }
+
+        private void KullaniciGiris_Load(object sender, EventArgs e)
+        {
+            
+        }
     }
 }
