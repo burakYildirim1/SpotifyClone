@@ -17,6 +17,7 @@ namespace SpotiftClone
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public songs()
         {
+            this.state = true;
             this.artists_of_song = new HashSet<artists_of_song>();
             this.playedcount_countries = new HashSet<playedcount_countries>();
             this.user_playlist_songs = new HashSet<user_playlist_songs>();

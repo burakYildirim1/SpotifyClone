@@ -32,7 +32,7 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
 
         private void sarkiGuncelle_Click(object sender, EventArgs e)
         {
-            int id = Convert.ToInt32(ID.Text);
+            int id = Convert.ToInt32((ID.Text).ToString());
             var x = Connection.spotifydb.songs.SingleOrDefault(c => c.ID == id);
             x.name = sarkiAdi.Text;
             x.date = sarkiTarih.Value;

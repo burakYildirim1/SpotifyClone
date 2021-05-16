@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fb3a612c14914c44ae5453eaec6e39fb" Name="Diagram1" ZoomLevel="95">
+      <Diagram DiagramId="fb3a612c14914c44ae5453eaec6e39fb" Name="Diagram1" ZoomLevel="64">
         <EntityTypeShape EntityType="spotifydbModel.admins" Width="1.5" PointX="5.25" PointY="16.875" />
         <EntityTypeShape EntityType="spotifydbModel.albums" Width="1.5" PointX="5.25" PointY="13" />
         <EntityTypeShape EntityType="spotifydbModel.artists" Width="1.5" PointX="3" PointY="13.125" />

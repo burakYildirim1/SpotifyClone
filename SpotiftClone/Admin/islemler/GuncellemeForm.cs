@@ -113,7 +113,7 @@ namespace SpotiftClone.Admin.islemler
                         on artSong.songID equals songs.ID
                         select new
                         {
-                            artSong.ID,
+                            songs.ID,
                             artistName = artist1.name,
                             songs.name,
                             songs.time,
@@ -146,7 +146,7 @@ namespace SpotiftClone.Admin.islemler
             }
             else if (control == 1)
             {
-                dataGridView1[e.ColumnIndex, e.RowIndex].Style.SelectionBackColor = Color.Red;
+               
 
                 sanatci.ID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
                 sanatci.name = dataGridView1.CurrentRow.Cells[1].Value.ToString();
@@ -158,7 +158,7 @@ namespace SpotiftClone.Admin.islemler
 
             else
             {
-                dataGridView1[e.ColumnIndex, e.RowIndex].Style.SelectionBackColor = Color.Red;
+               
                 sarki.ID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
                 sarki.name = dataGridView1.CurrentRow.Cells[2].Value.ToString();
                 sarki.date = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[4].Value.ToString());

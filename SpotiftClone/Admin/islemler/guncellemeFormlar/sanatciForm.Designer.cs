@@ -33,11 +33,11 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             this.sahneAdi = new System.Windows.Forms.TextBox();
             this.sanatciSoyad = new System.Windows.Forms.TextBox();
             this.sanatciAdi = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // sanatciGuncelle
@@ -46,7 +46,7 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             this.sanatciGuncelle.IconColor = System.Drawing.Color.Black;
             this.sanatciGuncelle.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.sanatciGuncelle.Location = new System.Drawing.Point(266, 278);
-            this.sanatciGuncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sanatciGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.sanatciGuncelle.Name = "sanatciGuncelle";
             this.sanatciGuncelle.Size = new System.Drawing.Size(105, 23);
             this.sanatciGuncelle.TabIndex = 18;
@@ -57,7 +57,7 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             // sahneAdi
             // 
             this.sahneAdi.Location = new System.Drawing.Point(266, 220);
-            this.sahneAdi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sahneAdi.Margin = new System.Windows.Forms.Padding(2);
             this.sahneAdi.Name = "sahneAdi";
             this.sahneAdi.Size = new System.Drawing.Size(105, 20);
             this.sahneAdi.TabIndex = 17;
@@ -65,7 +65,7 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             // sanatciSoyad
             // 
             this.sanatciSoyad.Location = new System.Drawing.Point(266, 167);
-            this.sanatciSoyad.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sanatciSoyad.Margin = new System.Windows.Forms.Padding(2);
             this.sanatciSoyad.Name = "sanatciSoyad";
             this.sanatciSoyad.Size = new System.Drawing.Size(105, 20);
             this.sanatciSoyad.TabIndex = 16;
@@ -73,19 +73,10 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             // sanatciAdi
             // 
             this.sanatciAdi.Location = new System.Drawing.Point(266, 114);
-            this.sanatciAdi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sanatciAdi.Margin = new System.Windows.Forms.Padding(2);
             this.sanatciAdi.Name = "sanatciAdi";
             this.sanatciAdi.Size = new System.Drawing.Size(105, 20);
             this.sanatciAdi.TabIndex = 15;
-            // 
-            // ID
-            // 
-            this.ID.Location = new System.Drawing.Point(266, 61);
-            this.ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Size = new System.Drawing.Size(105, 20);
-            this.ID.TabIndex = 14;
             // 
             // label4
             // 
@@ -135,23 +126,33 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             this.label1.TabIndex = 10;
             this.label1.Text = "Sanatçı Adı :";
             // 
+            // ID
+            // 
+            this.ID.Enabled = false;
+            this.ID.Location = new System.Drawing.Point(266, 61);
+            this.ID.Margin = new System.Windows.Forms.Padding(2);
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Size = new System.Drawing.Size(105, 20);
+            this.ID.TabIndex = 19;
+            // 
             // sanatciForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.ID);
             this.Controls.Add(this.sanatciGuncelle);
             this.Controls.Add(this.sahneAdi);
             this.Controls.Add(this.sanatciSoyad);
             this.Controls.Add(this.sanatciAdi);
-            this.Controls.Add(this.ID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "sanatciForm";
             this.Text = "sarkiForm";
             this.Load += new System.EventHandler(this.sanatciForm_Load);
@@ -166,10 +167,10 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
         private System.Windows.Forms.TextBox sahneAdi;
         private System.Windows.Forms.TextBox sanatciSoyad;
         private System.Windows.Forms.TextBox sanatciAdi;
-        private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox ID;
     }
 }

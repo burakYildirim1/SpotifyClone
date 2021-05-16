@@ -34,7 +34,7 @@ namespace SpotiftClone.MenuForms
             var query2 = from song in Connection.spotifydb.songs
             join plSong in Connection.spotifydb.user_playlist_songs
             on song.ID equals plSong.songID
-            where (plSong.playlistID == query)
+            where (plSong.playlistID == query && song.state == true)
             select new
             {
                 plSong.ID,
@@ -61,7 +61,7 @@ namespace SpotiftClone.MenuForms
             var query2 = from song in Connection.spotifydb.songs
                          join plSong in Connection.spotifydb.user_playlist_songs
                          on song.ID equals plSong.songID
-                         where (plSong.playlistID == query)
+                         where (plSong.playlistID == query && song.state == true)
                          select new
                          {
                              plSong.ID,
@@ -88,7 +88,7 @@ namespace SpotiftClone.MenuForms
             var query2 = from song in Connection.spotifydb.songs
                          join plSong in Connection.spotifydb.user_playlist_songs
                          on song.ID equals plSong.songID
-                         where (plSong.playlistID == query)
+                         where (plSong.playlistID == query && song.state == true)
                          select new
                          {
                              plSong.ID,

@@ -31,9 +31,9 @@ namespace SpotiftClone.Admin.islemler.silmeFormlar
         {
             this.sarkiSil = new FontAwesome.Sharp.IconButton();
             this.sarkiAdi = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.ID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // sarkiSil
@@ -57,15 +57,6 @@ namespace SpotiftClone.Admin.islemler.silmeFormlar
             this.sarkiAdi.Name = "sarkiAdi";
             this.sarkiAdi.Size = new System.Drawing.Size(105, 20);
             this.sarkiAdi.TabIndex = 34;
-            // 
-            // ID
-            // 
-            this.ID.Location = new System.Drawing.Point(218, 64);
-            this.ID.Margin = new System.Windows.Forms.Padding(2);
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Size = new System.Drawing.Size(105, 20);
-            this.ID.TabIndex = 33;
             // 
             // label2
             // 
@@ -91,15 +82,25 @@ namespace SpotiftClone.Admin.islemler.silmeFormlar
             this.label1.TabIndex = 29;
             this.label1.Text = "Şarkı Adı :";
             // 
+            // ID
+            // 
+            this.ID.Enabled = false;
+            this.ID.Location = new System.Drawing.Point(218, 64);
+            this.ID.Margin = new System.Windows.Forms.Padding(2);
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Size = new System.Drawing.Size(105, 20);
+            this.ID.TabIndex = 37;
+            // 
             // sarkiFormSilme
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.ID);
             this.Controls.Add(this.sarkiSil);
             this.Controls.Add(this.sarkiAdi);
-            this.Controls.Add(this.ID);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -115,8 +116,8 @@ namespace SpotiftClone.Admin.islemler.silmeFormlar
 
         private FontAwesome.Sharp.IconButton sarkiSil;
         private System.Windows.Forms.TextBox sarkiAdi;
-        private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.TextBox ID;
     }
 }

@@ -88,17 +88,8 @@ namespace SpotiftClone
 
         private void ıconButton3_Click(object sender, EventArgs e)
         {
-
-            
-            if(User.user.subscriber_type.type == "Premium")
-            {
-                TakipEdilenForm takipEdilenForm = new TakipEdilenForm();
-                FormGetir2(takipEdilenForm);
-            }
-            else
-            {
-                MessageBox.Show("para yükle");
-            }
+            TakipEdilenForm takipEdilenForm = new TakipEdilenForm();
+            FormGetir2(takipEdilenForm);
 
         }
 

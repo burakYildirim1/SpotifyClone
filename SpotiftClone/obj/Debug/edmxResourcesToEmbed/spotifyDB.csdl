@@ -105,7 +105,7 @@
     <Property Name="songCount" Type="Int32" Nullable="false" />
     <Property Name="date" Type="DateTime" Nullable="false" />
     <Property Name="name" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
-    <Property Name="state" Type="Boolean" Nullable="false" />
+    <Property Name="state" Type="Boolean" Nullable="false" DefaultValue="true" />
     <NavigationProperty Name="artists" Relationship="spotifydbModel.albums_ibfk_1" FromRole="albums" ToRole="artists" />
     <NavigationProperty Name="song_type" Relationship="spotifydbModel.albums_ibfk_2" FromRole="albums" ToRole="song_type" />
     <NavigationProperty Name="songs" Relationship="spotifydbModel.songs_ibfk_3" FromRole="albums" ToRole="songs" />
@@ -119,7 +119,7 @@
     <Property Name="surname" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
     <Property Name="stageName" Type="String" Nullable="false" MaxLength="45" FixedLength="false" Unicode="false" />
     <Property Name="countryID" Type="Int32" Nullable="false" />
-    <Property Name="state" Type="Boolean" Nullable="false" />
+    <Property Name="state" Type="Boolean" Nullable="false" DefaultValue="true" />
     <NavigationProperty Name="albums" Relationship="spotifydbModel.albums_ibfk_1" FromRole="artists" ToRole="albums" />
     <NavigationProperty Name="countries" Relationship="spotifydbModel.artists_ibfk_1" FromRole="artists" ToRole="countries" />
     <NavigationProperty Name="artists_of_song" Relationship="spotifydbModel.artists_of_song_ibfk_1" FromRole="artists" ToRole="artists_of_song" />
@@ -187,7 +187,7 @@
     <Property Name="date" Type="DateTime" Nullable="false" />
     <Property Name="time" Type="Int32" Nullable="false" />
     <Property Name="playedCount" Type="Int32" Nullable="false" />
-    <Property Name="state" Type="Boolean" Nullable="false" />
+    <Property Name="state" Type="Boolean" Nullable="false" DefaultValue="true" />
     <NavigationProperty Name="albums" Relationship="spotifydbModel.songs_ibfk_3" FromRole="songs" ToRole="albums" />
     <NavigationProperty Name="artists_of_song" Relationship="spotifydbModel.artists_of_song_ibfk_2" FromRole="songs" ToRole="artists_of_song" />
     <NavigationProperty Name="playedcount_countries" Relationship="spotifydbModel.playedcount_countries_ibfk_2" FromRole="songs" ToRole="playedcount_countries" />

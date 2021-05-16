@@ -74,12 +74,22 @@ namespace SpotiftClone.MenuForms
             {
                 if (subscriberID == type)
                 {
-                    Connection.spotifydb.user_follows.Add(new user_follows() { userID = userID, followingID = follower.ID });
-                    Connection.spotifydb.SaveChanges();
+                    var follow = Connection.spotifydb.user_follows.Where(c => c.followingID == follower.ID && c.userID == userID).Count();
+                    if(follow == 0)
+                    {
+                        Connection.spotifydb.user_follows.Add(new user_follows() { userID = userID, followingID = follower.ID });
+                        MessageBox.Show("Takip listenize eklendi!", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                        Connection.spotifydb.SaveChanges();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Bu kişiyi zaten takip ediyorsunuz!", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    }
+
                 }
                 else
                 {
-                    MessageBox.Show("Sadece premium kullanıcılar takip edebilir!", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("Sadece premium kullanıcılar takip edilebilir!", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
             }
             else

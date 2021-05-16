@@ -32,12 +32,12 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             this.sarkiGuncelle = new FontAwesome.Sharp.IconButton();
             this.sarkiSuresi = new System.Windows.Forms.TextBox();
             this.sarkiAdi = new System.Windows.Forms.TextBox();
-            this.ID = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.sarkiTarih = new System.Windows.Forms.DateTimePicker();
+            this.ID = new System.Windows.Forms.TextBox();
             this.SuspendLayout();
             // 
             // sarkiGuncelle
@@ -46,7 +46,7 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             this.sarkiGuncelle.IconColor = System.Drawing.Color.Black;
             this.sarkiGuncelle.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.sarkiGuncelle.Location = new System.Drawing.Point(266, 278);
-            this.sarkiGuncelle.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sarkiGuncelle.Margin = new System.Windows.Forms.Padding(2);
             this.sarkiGuncelle.Name = "sarkiGuncelle";
             this.sarkiGuncelle.Size = new System.Drawing.Size(105, 23);
             this.sarkiGuncelle.TabIndex = 27;
@@ -57,7 +57,7 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             // sarkiSuresi
             // 
             this.sarkiSuresi.Location = new System.Drawing.Point(266, 220);
-            this.sarkiSuresi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sarkiSuresi.Margin = new System.Windows.Forms.Padding(2);
             this.sarkiSuresi.Name = "sarkiSuresi";
             this.sarkiSuresi.Size = new System.Drawing.Size(105, 20);
             this.sarkiSuresi.TabIndex = 26;
@@ -65,19 +65,10 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             // sarkiAdi
             // 
             this.sarkiAdi.Location = new System.Drawing.Point(266, 114);
-            this.sarkiAdi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sarkiAdi.Margin = new System.Windows.Forms.Padding(2);
             this.sarkiAdi.Name = "sarkiAdi";
             this.sarkiAdi.Size = new System.Drawing.Size(105, 20);
             this.sarkiAdi.TabIndex = 24;
-            // 
-            // ID
-            // 
-            this.ID.Location = new System.Drawing.Point(266, 61);
-            this.ID.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Size = new System.Drawing.Size(105, 20);
-            this.ID.TabIndex = 23;
             // 
             // label4
             // 
@@ -130,10 +121,20 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             // sarkiTarih
             // 
             this.sarkiTarih.Location = new System.Drawing.Point(266, 167);
-            this.sarkiTarih.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.sarkiTarih.Margin = new System.Windows.Forms.Padding(2);
             this.sarkiTarih.Name = "sarkiTarih";
             this.sarkiTarih.Size = new System.Drawing.Size(105, 20);
             this.sarkiTarih.TabIndex = 28;
+            // 
+            // ID
+            // 
+            this.ID.Enabled = false;
+            this.ID.Location = new System.Drawing.Point(266, 61);
+            this.ID.Margin = new System.Windows.Forms.Padding(2);
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Size = new System.Drawing.Size(105, 20);
+            this.ID.TabIndex = 29;
             // 
             // sarkiForm
             // 
@@ -141,17 +142,17 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
             this.ClientSize = new System.Drawing.Size(600, 366);
+            this.Controls.Add(this.ID);
             this.Controls.Add(this.sarkiTarih);
             this.Controls.Add(this.sarkiGuncelle);
             this.Controls.Add(this.sarkiSuresi);
             this.Controls.Add(this.sarkiAdi);
-            this.Controls.Add(this.ID);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "sarkiForm";
             this.Text = "sarkiForm";
             this.Load += new System.EventHandler(this.sarkiForm_Load);
@@ -165,11 +166,11 @@ namespace SpotiftClone.Admin.islemler.guncellemeFormlar
         private FontAwesome.Sharp.IconButton sarkiGuncelle;
         private System.Windows.Forms.TextBox sarkiSuresi;
         private System.Windows.Forms.TextBox sarkiAdi;
-        private System.Windows.Forms.TextBox ID;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.DateTimePicker sarkiTarih;
+        private System.Windows.Forms.TextBox ID;
     }
 }

@@ -59,8 +59,6 @@ namespace SpotiftClone.Admin.islemler
             this.sarkiTurList = new System.Windows.Forms.ComboBox();
             this.label11 = new System.Windows.Forms.Label();
             this.tabPage8 = new System.Windows.Forms.TabPage();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.checkedListBox1 = new System.Windows.Forms.CheckedListBox();
             this.button1 = new System.Windows.Forms.Button();
             this.label19 = new System.Windows.Forms.Label();
             this.sarkiSure = new System.Windows.Forms.TextBox();
@@ -75,6 +73,11 @@ namespace SpotiftClone.Admin.islemler
             this.sanatciAdlari = new System.Windows.Forms.ComboBox();
             this.label14 = new System.Windows.Forms.Label();
             this.customInstaller1 = new MySql.Data.MySqlClient.CustomInstaller();
+            this.mevcutSarkilar = new System.Windows.Forms.ComboBox();
+            this.mevcutSarki = new System.Windows.Forms.Label();
+            this.secimYap = new System.Windows.Forms.ComboBox();
+            this.label21 = new System.Windows.Forms.Label();
+            this.button2 = new System.Windows.Forms.Button();
             this.tabControl2.SuspendLayout();
             this.tabPage5.SuspendLayout();
             this.tabPage6.SuspendLayout();
@@ -389,8 +392,11 @@ namespace SpotiftClone.Admin.islemler
             // tabPage8
             // 
             this.tabPage8.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
-            this.tabPage8.Controls.Add(this.textBox1);
-            this.tabPage8.Controls.Add(this.checkedListBox1);
+            this.tabPage8.Controls.Add(this.button2);
+            this.tabPage8.Controls.Add(this.label21);
+            this.tabPage8.Controls.Add(this.secimYap);
+            this.tabPage8.Controls.Add(this.mevcutSarki);
+            this.tabPage8.Controls.Add(this.mevcutSarkilar);
             this.tabPage8.Controls.Add(this.button1);
             this.tabPage8.Controls.Add(this.label19);
             this.tabPage8.Controls.Add(this.sarkiSure);
@@ -409,23 +415,7 @@ namespace SpotiftClone.Admin.islemler
             this.tabPage8.Size = new System.Drawing.Size(1290, 713);
             this.tabPage8.TabIndex = 3;
             this.tabPage8.Text = "Şarkı";
-            // 
-            // textBox1
-            // 
-            this.textBox1.Location = new System.Drawing.Point(214, 33);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(214, 23);
-            this.textBox1.TabIndex = 31;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
-            // 
-            // checkedListBox1
-            // 
-            this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(214, 122);
-            this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(214, 94);
-            this.checkedListBox1.TabIndex = 30;
-            this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
+            this.tabPage8.Click += new System.EventHandler(this.tabPage8_Click);
             // 
             // button1
             // 
@@ -441,7 +431,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(505, 363);
+            this.label19.Location = new System.Drawing.Point(507, 363);
             this.label19.Name = "label19";
             this.label19.Size = new System.Drawing.Size(131, 51);
             this.label19.TabIndex = 28;
@@ -468,7 +458,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(525, 266);
+            this.label18.Location = new System.Drawing.Point(527, 266);
             this.label18.Name = "label18";
             this.label18.Size = new System.Drawing.Size(111, 51);
             this.label18.TabIndex = 25;
@@ -478,11 +468,11 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(542, 122);
+            this.label17.Location = new System.Drawing.Point(534, 122);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(94, 51);
+            this.label17.Size = new System.Drawing.Size(104, 51);
             this.label17.TabIndex = 24;
-            this.label17.Text = "Şarkı Adı :";
+            this.label17.Text = "Yeni Şarkı :";
             // 
             // sarkiAdi
             // 
@@ -499,6 +489,7 @@ namespace SpotiftClone.Admin.islemler
             this.albumAdi.Name = "albumAdi";
             this.albumAdi.Size = new System.Drawing.Size(214, 25);
             this.albumAdi.TabIndex = 22;
+            this.albumAdi.SelectedIndexChanged += new System.EventHandler(this.albumAdi_SelectedIndexChanged);
             // 
             // label16
             // 
@@ -534,7 +525,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.sanatciAdlari.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sanatciAdlari.FormattingEnabled = true;
-            this.sanatciAdlari.Location = new System.Drawing.Point(214, 74);
+            this.sanatciAdlari.Location = new System.Drawing.Point(214, 123);
             this.sanatciAdlari.Name = "sanatciAdlari";
             this.sanatciAdlari.Size = new System.Drawing.Size(214, 25);
             this.sanatciAdlari.TabIndex = 18;
@@ -549,6 +540,55 @@ namespace SpotiftClone.Admin.islemler
             this.label14.Size = new System.Drawing.Size(145, 51);
             this.label14.TabIndex = 17;
             this.label14.Text = "Sanatçı Adı :";
+            // 
+            // mevcutSarkilar
+            // 
+            this.mevcutSarkilar.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.mevcutSarkilar.FormattingEnabled = true;
+            this.mevcutSarkilar.Location = new System.Drawing.Point(214, 186);
+            this.mevcutSarkilar.Name = "mevcutSarkilar";
+            this.mevcutSarkilar.Size = new System.Drawing.Size(214, 25);
+            this.mevcutSarkilar.TabIndex = 31;
+            // 
+            // mevcutSarki
+            // 
+            this.mevcutSarki.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.mevcutSarki.ForeColor = System.Drawing.Color.White;
+            this.mevcutSarki.Location = new System.Drawing.Point(32, 185);
+            this.mevcutSarki.Name = "mevcutSarki";
+            this.mevcutSarki.Size = new System.Drawing.Size(129, 51);
+            this.mevcutSarki.TabIndex = 32;
+            this.mevcutSarki.Text = "Mevcut Şarkı :";
+            // 
+            // secimYap
+            // 
+            this.secimYap.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.secimYap.FormattingEnabled = true;
+            this.secimYap.Location = new System.Drawing.Point(447, 32);
+            this.secimYap.Name = "secimYap";
+            this.secimYap.Size = new System.Drawing.Size(214, 25);
+            this.secimYap.TabIndex = 33;
+            this.secimYap.SelectedIndexChanged += new System.EventHandler(this.secimYap_SelectedIndexChanged);
+            // 
+            // label21
+            // 
+            this.label21.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label21.ForeColor = System.Drawing.Color.White;
+            this.label21.Location = new System.Drawing.Point(296, 31);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(145, 51);
+            this.label21.TabIndex = 34;
+            this.label21.Text = "Seçim Yapınız :";
+            // 
+            // button2
+            // 
+            this.button2.Location = new System.Drawing.Point(258, 231);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(122, 34);
+            this.button2.TabIndex = 35;
+            this.button2.Text = "Ekle";
+            this.button2.UseVisualStyleBackColor = true;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // EklemeForm
             // 
@@ -624,8 +664,11 @@ namespace SpotiftClone.Admin.islemler
         private System.Windows.Forms.Label label15;
         private System.Windows.Forms.ComboBox sanatciAdlari;
         private System.Windows.Forms.Label label14;
-        private System.Windows.Forms.CheckedListBox checkedListBox1;
         private MySql.Data.MySqlClient.CustomInstaller customInstaller1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label label21;
+        private System.Windows.Forms.ComboBox secimYap;
+        private System.Windows.Forms.Label mevcutSarki;
+        private System.Windows.Forms.ComboBox mevcutSarkilar;
+        private System.Windows.Forms.Button button2;
     }
 }

@@ -21,6 +21,10 @@ namespace SpotiftClone.MenuForms
 
         private void TakipEdilenForm_Load(object sender, EventArgs e)
         {
+
+
+
+
             var userID = User.user.ID;
             dataGridView1.DataSource = null;
             dataGridView1.Rows.Clear();
@@ -29,13 +33,14 @@ namespace SpotiftClone.MenuForms
             var query = from user in Connection.spotifydb.users
                         join follow in Connection.spotifydb.user_follows
                         on user.ID equals follow.followingID
-                        where  user.ID != userID
+                        where  user.ID != userID && userID == follow.userID
 
                         select new
                         {
                             user.name,
                             user.surname,
-                            user.ID
+                            user.ID,
+                            followID = follow.ID
 
                         };
 
@@ -44,58 +49,62 @@ namespace SpotiftClone.MenuForms
             dataGridView1.Columns[0].HeaderText = "Ad";
             dataGridView1.Columns[1].HeaderText = "Soyad";
             this.dataGridView1.Columns[2].Visible = false;
+            this.dataGridView1.Columns[3].Visible = false;
 
         }
 
         private void button1_Click(object sender, EventArgs e)
         {
-            var userID = int.Parse( dataGridView1.CurrentRow.Cells[2].Value.ToString());
-            var playListID = Connection.spotifydb.playlists.Where(c => c.userID == userID).ToList();
-            int klasik = playListID[0].ID;
-            int jazz = playListID[1].ID;
-            int pop = playListID[2].ID;
+
+            if (User.user.subscriber_type.type == "Premium")
+            {
+                var userID = int.Parse(dataGridView1.CurrentRow.Cells[2].Value.ToString());
+                var playListID = Connection.spotifydb.playlists.Where(c => c.userID == userID).ToList();
+                int klasik = playListID[0].ID;
+                int jazz = playListID[1].ID;
+                int pop = playListID[2].ID;
 
 
-            var query = from playlist in Connection.spotifydb.user_playlist_songs
+                var query = from playlist in Connection.spotifydb.user_playlist_songs
 
-                        join item in Connection.spotifydb.songs
-                        on playlist.songID equals item.ID
-                        where playlist.playlistID == klasik
-                        select new
-                        {
-                            item.name,
-                            item.ID
-                        };
-
-
-
-
-
-
-
-            var query2 = from playlist in Connection.spotifydb.user_playlist_songs
-
-                        join item in Connection.spotifydb.songs
-                        on playlist.songID equals item.ID
-                        where playlist.playlistID == pop
-                        select new
-                        {
-                            item.name,
-                            item.ID
-                        };
+                            join item in Connection.spotifydb.songs
+                            on playlist.songID equals item.ID
+                            where playlist.playlistID == klasik && item.state == true
+                            select new
+                            {
+                                item.name,
+                                item.ID
+                            };
 
 
 
-            var query3 = from playlist in Connection.spotifydb.user_playlist_songs
 
-                        join item in Connection.spotifydb.songs
-                        on playlist.songID equals item.ID
-                        where playlist.playlistID == jazz
-                        select new
-                        {
-                            item.name,
-                            item.ID
-                        };
+
+
+
+                var query2 = from playlist in Connection.spotifydb.user_playlist_songs
+
+                             join item in Connection.spotifydb.songs
+                             on playlist.songID equals item.ID
+                             where playlist.playlistID == pop && item.state == true
+                             select new
+                             {
+                                 item.name,
+                                 item.ID
+                             };
+
+
+
+                var query3 = from playlist in Connection.spotifydb.user_playlist_songs
+
+                             join item in Connection.spotifydb.songs
+                             on playlist.songID equals item.ID
+                             where playlist.playlistID == jazz && item.state == true
+                             select new
+                             {
+                                 item.name,
+                                 item.ID
+                             };
 
 
                 dataGridView2.DataSource = query.ToList();
@@ -105,6 +114,14 @@ namespace SpotiftClone.MenuForms
                 this.dataGridView2.Columns[1].Visible = false;
                 this.dataGridView3.Columns[1].Visible = false;
                 this.dataGridView4.Columns[1].Visible = false;
+            }
+            else
+            {
+                MessageBox.Show("Bu işlem için premium kullanıcı olmalısınız!");
+            }
+
+
+            
         }
 
         private void tabPage1_Click(object sender, EventArgs e)
@@ -119,47 +136,71 @@ namespace SpotiftClone.MenuForms
 
         private void button2_Click(object sender, EventArgs e)
         {
-            var playListID = Connection.spotifydb.playlists.Where(c => c.userID == User.user.ID).ToList();
-            int klasik = playListID[0].ID;
 
 
 
-            int sarki = int.Parse(dataGridView2.CurrentRow.Cells[1].Value.ToString());
-
-            var varMi = Connection.spotifydb.user_playlist_songs.Any(c=>c.songID == sarki && c.playlistID == klasik);
-
-            if(varMi == false)
+            if (User.user.subscriber_type.type == "Premium")
             {
-                Connection.spotifydb.user_playlist_songs.Add(new user_playlist_songs() { playlistID = klasik, songID = sarki });
-                Connection.spotifydb.SaveChanges();
+                var playListID = Connection.spotifydb.playlists.Where(c => c.userID == User.user.ID).ToList();
+                int klasik = playListID[0].ID;
+
+
+
+                int sarki = int.Parse(dataGridView2.CurrentRow.Cells[1].Value.ToString());
+
+                var varMi = Connection.spotifydb.user_playlist_songs.Any(c => c.songID == sarki && c.playlistID == klasik);
+
+                if (varMi == false)
+                {
+                    Connection.spotifydb.user_playlist_songs.Add(new user_playlist_songs() { playlistID = klasik, songID = sarki });
+                    Connection.spotifydb.SaveChanges();
+                }
+                else
+                {
+                    MessageBox.Show("Şarkı zaten mevcut!", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
             else
             {
-                MessageBox.Show("Şarkı zaten mevcut!", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bu işlem için premium kullanıcı olmalısınız!");
             }
+            
 
         }
 
         private void button5_Click(object sender, EventArgs e)
         {
-            var playListID = Connection.spotifydb.playlists.Where(c => c.userID == User.user.ID).ToList();
-            int jazz = playListID[2].ID;
 
 
 
-            int sarki = int.Parse(dataGridView3.CurrentRow.Cells[1].Value.ToString());
-
-            var varMi = Connection.spotifydb.user_playlist_songs.Any(c => c.songID == sarki && c.playlistID == jazz);
-
-            if (varMi == false)
+            if (User.user.subscriber_type.type == "Premium")
             {
-                Connection.spotifydb.user_playlist_songs.Add(new user_playlist_songs() { playlistID = jazz, songID = sarki });
-                Connection.spotifydb.SaveChanges();
+                var playListID = Connection.spotifydb.playlists.Where(c => c.userID == User.user.ID).ToList();
+                int jazz = playListID[2].ID;
+
+
+
+                int sarki = int.Parse(dataGridView3.CurrentRow.Cells[1].Value.ToString());
+
+                var varMi = Connection.spotifydb.user_playlist_songs.Any(c => c.songID == sarki && c.playlistID == jazz);
+
+                if (varMi == false)
+                {
+                    Connection.spotifydb.user_playlist_songs.Add(new user_playlist_songs() { playlistID = jazz, songID = sarki });
+                    Connection.spotifydb.SaveChanges();
+                }
+                else
+                {
+                    MessageBox.Show("Şarkı zaten mevcut!", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
             }
+
             else
             {
-                MessageBox.Show("Şarkı zaten mevcut!", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show("Bu işlem için premium kullanıcı olmalısınız!");
             }
+
+
         }
 
         private void button7_Click(object sender, EventArgs e)
@@ -253,6 +294,16 @@ namespace SpotiftClone.MenuForms
             Connection.spotifydb.SaveChanges();
             MessageBox.Show("Tüm Şarkılar Eklendi ", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
             //var sarki = (dataGridView2.Rows[1].Cells[2].Value.ToString());
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            
+            var followingID = int.Parse(dataGridView1.CurrentRow.Cells[3].Value.ToString());
+            var delete = Connection.spotifydb.user_follows.SingleOrDefault(c => c.ID == followingID);
+            Connection.spotifydb.user_follows.Remove(delete);
+            Connection.spotifydb.SaveChanges();
+            MessageBox.Show("Kullanıcı takipten çıkarıldı! ", "Spotify Clone", MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
     }
     
