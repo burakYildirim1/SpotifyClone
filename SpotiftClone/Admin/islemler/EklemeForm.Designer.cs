@@ -116,7 +116,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             // ulkeAdi
             // 
-            this.ulkeAdi.Location = new System.Drawing.Point(381, 162);
+            this.ulkeAdi.Location = new System.Drawing.Point(706, 123);
             this.ulkeAdi.Name = "ulkeAdi";
             this.ulkeAdi.Size = new System.Drawing.Size(196, 23);
             this.ulkeAdi.TabIndex = 4;
@@ -126,7 +126,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.ulkeListe.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ulkeListe.FormattingEnabled = true;
-            this.ulkeListe.Location = new System.Drawing.Point(381, 63);
+            this.ulkeListe.Location = new System.Drawing.Point(144, 123);
             this.ulkeListe.Name = "ulkeListe";
             this.ulkeListe.Size = new System.Drawing.Size(196, 25);
             this.ulkeListe.TabIndex = 3;
@@ -134,7 +134,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             // ulkeEkle
             // 
-            this.ulkeEkle.Location = new System.Drawing.Point(399, 239);
+            this.ulkeEkle.Location = new System.Drawing.Point(723, 182);
             this.ulkeEkle.Name = "ulkeEkle";
             this.ulkeEkle.Size = new System.Drawing.Size(158, 36);
             this.ulkeEkle.TabIndex = 2;
@@ -146,7 +146,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(92, 161);
+            this.label4.Location = new System.Drawing.Point(433, 122);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(256, 51);
             this.label4.TabIndex = 1;
@@ -156,7 +156,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label3.ForeColor = System.Drawing.Color.White;
-            this.label3.Location = new System.Drawing.Point(269, 62);
+            this.label3.Location = new System.Drawing.Point(40, 122);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(79, 51);
             this.label3.TabIndex = 0;
@@ -184,7 +184,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             // btnKaydet
             // 
-            this.btnKaydet.Location = new System.Drawing.Point(292, 411);
+            this.btnKaydet.Location = new System.Drawing.Point(654, 287);
             this.btnKaydet.Name = "btnKaydet";
             this.btnKaydet.Size = new System.Drawing.Size(153, 35);
             this.btnKaydet.TabIndex = 12;
@@ -196,7 +196,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label8.ForeColor = System.Drawing.Color.White;
-            this.label8.Location = new System.Drawing.Point(131, 343);
+            this.label8.Location = new System.Drawing.Point(506, 222);
             this.label8.Name = "label8";
             this.label8.Size = new System.Drawing.Size(108, 51);
             this.label8.TabIndex = 11;
@@ -204,7 +204,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             // textSSahneAd
             // 
-            this.textSSahneAd.Location = new System.Drawing.Point(272, 344);
+            this.textSSahneAd.Location = new System.Drawing.Point(634, 223);
             this.textSSahneAd.Name = "textSSahneAd";
             this.textSSahneAd.Size = new System.Drawing.Size(196, 23);
             this.textSSahneAd.TabIndex = 10;
@@ -213,7 +213,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label7.ForeColor = System.Drawing.Color.White;
-            this.label7.Location = new System.Drawing.Point(96, 254);
+            this.label7.Location = new System.Drawing.Point(471, 122);
             this.label7.Name = "label7";
             this.label7.Size = new System.Drawing.Size(143, 51);
             this.label7.TabIndex = 9;
@@ -221,7 +221,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             // textSSoyad
             // 
-            this.textSSoyad.Location = new System.Drawing.Point(272, 255);
+            this.textSSoyad.Location = new System.Drawing.Point(634, 124);
             this.textSSoyad.Name = "textSSoyad";
             this.textSSoyad.Size = new System.Drawing.Size(196, 23);
             this.textSSoyad.TabIndex = 8;
@@ -230,7 +230,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label6.ForeColor = System.Drawing.Color.White;
-            this.label6.Location = new System.Drawing.Point(125, 172);
+            this.label6.Location = new System.Drawing.Point(40, 222);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(114, 51);
             this.label6.TabIndex = 7;
@@ -238,7 +238,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             // textSAdi
             // 
-            this.textSAdi.Location = new System.Drawing.Point(272, 173);
+            this.textSAdi.Location = new System.Drawing.Point(181, 223);
             this.textSAdi.Name = "textSAdi";
             this.textSAdi.Size = new System.Drawing.Size(196, 23);
             this.textSAdi.TabIndex = 6;
@@ -247,7 +247,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.ulkeSec.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.ulkeSec.FormattingEnabled = true;
-            this.ulkeSec.Location = new System.Drawing.Point(272, 83);
+            this.ulkeSec.Location = new System.Drawing.Point(181, 124);
             this.ulkeSec.Name = "ulkeSec";
             this.ulkeSec.Size = new System.Drawing.Size(196, 25);
             this.ulkeSec.TabIndex = 5;
@@ -257,7 +257,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label5.ForeColor = System.Drawing.Color.White;
-            this.label5.Location = new System.Drawing.Point(116, 82);
+            this.label5.Location = new System.Drawing.Point(31, 122);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(123, 51);
             this.label5.TabIndex = 4;
@@ -286,7 +286,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             // btnAlbumEkle
             // 
-            this.btnAlbumEkle.Location = new System.Drawing.Point(399, 441);
+            this.btnAlbumEkle.Location = new System.Drawing.Point(723, 305);
             this.btnAlbumEkle.Name = "btnAlbumEkle";
             this.btnAlbumEkle.Size = new System.Drawing.Size(130, 39);
             this.btnAlbumEkle.TabIndex = 22;
@@ -298,7 +298,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.albumTarih.CustomFormat = "yyyy-MM-dd";
             this.albumTarih.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.albumTarih.Location = new System.Drawing.Point(359, 379);
+            this.albumTarih.Location = new System.Drawing.Point(689, 221);
             this.albumTarih.Name = "albumTarih";
             this.albumTarih.Size = new System.Drawing.Size(210, 23);
             this.albumTarih.TabIndex = 21;
@@ -307,7 +307,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label13.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label13.ForeColor = System.Drawing.Color.White;
-            this.label13.Location = new System.Drawing.Point(229, 380);
+            this.label13.Location = new System.Drawing.Point(556, 209);
             this.label13.Name = "label13";
             this.label13.Size = new System.Drawing.Size(104, 51);
             this.label13.TabIndex = 20;
@@ -317,7 +317,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label12.ForeColor = System.Drawing.Color.White;
-            this.label12.Location = new System.Drawing.Point(125, 306);
+            this.label12.Location = new System.Drawing.Point(452, 124);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(208, 51);
             this.label12.TabIndex = 18;
@@ -325,7 +325,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             // textSarkiSayi
             // 
-            this.textSarkiSayi.Location = new System.Drawing.Point(359, 307);
+            this.textSarkiSayi.Location = new System.Drawing.Point(689, 126);
             this.textSarkiSayi.Name = "textSarkiSayi";
             this.textSarkiSayi.Size = new System.Drawing.Size(210, 23);
             this.textSarkiSayi.TabIndex = 17;
@@ -334,16 +334,17 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.SanatciAdList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.SanatciAdList.FormattingEnabled = true;
-            this.SanatciAdList.Location = new System.Drawing.Point(359, 155);
+            this.SanatciAdList.Location = new System.Drawing.Point(181, 221);
             this.SanatciAdList.Name = "SanatciAdList";
             this.SanatciAdList.Size = new System.Drawing.Size(210, 25);
             this.SanatciAdList.TabIndex = 16;
+            this.SanatciAdList.SelectedIndexChanged += new System.EventHandler(this.SanatciAdList_SelectedIndexChanged);
             // 
             // label9
             // 
             this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label9.ForeColor = System.Drawing.Color.White;
-            this.label9.Location = new System.Drawing.Point(228, 236);
+            this.label9.Location = new System.Drawing.Point(40, 312);
             this.label9.Name = "label9";
             this.label9.Size = new System.Drawing.Size(105, 51);
             this.label9.TabIndex = 15;
@@ -351,7 +352,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             // textAlbumAd
             // 
-            this.textAlbumAd.Location = new System.Drawing.Point(359, 237);
+            this.textAlbumAd.Location = new System.Drawing.Point(181, 313);
             this.textAlbumAd.Name = "textAlbumAd";
             this.textAlbumAd.Size = new System.Drawing.Size(210, 23);
             this.textAlbumAd.TabIndex = 14;
@@ -360,7 +361,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label10.ForeColor = System.Drawing.Color.White;
-            this.label10.Location = new System.Drawing.Point(218, 154);
+            this.label10.Location = new System.Drawing.Point(30, 222);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(115, 51);
             this.label10.TabIndex = 13;
@@ -370,7 +371,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.sarkiTurList.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sarkiTurList.FormattingEnabled = true;
-            this.sarkiTurList.Location = new System.Drawing.Point(359, 65);
+            this.sarkiTurList.Location = new System.Drawing.Point(181, 124);
             this.sarkiTurList.Name = "sarkiTurList";
             this.sarkiTurList.Size = new System.Drawing.Size(210, 25);
             this.sarkiTurList.TabIndex = 11;
@@ -379,7 +380,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label11.ForeColor = System.Drawing.Color.White;
-            this.label11.Location = new System.Drawing.Point(233, 64);
+            this.label11.Location = new System.Drawing.Point(45, 122);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(100, 51);
             this.label11.TabIndex = 10;
@@ -420,15 +421,15 @@ namespace SpotiftClone.Admin.islemler
             // checkedListBox1
             // 
             this.checkedListBox1.FormattingEnabled = true;
-            this.checkedListBox1.Location = new System.Drawing.Point(214, 306);
+            this.checkedListBox1.Location = new System.Drawing.Point(214, 122);
             this.checkedListBox1.Name = "checkedListBox1";
-            this.checkedListBox1.Size = new System.Drawing.Size(188, 94);
+            this.checkedListBox1.Size = new System.Drawing.Size(214, 94);
             this.checkedListBox1.TabIndex = 30;
             this.checkedListBox1.SelectedIndexChanged += new System.EventHandler(this.checkedListBox1_SelectedIndexChanged);
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(454, 319);
+            this.button1.Location = new System.Drawing.Point(737, 435);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(122, 34);
             this.button1.TabIndex = 29;
@@ -440,16 +441,16 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label19.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label19.ForeColor = System.Drawing.Color.White;
-            this.label19.Location = new System.Drawing.Point(477, 222);
+            this.label19.Location = new System.Drawing.Point(505, 363);
             this.label19.Name = "label19";
-            this.label19.Size = new System.Drawing.Size(167, 51);
+            this.label19.Size = new System.Drawing.Size(131, 51);
             this.label19.TabIndex = 28;
             this.label19.Text = "Süre (saniye) :";
             this.label19.Click += new System.EventHandler(this.label19_Click);
             // 
             // sarkiSure
             // 
-            this.sarkiSure.Location = new System.Drawing.Point(662, 227);
+            this.sarkiSure.Location = new System.Drawing.Point(691, 365);
             this.sarkiSure.Name = "sarkiSure";
             this.sarkiSure.Size = new System.Drawing.Size(214, 23);
             this.sarkiSure.TabIndex = 27;
@@ -458,7 +459,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.sarkiTarihi.CustomFormat = "yyyy-MM-dd";
             this.sarkiTarihi.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.sarkiTarihi.Location = new System.Drawing.Point(662, 150);
+            this.sarkiTarihi.Location = new System.Drawing.Point(691, 268);
             this.sarkiTarihi.Name = "sarkiTarihi";
             this.sarkiTarihi.Size = new System.Drawing.Size(214, 23);
             this.sarkiTarihi.TabIndex = 26;
@@ -467,9 +468,9 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label18.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label18.ForeColor = System.Drawing.Color.White;
-            this.label18.Location = new System.Drawing.Point(502, 148);
+            this.label18.Location = new System.Drawing.Point(525, 266);
             this.label18.Name = "label18";
-            this.label18.Size = new System.Drawing.Size(142, 51);
+            this.label18.Size = new System.Drawing.Size(111, 51);
             this.label18.TabIndex = 25;
             this.label18.Text = "Yayın tarihi :";
             // 
@@ -477,15 +478,15 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label17.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label17.ForeColor = System.Drawing.Color.White;
-            this.label17.Location = new System.Drawing.Point(517, 70);
+            this.label17.Location = new System.Drawing.Point(542, 122);
             this.label17.Name = "label17";
-            this.label17.Size = new System.Drawing.Size(121, 51);
+            this.label17.Size = new System.Drawing.Size(94, 51);
             this.label17.TabIndex = 24;
             this.label17.Text = "Şarkı Adı :";
             // 
             // sarkiAdi
             // 
-            this.sarkiAdi.Location = new System.Drawing.Point(662, 74);
+            this.sarkiAdi.Location = new System.Drawing.Point(691, 123);
             this.sarkiAdi.Name = "sarkiAdi";
             this.sarkiAdi.Size = new System.Drawing.Size(214, 23);
             this.sarkiAdi.TabIndex = 23;
@@ -494,7 +495,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.albumAdi.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.albumAdi.FormattingEnabled = true;
-            this.albumAdi.Location = new System.Drawing.Point(214, 223);
+            this.albumAdi.Location = new System.Drawing.Point(214, 364);
             this.albumAdi.Name = "albumAdi";
             this.albumAdi.Size = new System.Drawing.Size(214, 25);
             this.albumAdi.TabIndex = 22;
@@ -503,7 +504,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label16.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label16.ForeColor = System.Drawing.Color.White;
-            this.label16.Location = new System.Drawing.Point(56, 211);
+            this.label16.Location = new System.Drawing.Point(51, 364);
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(134, 51);
             this.label16.TabIndex = 21;
@@ -513,7 +514,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.sarkiTurleri.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.sarkiTurleri.FormattingEnabled = true;
-            this.sarkiTurleri.Location = new System.Drawing.Point(214, 148);
+            this.sarkiTurleri.Location = new System.Drawing.Point(214, 266);
             this.sarkiTurleri.Name = "sarkiTurleri";
             this.sarkiTurleri.Size = new System.Drawing.Size(214, 25);
             this.sarkiTurleri.TabIndex = 20;
@@ -523,7 +524,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label15.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label15.ForeColor = System.Drawing.Color.White;
-            this.label15.Location = new System.Drawing.Point(64, 144);
+            this.label15.Location = new System.Drawing.Point(59, 265);
             this.label15.Name = "label15";
             this.label15.Size = new System.Drawing.Size(126, 51);
             this.label15.TabIndex = 19;
@@ -543,7 +544,7 @@ namespace SpotiftClone.Admin.islemler
             // 
             this.label14.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
             this.label14.ForeColor = System.Drawing.Color.White;
-            this.label14.Location = new System.Drawing.Point(45, 70);
+            this.label14.Location = new System.Drawing.Point(40, 122);
             this.label14.Name = "label14";
             this.label14.Size = new System.Drawing.Size(145, 51);
             this.label14.TabIndex = 17;

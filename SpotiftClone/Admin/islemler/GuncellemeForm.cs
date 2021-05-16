@@ -62,7 +62,7 @@ namespace SpotiftClone.Admin.islemler
 
             dataGridView1.Columns[1].HeaderText = "Sanatçı Adı";
             dataGridView1.Columns[2].HeaderText = "Albüm Adı";
-            dataGridView1.Columns[3].HeaderText = "Şarkı Süresi";
+            dataGridView1.Columns[3].HeaderText = "Dinlenme Sayısı";
             dataGridView1.Columns[4].HeaderText = "Çıkış Tarihi";
 
             control = 0;
@@ -104,22 +104,6 @@ namespace SpotiftClone.Admin.islemler
             dataGridView1.Refresh();
 
 
-            //var query = from artists1 in Connection.spotifydb.artists
-            //            join sarki1 in Connection.spotifydb.songs
-            //            on artists1.ID equals sarki1.artistID
-            //            select new
-            //            {
-            //                sarki1.ID,
-            //                artistName = artists1.name,
-            //                sarki1.name,
-
-            //                sarki1.time,
-            //                sarki.playedCount
-
-            //            };
-
-
-
 
             var query = from artSong in Connection.spotifydb.artists_of_song
                         join artist1 in Connection.spotifydb.artists
@@ -133,22 +117,15 @@ namespace SpotiftClone.Admin.islemler
                             artistName = artist1.name,
                             songs.name,
                             songs.time,
+                            songs.date,
                             songs.playedCount
-                            //sarki1.name,
 
-                            //sarki1.time,
-                            //sarki.playedCount
 
                         };
 
 
             dataGridView1.DataSource = query.ToList(); //queryden gelen dataları liste olarak yazdır
                                                        //dataGridView1.Columns[0].HeaderText = "Sanatçı Adı";
-
-            //dataGridView1.Columns[1].HeaderText = "Sanatçı Adı";
-            //dataGridView1.Columns[2].HeaderText = "Şarkı Adı";
-            //dataGridView1.Columns[3].HeaderText = "Şarkı Süresi";
-            //dataGridView1.Columns[3].HeaderText = "Oynatma Sayısı";
 
 
             control = 2;
@@ -159,12 +136,11 @@ namespace SpotiftClone.Admin.islemler
         {
             if (control == 0)
             {
-                dataGridView1[e.ColumnIndex, e.RowIndex].Style.SelectionBackColor = Color.Red;
                 album.ID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                album.songCount = (int)(dataGridView1.CurrentRow.Cells[1].Value);
+                album.songCount = (int)(dataGridView1.CurrentRow.Cells[3].Value);
 
                 album.name = dataGridView1.CurrentRow.Cells[2].Value.ToString();
-                album.date = Convert.ToDateTime (dataGridView1.CurrentRow.Cells[3].Value.ToString());
+                album.date = Convert.ToDateTime (dataGridView1.CurrentRow.Cells[4].Value.ToString());
                 albumForm albumForm = new albumForm(album);
                 FormGetir(albumForm);
             }
@@ -184,8 +160,8 @@ namespace SpotiftClone.Admin.islemler
             {
                 dataGridView1[e.ColumnIndex, e.RowIndex].Style.SelectionBackColor = Color.Red;
                 sarki.ID = int.Parse(dataGridView1.CurrentRow.Cells[0].Value.ToString());
-                sarki.name = dataGridView1.CurrentRow.Cells[1].Value.ToString();
-                sarki.date = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[2].Value.ToString());
+                sarki.name = dataGridView1.CurrentRow.Cells[2].Value.ToString();
+                sarki.date = Convert.ToDateTime(dataGridView1.CurrentRow.Cells[4].Value.ToString());
                 sarki.time = (int)(dataGridView1.CurrentRow.Cells[3].Value);
                 sarkiForm sarkiForm = new sarkiForm(sarki);
                 FormGetir(sarkiForm);

@@ -269,5 +269,10 @@ namespace SpotiftClone.Admin.islemler
 
             }
         }
+
+        private void SanatciAdList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }
