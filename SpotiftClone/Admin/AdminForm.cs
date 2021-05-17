@@ -50,5 +50,11 @@ namespace SpotiftClone.Admin
             SilmeForm silmeForm = new SilmeForm();
             FormGetir(silmeForm);
         }
+
+        private void ıconButton4_Click(object sender, EventArgs e)
+        {
+            VeritabaniForm veritabaniForm = new VeritabaniForm();
+            FormGetir(veritabaniForm);
+        }
     }
 }

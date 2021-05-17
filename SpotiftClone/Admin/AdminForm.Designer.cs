@@ -31,24 +31,26 @@ namespace SpotiftClone.Admin
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AdminForm));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.label2 = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.ıconButton3 = new FontAwesome.Sharp.IconButton();
             this.ıconButton2 = new FontAwesome.Sharp.IconButton();
             this.ıconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel4 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.ıconButton4 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
-            this.panel4.SuspendLayout();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            this.panel1.Controls.Add(this.ıconButton4);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.pictureBox1);
             this.panel1.Controls.Add(this.ıconButton3);
@@ -60,6 +62,35 @@ namespace SpotiftClone.Admin
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(211, 612);
             this.panel1.TabIndex = 2;
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
+            this.panel6.Controls.Add(this.label2);
+            this.panel6.Location = new System.Drawing.Point(60, 24);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(146, 53);
+            this.panel6.TabIndex = 10;
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Bahnschrift", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.label2.ForeColor = System.Drawing.Color.White;
+            this.label2.Location = new System.Drawing.Point(-5, 9);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(155, 29);
+            this.label2.TabIndex = 0;
+            this.label2.Text = "Spotify Clone";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(2, 12);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(62, 65);
+            this.pictureBox1.TabIndex = 9;
+            this.pictureBox1.TabStop = false;
             // 
             // ıconButton3
             // 
@@ -158,34 +189,27 @@ namespace SpotiftClone.Admin
             this.panel2.Size = new System.Drawing.Size(944, 612);
             this.panel2.TabIndex = 6;
             // 
-            // panel6
+            // ıconButton4
             // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(63)))), ((int)(((byte)(63)))), ((int)(((byte)(63)))));
-            this.panel6.Controls.Add(this.label2);
-            this.panel6.Location = new System.Drawing.Point(60, 24);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(146, 53);
-            this.panel6.TabIndex = 10;
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("Bahnschrift", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
-            this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(-5, 9);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(155, 29);
-            this.label2.TabIndex = 0;
-            this.label2.Text = "Spotify Clone";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(2, 12);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(62, 65);
-            this.pictureBox1.TabIndex = 9;
-            this.pictureBox1.TabStop = false;
+            this.ıconButton4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(64)))), ((int)(((byte)(64)))), ((int)(((byte)(64)))));
+            this.ıconButton4.FlatAppearance.BorderSize = 0;
+            this.ıconButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.ıconButton4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(162)));
+            this.ıconButton4.ForeColor = System.Drawing.Color.White;
+            this.ıconButton4.IconChar = FontAwesome.Sharp.IconChar.Database;
+            this.ıconButton4.IconColor = System.Drawing.Color.White;
+            this.ıconButton4.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.ıconButton4.IconSize = 32;
+            this.ıconButton4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.ıconButton4.Location = new System.Drawing.Point(11, 322);
+            this.ıconButton4.Margin = new System.Windows.Forms.Padding(2);
+            this.ıconButton4.Name = "ıconButton4";
+            this.ıconButton4.Size = new System.Drawing.Size(188, 33);
+            this.ıconButton4.TabIndex = 11;
+            this.ıconButton4.Text = "Veritabanı Tablolar";
+            this.ıconButton4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.ıconButton4.UseVisualStyleBackColor = false;
+            this.ıconButton4.Click += new System.EventHandler(this.ıconButton4_Click);
             // 
             // AdminForm
             // 
@@ -204,11 +228,11 @@ namespace SpotiftClone.Admin
             this.Name = "AdminForm";
             this.Text = "AdminForm";
             this.panel1.ResumeLayout(false);
-            this.panel4.ResumeLayout(false);
-            this.panel4.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            this.panel4.ResumeLayout(false);
+            this.panel4.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -225,5 +249,6 @@ namespace SpotiftClone.Admin
         private System.Windows.Forms.Panel panel6;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private FontAwesome.Sharp.IconButton ıconButton4;
     }
 }

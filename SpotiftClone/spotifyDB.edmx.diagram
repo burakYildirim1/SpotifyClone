@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="fb3a612c14914c44ae5453eaec6e39fb" Name="Diagram1" ZoomLevel="64">
+      <Diagram DiagramId="fb3a612c14914c44ae5453eaec6e39fb" Name="Diagram1" ZoomLevel="109">
         <EntityTypeShape EntityType="spotifydbModel.admins" Width="1.5" PointX="5.25" PointY="16.875" />
         <EntityTypeShape EntityType="spotifydbModel.albums" Width="1.5" PointX="5.25" PointY="13" />
         <EntityTypeShape EntityType="spotifydbModel.artists" Width="1.5" PointX="3" PointY="13.125" />
@@ -15,7 +15,7 @@
         <EntityTypeShape EntityType="spotifydbModel.song_type" Width="1.5" PointX="3" PointY="4.375" />
         <EntityTypeShape EntityType="spotifydbModel.songs" Width="1.5" PointX="7.5" PointY="12.75" />
         <EntityTypeShape EntityType="spotifydbModel.subscriber_type" Width="1.5" PointX="0.75" PointY="5.625" />
-        <EntityTypeShape EntityType="spotifydbModel.user_follows" Width="1.5" PointX="5.25" PointY="10.125" />
+        <EntityTypeShape EntityType="spotifydbModel.user_follows" Width="1.5" PointX="6" PointY="10.125" />
         <EntityTypeShape EntityType="spotifydbModel.user_playlist_songs" Width="1.5" PointX="9.75" PointY="10.25" />
         <EntityTypeShape EntityType="spotifydbModel.users" Width="1.5" PointX="3" PointY="7.625" />
         <AssociationConnector Association="spotifydbModel.admins_ibfk_1" />

@@ -121,7 +121,7 @@ namespace SpotiftClone
             // pictureBox2
             // 
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(260, 6);
+            this.pictureBox2.Location = new System.Drawing.Point(270, 4);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(25, 24);
             this.pictureBox2.TabIndex = 21;
