@@ -175,3 +175,8 @@ C:\Users\90536\Desktop\sa\SpotiftClone-main\bin\Debug\SpotiftClone.exe.manifest
 C:\Users\90536\Desktop\sa\SpotiftClone-main\bin\Debug\SpotiftClone.application
 C:\Users\90536\Desktop\sa\SpotiftClone-main\obj\Debug\SpotiftClone.exe.manifest
 C:\Users\90536\Desktop\sa\SpotiftClone-main\obj\Debug\SpotiftClone.application
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\bin\Debug\SpotiftClone.exe.manifest
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\bin\Debug\SpotiftClone.application
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.Admin.islemler.VeritabaniForm.resources
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.exe.manifest
+C:\Users\90536\Desktop\SpotifyClone\SpotiftClone\obj\Debug\SpotiftClone.application
